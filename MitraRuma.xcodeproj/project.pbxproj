@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF114266A8AD0002640BE /* OnBoardingViewController.swift */; };
+		10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAF115266A8AD0002640BE /* OnBoardingViewController.xib */; };
+		10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF11E266A8C38002640BE /* UISliderEntity.swift */; };
+		10FAF122266A8EE4002640BE /* SliderContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF120266A8EE4002640BE /* SliderContentCollectionViewCell.swift */; };
+		10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAF121266A8EE4002640BE /* SliderContentCollectionViewCell.xib */; };
+		10FAF126266A9099002640BE /* UIGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF125266A9099002640BE /* UIGenerator.swift */; };
 		10FB8E63265FEAC8001D0E64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB8E62265FEAC8001D0E64 /* AppDelegate.swift */; };
 		10FB8E65265FEAC8001D0E64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB8E64265FEAC8001D0E64 /* SceneDelegate.swift */; };
 		10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB8E66265FEAC8001D0E64 /* ViewController.swift */; };
@@ -18,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10FAF114266A8AD0002640BE /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		10FAF115266A8AD0002640BE /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
+		10FAF11E266A8C38002640BE /* UISliderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderEntity.swift; sourceTree = "<group>"; };
+		10FAF120266A8EE4002640BE /* SliderContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		10FAF121266A8EE4002640BE /* SliderContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		10FAF125266A9099002640BE /* UIGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGenerator.swift; sourceTree = "<group>"; };
 		10FB8E5F265FEAC8001D0E64 /* MitraRuma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MitraRuma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10FB8E62265FEAC8001D0E64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10FB8E64265FEAC8001D0E64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +56,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10FAF112266A8AAB002640BE /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				10FAF113266A8ABE002640BE /* onboarding */,
+			);
+			path = screen;
+			sourceTree = "<group>";
+		};
+		10FAF113266A8ABE002640BE /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				10FAF118266A8ADE002640BE /* content */,
+				10FAF114266A8AD0002640BE /* OnBoardingViewController.swift */,
+				10FAF115266A8AD0002640BE /* OnBoardingViewController.xib */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
+		10FAF118266A8ADE002640BE /* content */ = {
+			isa = PBXGroup;
+			children = (
+				10FAF120266A8EE4002640BE /* SliderContentCollectionViewCell.swift */,
+				10FAF121266A8EE4002640BE /* SliderContentCollectionViewCell.xib */,
+			);
+			path = content;
+			sourceTree = "<group>";
+		};
+		10FAF11D266A8C28002640BE /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				10FAF11E266A8C38002640BE /* UISliderEntity.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		10FAF124266A908A002640BE /* support */ = {
+			isa = PBXGroup;
+			children = (
+				10FAF125266A9099002640BE /* UIGenerator.swift */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
 		10FB8E56265FEAC8001D0E64 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +120,9 @@
 		10FB8E61265FEAC8001D0E64 /* MitraRuma */ = {
 			isa = PBXGroup;
 			children = (
+				10FAF124266A908A002640BE /* support */,
+				10FAF11D266A8C28002640BE /* entity */,
+				10FAF112266A8AAB002640BE /* screen */,
 				10FB8E62265FEAC8001D0E64 /* AppDelegate.swift */,
 				10FB8E64265FEAC8001D0E64 /* SceneDelegate.swift */,
 				10FB8E66265FEAC8001D0E64 /* ViewController.swift */,
@@ -91,7 +149,6 @@
 				EACE7840FC85CD7C7558920D /* Pods-MitraRuma.debug.xcconfig */,
 				6806E69678042BD95BDE0942 /* Pods-MitraRuma.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -106,6 +163,8 @@
 				10FB8E5B265FEAC8001D0E64 /* Sources */,
 				10FB8E5C265FEAC8001D0E64 /* Frameworks */,
 				10FB8E5D265FEAC8001D0E64 /* Resources */,
+				602FA81F8E75873CAB793B5F /* [CP] Embed Pods Frameworks */,
+				1C857496ACF9181366ED03FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +215,8 @@
 				10FB8E72265FEAC9001D0E64 /* LaunchScreen.storyboard in Resources */,
 				10FB8E6F265FEAC9001D0E64 /* Assets.xcassets in Resources */,
 				10FB8E6A265FEAC8001D0E64 /* Main.storyboard in Resources */,
+				10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */,
+				10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +245,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1C857496ACF9181366ED03FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MitraRuma/Pods-MitraRuma-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MitraRuma/Pods-MitraRuma-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MitraRuma/Pods-MitraRuma-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		602FA81F8E75873CAB793B5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MitraRuma/Pods-MitraRuma-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MitraRuma/Pods-MitraRuma-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MitraRuma/Pods-MitraRuma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -191,10 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */,
+				10FAF126266A9099002640BE /* UIGenerator.swift in Sources */,
 				10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */,
 				10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */,
 				10FB8E63265FEAC8001D0E64 /* AppDelegate.swift in Sources */,
+				10FAF122266A8EE4002640BE /* SliderContentCollectionViewCell.swift in Sources */,
 				10FB8E65265FEAC8001D0E64 /* SceneDelegate.swift in Sources */,
+				10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
