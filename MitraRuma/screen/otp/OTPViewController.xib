@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPViewController" customModule="MitraRuma" customModuleProvider="target">
+            <connections>
+                <outlet property="otpField1View" destination="TZO-a9-yhn" id="JwF-94-bMH"/>
+                <outlet property="otpField2View" destination="Rpe-XX-XVA" id="LzC-U5-R9U"/>
+                <outlet property="otpField3View" destination="KW1-Wn-i9V" id="ifp-PL-7Gy"/>
+                <outlet property="otpField4View" destination="tmJ-jC-lvV" id="HyB-6M-WPD"/>
+                <outlet property="otpField5View" destination="bJu-YR-tXx" id="Aab-v7-Eax"/>
+                <outlet property="otpField6View" destination="JOp-6v-PGZ" id="MAl-Be-Oim"/>
+                <outlet property="otpResendButton" destination="Qq4-0a-IYR" id="J2g-aB-7f1"/>
+                <outlet property="otpWarningLabel" destination="FmY-RL-jOm" id="pHI-8q-Ong"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_mitra_ruma" translatesAutoresizingMaskIntoConstraints="NO" id="ah0-Fh-yCq">
+                    <rect key="frame" x="167" y="60" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="C66-Zi-dB6"/>
+                        <constraint firstAttribute="width" constant="80" id="EHh-6u-Y19"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masukkan OTP anda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9k-5d-sid">
+                    <rect key="frame" x="16" y="156" width="148.5" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rpe-XX-XVA" customClass="SingleInputFieldView" customModule="MitraRuma" customModuleProvider="target">
+                    <rect key="frame" x="64" y="190" width="40" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="rfi-PK-mQX"/>
+                        <constraint firstAttribute="height" constant="40" id="wjv-rq-V8y"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KW1-Wn-i9V" customClass="SingleInputFieldView" customModule="MitraRuma" customModuleProvider="target">
+                    <rect key="frame" x="112" y="190" width="40" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="MGQ-08-Q5i"/>
+                        <constraint firstAttribute="width" constant="40" id="yVE-rv-Pcw"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmJ-jC-lvV" customClass="SingleInputFieldView" customModule="MitraRuma" customModuleProvider="target">
+                    <rect key="frame" x="160" y="190" width="40" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="BF0-Ip-Acc"/>
+                        <constraint firstAttribute="height" constant="40" id="rG3-vU-R15"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJu-YR-tXx" customClass="SingleInputFieldView" customModule="MitraRuma" customModuleProvider="target">
+                    <rect key="frame" x="208" y="190" width="40" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="BFD-S7-wGm"/>
+                        <constraint firstAttribute="height" constant="40" id="VqM-h7-Bvq"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZO-a9-yhn" customClass="SingleInputFieldView" customModule="MitraRuma" customModuleProvider="target">
+                    <rect key="frame" x="16" y="190" width="40" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="BHI-1T-zQW"/>
+                        <constraint firstAttribute="width" constant="40" id="e2X-hQ-Ham"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kami telah mengirimkan kode OTP ke nomor anda" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmY-RL-jOm">
+                    <rect key="frame" x="16" y="246" width="382" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qq4-0a-IYR">
+                    <rect key="frame" x="16" y="806" width="382" height="40"/>
+                    <color key="backgroundColor" name="gray_button"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="3fw-Kn-g3d"/>
+                    </constraints>
+                    <state key="normal" title="Kirim Ulang OTP">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundTL" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundTR" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundBL" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundBR" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onResendOTPButton:" destination="-1" eventType="touchUpInside" id="6qs-PU-S1J"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOp-6v-PGZ" customClass="SingleInputFieldView" customModule="MitraRuma" customModuleProvider="target">
+                    <rect key="frame" x="256" y="190" width="40" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Wyq-gx-w8p"/>
+                        <constraint firstAttribute="width" constant="40" id="cFh-Uk-0vf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="a9k-5d-sid" firstAttribute="top" secondItem="ah0-Fh-yCq" secondAttribute="bottom" constant="16" id="6hO-EJ-h5U"/>
+                <constraint firstItem="KW1-Wn-i9V" firstAttribute="leading" secondItem="Rpe-XX-XVA" secondAttribute="trailing" constant="8" id="7CH-Uc-op4"/>
+                <constraint firstItem="bJu-YR-tXx" firstAttribute="leading" secondItem="tmJ-jC-lvV" secondAttribute="trailing" constant="8" id="CWR-45-hPJ"/>
+                <constraint firstItem="KW1-Wn-i9V" firstAttribute="centerY" secondItem="Rpe-XX-XVA" secondAttribute="centerY" id="E9R-vw-50f"/>
+                <constraint firstItem="TZO-a9-yhn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ete-hO-Htm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FmY-RL-jOm" secondAttribute="trailing" constant="16" id="FZY-gH-Ds7"/>
+                <constraint firstItem="JOp-6v-PGZ" firstAttribute="centerY" secondItem="bJu-YR-tXx" secondAttribute="centerY" id="GRP-8K-O23"/>
+                <constraint firstItem="tmJ-jC-lvV" firstAttribute="centerY" secondItem="KW1-Wn-i9V" secondAttribute="centerY" id="IJT-XL-f5R"/>
+                <constraint firstItem="Rpe-XX-XVA" firstAttribute="leading" secondItem="TZO-a9-yhn" secondAttribute="trailing" constant="8" id="Ih4-Yq-Wj5"/>
+                <constraint firstItem="a9k-5d-sid" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="QcP-f5-Qnb"/>
+                <constraint firstItem="Qq4-0a-IYR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="gA5-FE-W0F"/>
+                <constraint firstItem="FmY-RL-jOm" firstAttribute="top" secondItem="TZO-a9-yhn" secondAttribute="bottom" constant="16" id="jbI-f8-O2w"/>
+                <constraint firstItem="JOp-6v-PGZ" firstAttribute="leading" secondItem="bJu-YR-tXx" secondAttribute="trailing" constant="8" id="kdJ-25-bfg"/>
+                <constraint firstItem="ah0-Fh-yCq" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kts-2v-hQ2"/>
+                <constraint firstItem="ah0-Fh-yCq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="oQe-hh-nDT"/>
+                <constraint firstItem="Rpe-XX-XVA" firstAttribute="centerY" secondItem="TZO-a9-yhn" secondAttribute="centerY" id="pHe-wv-U4q"/>
+                <constraint firstItem="bJu-YR-tXx" firstAttribute="centerY" secondItem="tmJ-jC-lvV" secondAttribute="centerY" id="upj-Cy-G8M"/>
+                <constraint firstItem="FmY-RL-jOm" firstAttribute="leading" secondItem="TZO-a9-yhn" secondAttribute="leading" id="uwP-hK-bmA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Qq4-0a-IYR" secondAttribute="bottom" constant="16" id="vmp-d6-hYe"/>
+                <constraint firstItem="tmJ-jC-lvV" firstAttribute="leading" secondItem="KW1-Wn-i9V" secondAttribute="trailing" constant="8" id="yKl-bz-K8D"/>
+                <constraint firstItem="TZO-a9-yhn" firstAttribute="top" secondItem="a9k-5d-sid" secondAttribute="bottom" constant="16" id="ziq-hM-Yrz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qq4-0a-IYR" secondAttribute="trailing" constant="16" id="zvK-Y1-4l7"/>
+            </constraints>
+            <point key="canvasLocation" x="-12" y="129"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_mitra_ruma" width="17" height="13"/>
+        <namedColor name="gray_button">
+            <color red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

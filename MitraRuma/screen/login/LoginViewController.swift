@@ -36,7 +36,11 @@ class LoginViewController: UIViewController {
         }
         
         googleButton.onClick {
-            
+            let navigationController: UINavigationController = UINavigationController(rootViewController: OTPViewController())
+            navigationController.setNavigationBarHidden(true, animated: false)
+            navigationController.setToolbarHidden(true, animated: false)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
         }
     }
     

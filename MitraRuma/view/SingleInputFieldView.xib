@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SingleInputFieldView" customModule="MitraRuma" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="B7U-Hg-8L7" id="fZa-gU-tg3"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Bhn-AV-iOs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="85" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7U-Hg-8L7">
+                    <rect key="frame" x="8" y="8" width="69" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="pVd-uI-5y4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="onTextFieldChanged:" destination="-1" eventType="editingChanged" id="Ihf-Tz-itk"/>
+                    </connections>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wun-FL-VYr">
+                    <rect key="frame" x="8" y="51" width="69" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="KiQ-ha-uvz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wun-FL-VYr" secondAttribute="trailing" constant="8" id="Al0-XO-BhS"/>
+                <constraint firstItem="B7U-Hg-8L7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="FmJ-Oh-193"/>
+                <constraint firstAttribute="trailing" secondItem="B7U-Hg-8L7" secondAttribute="trailing" constant="8" id="LKX-Yy-6oW"/>
+                <constraint firstItem="wun-FL-VYr" firstAttribute="top" secondItem="B7U-Hg-8L7" secondAttribute="bottom" constant="8" id="jgQ-fL-4ZC"/>
+                <constraint firstItem="B7U-Hg-8L7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="lcf-zd-GaN"/>
+                <constraint firstItem="wun-FL-VYr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="mVH-1X-fqb"/>
+                <constraint firstAttribute="bottom" secondItem="wun-FL-VYr" secondAttribute="bottom" constant="6" id="ozR-pX-l5k"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-113.768115942029" y="273.21428571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
