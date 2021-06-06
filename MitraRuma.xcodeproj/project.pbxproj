@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		103AF918266D1AD9009C561B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103AF917266D1AD9009C561B /* Colors.xcassets */; };
+		103AF91C266D1FDF009C561B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AF91A266D1FDF009C561B /* LoginViewController.swift */; };
+		103AF91D266D1FDF009C561B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103AF91B266D1FDF009C561B /* LoginViewController.xib */; };
+		103AF920266D2071009C561B /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AF91F266D2071009C561B /* InputFieldView.swift */; };
+		103AF922266D208E009C561B /* InputFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103AF921266D208E009C561B /* InputFieldView.xib */; };
+		103AF924266D20FE009C561B /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AF923266D20FE009C561B /* UIExtension.swift */; };
+		103AF926266D2128009C561B /* TapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AF925266D2128009C561B /* TapGestureRecognizer.swift */; };
 		10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF114266A8AD0002640BE /* OnBoardingViewController.swift */; };
 		10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAF115266A8AD0002640BE /* OnBoardingViewController.xib */; };
 		10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF11E266A8C38002640BE /* UISliderEntity.swift */; };
@@ -25,6 +31,12 @@
 
 /* Begin PBXFileReference section */
 		103AF917266D1AD9009C561B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		103AF91A266D1FDF009C561B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		103AF91B266D1FDF009C561B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		103AF91F266D2071009C561B /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
+		103AF921266D208E009C561B /* InputFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputFieldView.xib; sourceTree = "<group>"; };
+		103AF923266D20FE009C561B /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		103AF925266D2128009C561B /* TapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureRecognizer.swift; sourceTree = "<group>"; };
 		10FAF114266A8AD0002640BE /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		10FAF115266A8AD0002640BE /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		10FAF11E266A8C38002640BE /* UISliderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderEntity.swift; sourceTree = "<group>"; };
@@ -56,9 +68,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		103AF919266D1FA9009C561B /* login */ = {
+			isa = PBXGroup;
+			children = (
+				103AF91A266D1FDF009C561B /* LoginViewController.swift */,
+				103AF91B266D1FDF009C561B /* LoginViewController.xib */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		103AF91E266D2059009C561B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				103AF91F266D2071009C561B /* InputFieldView.swift */,
+				103AF921266D208E009C561B /* InputFieldView.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		10FAF112266A8AAB002640BE /* screen */ = {
 			isa = PBXGroup;
 			children = (
+				103AF919266D1FA9009C561B /* login */,
 				10FAF113266A8ABE002640BE /* onboarding */,
 			);
 			path = screen;
@@ -95,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				10FAF125266A9099002640BE /* UIGenerator.swift */,
+				103AF923266D20FE009C561B /* UIExtension.swift */,
+				103AF925266D2128009C561B /* TapGestureRecognizer.swift */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -120,6 +153,7 @@
 		10FB8E61265FEAC8001D0E64 /* MitraRuma */ = {
 			isa = PBXGroup;
 			children = (
+				103AF91E266D2059009C561B /* view */,
 				10FAF124266A908A002640BE /* support */,
 				10FAF11D266A8C28002640BE /* entity */,
 				10FAF112266A8AAB002640BE /* screen */,
@@ -214,9 +248,11 @@
 			files = (
 				103AF918266D1AD9009C561B /* Colors.xcassets in Resources */,
 				10FB8E72265FEAC9001D0E64 /* LaunchScreen.storyboard in Resources */,
+				103AF91D266D1FDF009C561B /* LoginViewController.xib in Resources */,
 				10FB8E6F265FEAC9001D0E64 /* Assets.xcassets in Resources */,
 				10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */,
 				10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */,
+				103AF922266D208E009C561B /* InputFieldView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,13 +322,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103AF91C266D1FDF009C561B /* LoginViewController.swift in Sources */,
 				10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */,
 				10FAF126266A9099002640BE /* UIGenerator.swift in Sources */,
 				10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */,
 				10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */,
+				103AF926266D2128009C561B /* TapGestureRecognizer.swift in Sources */,
 				10FB8E63265FEAC8001D0E64 /* AppDelegate.swift in Sources */,
 				10FAF122266A8EE4002640BE /* SliderContentCollectionViewCell.swift in Sources */,
 				10FB8E65265FEAC8001D0E64 /* SceneDelegate.swift in Sources */,
+				103AF920266D2071009C561B /* InputFieldView.swift in Sources */,
+				103AF924266D20FE009C561B /* UIExtension.swift in Sources */,
 				10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

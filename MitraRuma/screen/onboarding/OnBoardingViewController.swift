@@ -14,6 +14,8 @@ class OnBoardingViewController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    private var currentIndex: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,15 +23,33 @@ class OnBoardingViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "SliderContentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SliderContentCollectionViewCell")
         
-        pageControl.currentPage = 0
+        pageControl.currentPage = currentIndex
     }
     
     @IBAction func onNextClicked(_ sender: Any) {
-        
+        if (currentIndex != 2) {
+            currentIndex += 1
+            pageControl.currentPage = currentIndex
+//            collectionView.moveItem(at: IndexPath(item: 0, section: currentIndex - 1), to: IndexPath(item: 0, section: currentIndex))
+            
+            if (currentIndex == 2) {
+                nextButton.setTitle("Lanjut", for: .normal)
+            }
+        } else {
+            let navigationController: UINavigationController = UINavigationController(rootViewController: LoginViewController())
+            navigationController.setNavigationBarHidden(true, animated: false)
+            navigationController.setToolbarHidden(true, animated: false)
+            navigationController.modalPresentationStyle = .fullScreen
+            present(navigationController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func onSkipClicked(_ sender: Any) {
-    
+        let navigationController: UINavigationController = UINavigationController(rootViewController: LoginViewController())
+        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.setToolbarHidden(true, animated: false)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
     }
 }
 

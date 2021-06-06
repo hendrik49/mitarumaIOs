@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputFieldView" customModule="MitraRuma" customModuleProvider="target">
+            <connections>
+                <outlet property="borderView" destination="Jac-Tr-QAN" id="j7M-Bt-6aJ"/>
+                <outlet property="inputTextField" destination="Iz7-Qe-t0m" id="SXp-6O-J7p"/>
+                <outlet property="titleLabel" destination="vYi-HS-fn3" id="O9j-Xv-SSh"/>
+                <outlet property="view" destination="iN0-l3-epB" id="P8a-EZ-5ez"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jac-Tr-QAN">
+                    <rect key="frame" x="16" y="16" width="382" height="58"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iz7-Qe-t0m">
+                            <rect key="frame" x="8" y="9" width="366" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="onTextFieldChanged:" destination="-1" eventType="editingChanged" id="Aji-eS-Gm2"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Iz7-Qe-t0m" firstAttribute="top" secondItem="Jac-Tr-QAN" secondAttribute="top" constant="9" id="1ck-sz-7MO"/>
+                        <constraint firstAttribute="trailing" secondItem="Iz7-Qe-t0m" secondAttribute="trailing" constant="8" id="EJ4-xg-Vos"/>
+                        <constraint firstItem="Iz7-Qe-t0m" firstAttribute="leading" secondItem="Jac-Tr-QAN" secondAttribute="leading" constant="8" id="OMT-Tp-yZ5"/>
+                        <constraint firstAttribute="bottom" secondItem="Iz7-Qe-t0m" secondAttribute="bottom" constant="8" id="jvj-5f-Wir"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundTL" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundTR" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundBL" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundBR" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="gray_border"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBound" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYi-HS-fn3">
+                    <rect key="frame" x="32" y="9" width="35.5" height="17"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Jac-Tr-QAN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="0EJ-jJ-PgJ"/>
+                <constraint firstItem="vYi-HS-fn3" firstAttribute="top" secondItem="Jac-Tr-QAN" secondAttribute="top" constant="-7" id="A4H-mT-Hlb"/>
+                <constraint firstAttribute="trailing" secondItem="Jac-Tr-QAN" secondAttribute="trailing" constant="16" id="EE3-U6-0r8"/>
+                <constraint firstAttribute="bottom" secondItem="Jac-Tr-QAN" secondAttribute="bottom" constant="8" id="Kl9-FT-6GY"/>
+                <constraint firstItem="Jac-Tr-QAN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="XHT-vG-iVJ"/>
+                <constraint firstItem="vYi-HS-fn3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="ewa-Aa-J1j"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="205.79710144927537" y="30.803571428571427"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="gray_border">
+            <color red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="0.32000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
