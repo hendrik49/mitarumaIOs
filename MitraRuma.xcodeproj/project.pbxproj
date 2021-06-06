@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103AF918266D1AD9009C561B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103AF917266D1AD9009C561B /* Colors.xcassets */; };
 		10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF114266A8AD0002640BE /* OnBoardingViewController.swift */; };
 		10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAF115266A8AD0002640BE /* OnBoardingViewController.xib */; };
 		10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF11E266A8C38002640BE /* UISliderEntity.swift */; };
@@ -16,7 +17,6 @@
 		10FB8E63265FEAC8001D0E64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB8E62265FEAC8001D0E64 /* AppDelegate.swift */; };
 		10FB8E65265FEAC8001D0E64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB8E64265FEAC8001D0E64 /* SceneDelegate.swift */; };
 		10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB8E66265FEAC8001D0E64 /* ViewController.swift */; };
-		10FB8E6A265FEAC8001D0E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10FB8E68265FEAC8001D0E64 /* Main.storyboard */; };
 		10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10FB8E6B265FEAC8001D0E64 /* MitraRuma.xcdatamodeld */; };
 		10FB8E6F265FEAC9001D0E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10FB8E6E265FEAC9001D0E64 /* Assets.xcassets */; };
 		10FB8E72265FEAC9001D0E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10FB8E70265FEAC9001D0E64 /* LaunchScreen.storyboard */; };
@@ -24,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		103AF917266D1AD9009C561B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		10FAF114266A8AD0002640BE /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		10FAF115266A8AD0002640BE /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		10FAF11E266A8C38002640BE /* UISliderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderEntity.swift; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 		10FB8E62265FEAC8001D0E64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10FB8E64265FEAC8001D0E64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		10FB8E66265FEAC8001D0E64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		10FB8E69265FEAC8001D0E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10FB8E6C265FEAC8001D0E64 /* MitraRuma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MitraRuma.xcdatamodel; sourceTree = "<group>"; };
 		10FB8E6E265FEAC9001D0E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10FB8E71265FEAC9001D0E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -126,11 +126,11 @@
 				10FB8E62265FEAC8001D0E64 /* AppDelegate.swift */,
 				10FB8E64265FEAC8001D0E64 /* SceneDelegate.swift */,
 				10FB8E66265FEAC8001D0E64 /* ViewController.swift */,
-				10FB8E68265FEAC8001D0E64 /* Main.storyboard */,
 				10FB8E6E265FEAC9001D0E64 /* Assets.xcassets */,
 				10FB8E70265FEAC9001D0E64 /* LaunchScreen.storyboard */,
 				10FB8E73265FEAC9001D0E64 /* Info.plist */,
 				10FB8E6B265FEAC8001D0E64 /* MitraRuma.xcdatamodeld */,
+				103AF917266D1AD9009C561B /* Colors.xcassets */,
 			);
 			path = MitraRuma;
 			sourceTree = "<group>";
@@ -212,9 +212,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103AF918266D1AD9009C561B /* Colors.xcassets in Resources */,
 				10FB8E72265FEAC9001D0E64 /* LaunchScreen.storyboard in Resources */,
 				10FB8E6F265FEAC9001D0E64 /* Assets.xcassets in Resources */,
-				10FB8E6A265FEAC8001D0E64 /* Main.storyboard in Resources */,
 				10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */,
 				10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */,
 			);
@@ -300,14 +300,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		10FB8E68265FEAC8001D0E64 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				10FB8E69265FEAC8001D0E64 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		10FB8E70265FEAC9001D0E64 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -450,7 +442,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = id.mitra.MitraRuma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -469,7 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = id.mitra.MitraRuma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
