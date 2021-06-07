@@ -30,7 +30,7 @@ class OnBoardingViewController: UIViewController {
         if (currentIndex != 2) {
             currentIndex += 1
             pageControl.currentPage = currentIndex
-//            collectionView.moveItem(at: IndexPath(item: 0, section: currentIndex - 1), to: IndexPath(item: 0, section: currentIndex))
+            collectionView.scrollToItem(at: IndexPath(item: currentIndex, section: 0), at: .right, animated: true)
             
             if (currentIndex == 2) {
                 nextButton.setTitle("Lanjut", for: .normal)
@@ -53,7 +53,7 @@ class OnBoardingViewController: UIViewController {
     }
 }
 
-extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension OnBoardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return UIGenerator.generateOnBoarding().count
     }
