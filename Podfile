@@ -10,6 +10,7 @@ target 'MitraRuma' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'RxRetroSwift'
+  pod 'DLRadioButton', '~> 1.4'
 
   # Pods for MitraRuma
 

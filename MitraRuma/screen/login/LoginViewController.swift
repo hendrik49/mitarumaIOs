@@ -8,6 +8,7 @@
 import UIKit
 import GoogleSignIn
 import Firebase
+import DLRadioButton
 
 class LoginViewController: UIViewController {
 
@@ -17,14 +18,24 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerLabel: UILabel!
     @IBOutlet weak var registerAskLabel: UILabel!
     @IBOutlet weak var signInGoogleView: UIView!
+    @IBOutlet weak var clientRadioButton: DLRadioButton!
+    @IBOutlet weak var applicatorRadioButton: DLRadioButton!
+    @IBOutlet weak var registerAsContainerVie: UIView!
+    
+    @IBOutlet weak var topRegisterAsConstraintLayout: NSLayoutConstraint!
     
     private var canRegisterOrLogin: Bool = false
-    private var state: String = "Register"
+    private var state: String = "Login"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneNumberInputView.delegate = self
-        phoneNumberInputView.setUpData(title: "No. HP", hint: "Masukkan no hp", type: .numberPad)
+        phoneNumberInputView.setUpData(hint: "Masukkan no hp", type: .numberPad)
+        
+        clientRadioButton.contentHorizontalAlignment = .left
+        applicatorRadioButton.contentHorizontalAlignment = .left
+        
+        switchState()
         
         switchLoginButton.onClick {
             if (self.state == "Register") {
@@ -57,11 +68,19 @@ class LoginViewController: UIViewController {
             registerButton.setTitle("Login", for: .normal)
             registerAskLabel.text = "Belum punya akun?"
             switchLoginButton.text = "Register"
+            registerAsContainerVie.isHidden = true
+            topRegisterAsConstraintLayout.constant = -registerAsContainerVie.frame.height
         } else {
             registerLabel.text = "Register"
             registerButton.setTitle("Register", for: .normal)
             registerAskLabel.text = "Sudah punya akun?"
             switchLoginButton.text = "Login"
+            registerAsContainerVie.isHidden = false
+            topRegisterAsConstraintLayout.constant = 16
+        }
+        
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
         }
     }
     

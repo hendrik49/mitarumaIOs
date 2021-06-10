@@ -16,7 +16,6 @@ class InputFieldView: UIView {
     @IBOutlet var view: UIView!
     @IBOutlet weak var borderView: UIView!
     @IBOutlet weak var inputTextField: UITextField!
-    @IBOutlet weak var titleLabel: UILabel!
     
     var delegate: InputFieldViewDelegate? = nil
     
@@ -35,8 +34,7 @@ class InputFieldView: UIView {
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v1]|", options: [], metrics: nil, views: ["v1": view!]))
     }
     
-    func setUpData(title: String, hint: String, type: UIKeyboardType? = nil) {
-        titleLabel.text = title
+    func setUpData(hint: String, type: UIKeyboardType? = nil) {
         inputTextField.attributedPlaceholder = NSAttributedString(string: hint)
         inputTextField.keyboardType = .default
         if let type = type {
