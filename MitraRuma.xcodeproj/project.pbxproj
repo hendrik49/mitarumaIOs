@@ -20,6 +20,14 @@
 		103AF92F266D33E7009C561B /* SingleInputFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103AF92E266D33E7009C561B /* SingleInputFieldView.xib */; };
 		10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A56AD4266E35F40019516A /* DashboardViewController.swift */; };
 		10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A56AD5266E35F40019516A /* DashboardViewController.xib */; };
+		10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */; };
+		10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */; };
+		10FAC8D9267264E000538D6C /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8D7267264E000538D6C /* SelectionTableViewCell.swift */; };
+		10FAC8DA267264E000538D6C /* SelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8D8267264E000538D6C /* SelectionTableViewCell.xib */; };
+		10FAC8DD267264ED00538D6C /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8DB267264ED00538D6C /* TitleTableViewCell.swift */; };
+		10FAC8DE267264ED00538D6C /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8DC267264ED00538D6C /* TitleTableViewCell.xib */; };
+		10FAC8E0267265D300538D6C /* UIPickerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8DF267265D300538D6C /* UIPickerEntity.swift */; };
+		10FAC8E22672672300538D6C /* SelectSkillPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8E12672672300538D6C /* SelectSkillPresenter.swift */; };
 		10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF114266A8AD0002640BE /* OnBoardingViewController.swift */; };
 		10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAF115266A8AD0002640BE /* OnBoardingViewController.xib */; };
 		10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF11E266A8C38002640BE /* UISliderEntity.swift */; };
@@ -49,6 +57,14 @@
 		103AF92E266D33E7009C561B /* SingleInputFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleInputFieldView.xib; sourceTree = "<group>"; };
 		10A56AD4266E35F40019516A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		10A56AD5266E35F40019516A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillViewController.swift; sourceTree = "<group>"; };
+		10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSkillViewController.xib; sourceTree = "<group>"; };
+		10FAC8D7267264E000538D6C /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
+		10FAC8D8267264E000538D6C /* SelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionTableViewCell.xib; sourceTree = "<group>"; };
+		10FAC8DB267264ED00538D6C /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		10FAC8DC267264ED00538D6C /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
+		10FAC8DF267265D300538D6C /* UIPickerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerEntity.swift; sourceTree = "<group>"; };
+		10FAC8E12672672300538D6C /* SelectSkillPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillPresenter.swift; sourceTree = "<group>"; };
 		10FAF114266A8AD0002640BE /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		10FAF115266A8AD0002640BE /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		10FAF11E266A8C38002640BE /* UISliderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISliderEntity.swift; sourceTree = "<group>"; };
@@ -118,9 +134,32 @@
 			path = dashboard;
 			sourceTree = "<group>";
 		};
+		10FAC8D1267261ED00538D6C /* selectskill */ = {
+			isa = PBXGroup;
+			children = (
+				10FAC8D6267264CD00538D6C /* cell */,
+				10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */,
+				10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */,
+				10FAC8E12672672300538D6C /* SelectSkillPresenter.swift */,
+			);
+			path = selectskill;
+			sourceTree = "<group>";
+		};
+		10FAC8D6267264CD00538D6C /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				10FAC8D7267264E000538D6C /* SelectionTableViewCell.swift */,
+				10FAC8D8267264E000538D6C /* SelectionTableViewCell.xib */,
+				10FAC8DB267264ED00538D6C /* TitleTableViewCell.swift */,
+				10FAC8DC267264ED00538D6C /* TitleTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		10FAF112266A8AAB002640BE /* screen */ = {
 			isa = PBXGroup;
 			children = (
+				10FAC8D1267261ED00538D6C /* selectskill */,
 				10A56AD3266E35E20019516A /* dashboard */,
 				103AF927266D32EF009C561B /* otp */,
 				103AF919266D1FA9009C561B /* login */,
@@ -152,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				10FAF11E266A8C38002640BE /* UISliderEntity.swift */,
+				10FAC8DF267265D300538D6C /* UIPickerEntity.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -280,13 +320,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */,
 				103AF92F266D33E7009C561B /* SingleInputFieldView.xib in Resources */,
 				103AF92B266D3305009C561B /* OTPViewController.xib in Resources */,
 				103AF918266D1AD9009C561B /* Colors.xcassets in Resources */,
+				10FAC8DA267264E000538D6C /* SelectionTableViewCell.xib in Resources */,
 				10FB8E72265FEAC9001D0E64 /* LaunchScreen.storyboard in Resources */,
 				103AF91D266D1FDF009C561B /* LoginViewController.xib in Resources */,
 				10FB8E6F265FEAC9001D0E64 /* Assets.xcassets in Resources */,
 				10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */,
+				10FAC8DE267264ED00538D6C /* TitleTableViewCell.xib in Resources */,
 				10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */,
 				10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */,
 				103AF922266D208E009C561B /* InputFieldView.xib in Resources */,
@@ -360,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				103AF91C266D1FDF009C561B /* LoginViewController.swift in Sources */,
+				10FAC8D9267264E000538D6C /* SelectionTableViewCell.swift in Sources */,
 				10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */,
 				103AF92A266D3305009C561B /* OTPViewController.swift in Sources */,
 				10FAF126266A9099002640BE /* UIGenerator.swift in Sources */,
@@ -367,12 +411,16 @@
 				10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */,
 				103AF92D266D33D6009C561B /* SingleInputFieldView.swift in Sources */,
 				10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */,
+				10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */,
 				103AF926266D2128009C561B /* TapGestureRecognizer.swift in Sources */,
 				10FB8E63265FEAC8001D0E64 /* AppDelegate.swift in Sources */,
+				10FAC8E22672672300538D6C /* SelectSkillPresenter.swift in Sources */,
 				10FAF122266A8EE4002640BE /* SliderContentCollectionViewCell.swift in Sources */,
+				10FAC8E0267265D300538D6C /* UIPickerEntity.swift in Sources */,
 				10FB8E65265FEAC8001D0E64 /* SceneDelegate.swift in Sources */,
 				103AF920266D2071009C561B /* InputFieldView.swift in Sources */,
 				103AF924266D20FE009C561B /* UIExtension.swift in Sources */,
+				10FAC8DD267264ED00538D6C /* TitleTableViewCell.swift in Sources */,
 				10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

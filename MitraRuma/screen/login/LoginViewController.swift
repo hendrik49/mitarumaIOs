@@ -88,7 +88,40 @@ class LoginViewController: UIViewController {
         registerButton.backgroundColor = canRegisterOrLogin ? UIColor(named: "blue_success") : UIColor(named: "gray_button")
     }
     
+    private func validateRegister() -> Bool {
+        if (applicatorRadioButton.isSelected) {
+            return true
+        }
+        
+        if (clientRadioButton.isSelected) {
+            return true
+        }
+        
+        return false
+    }
+    
     @IBAction func onRegisterClicked(_ sender: Any) {
+        if (state == "Register") {
+            if (validateRegister()) {
+                if (applicatorRadioButton.isSelected) {
+                    navigationController?.pushViewController(SelectSkillViewController(), animated: true)
+                } else {
+                    let navigationController: UINavigationController = UINavigationController(rootViewController: OTPViewController())
+                    navigationController.setNavigationBarHidden(true, animated: false)
+                    navigationController.setToolbarHidden(true, animated: false)
+                    navigationController.modalPresentationStyle = .fullScreen
+                    self.present(navigationController, animated: true, completion: nil)
+                }
+            } else {
+                
+            }
+        } else {
+            let navigationController: UINavigationController = UINavigationController(rootViewController: DashboardViewController())
+            navigationController.setNavigationBarHidden(true, animated: false)
+            navigationController.setToolbarHidden(true, animated: false)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
+        }
     }
 }
 
