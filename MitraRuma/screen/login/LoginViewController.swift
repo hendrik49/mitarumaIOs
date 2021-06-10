@@ -6,16 +6,17 @@
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var phoneNumberInputView: InputFieldView!
     @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var googleButton: UIView!
     @IBOutlet weak var switchLoginButton: UILabel!
     @IBOutlet weak var registerLabel: UILabel!
     @IBOutlet weak var registerAskLabel: UILabel!
-    @IBOutlet weak var registerWithGoogleLabel: UILabel!
+    @IBOutlet weak var signInGoogleView: UIView!
     
     private var canRegisterOrLogin: Bool = false
     private var state: String = "Register"
@@ -35,26 +36,30 @@ class LoginViewController: UIViewController {
             self.switchState()
         }
         
-        googleButton.onClick {
-            let navigationController: UINavigationController = UINavigationController(rootViewController: OTPViewController())
-            navigationController.setNavigationBarHidden(true, animated: false)
-            navigationController.setToolbarHidden(true, animated: false)
-            navigationController.modalPresentationStyle = .fullScreen
-            self.present(navigationController, animated: true, completion: nil)
+        signInGoogleView.onClick {
+            GIDSignIn.sharedInstance()?.signIn()
+//            let navigationController: UINavigationController = UINavigationController(rootViewController: OTPViewController())
+//            navigationController.setNavigationBarHidden(true, animated: false)
+//            navigationController.setToolbarHidden(true, animated: false)
+//            navigationController.modalPresentationStyle = .fullScreen
+//            self.present(navigationController, animated: true, completion: nil)
         }
+    }
+    
+    private func setUpGoogleSignIn() {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.delegate = self
     }
     
     private func switchState() {
         if (state == "Login") {
             registerLabel.text = "Login"
             registerButton.setTitle("Login", for: .normal)
-            registerWithGoogleLabel.text = "Login dengan Google"
             registerAskLabel.text = "Belum punya akun?"
             switchLoginButton.text = "Register"
         } else {
             registerLabel.text = "Register"
             registerButton.setTitle("Register", for: .normal)
-            registerWithGoogleLabel.text = "Register dengan Google"
             registerAskLabel.text = "Sudah punya akun?"
             switchLoginButton.text = "Login"
         }
@@ -65,6 +70,16 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func onRegisterClicked(_ sender: Any) {
+    }
+}
+
+extension LoginViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if (error != nil) {
+            return
+        }
+        
+        
     }
 }
 
