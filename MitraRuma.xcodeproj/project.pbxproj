@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		10173FA2267310920000DAFB /* SelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA1267310920000DAFB /* SelectionPresenter.swift */; };
 		10173FA4267311FA0000DAFB /* UIGroupEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA3267311FA0000DAFB /* UIGroupEntity.swift */; };
+		10173FA726731C7C0000DAFB /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA626731C7C0000DAFB /* ApiClient.swift */; };
+		10173FA926731C9C0000DAFB /* RequestCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA826731C9C0000DAFB /* RequestCaller.swift */; };
+		10173FAB26731CD10000DAFB /* RawResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FAA26731CD10000DAFB /* RawResponse.swift */; };
+		10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FAC26731D550000DAFB /* CustomUserDefaults.swift */; };
+		10173FAF26731E920000DAFB /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FAE26731E920000DAFB /* RequestModel.swift */; };
+		10173FB126731ECB0000DAFB /* UserApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB026731ECB0000DAFB /* UserApiClient.swift */; };
+		10173FB426731F780000DAFB /* CustomRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB326731F780000DAFB /* CustomRemoteEntity.swift */; };
+		10173FB626731F890000DAFB /* RemoteErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB526731F890000DAFB /* RemoteErrorEntity.swift */; };
+		10173FB826731FD80000DAFB /* RemoteUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB726731FD80000DAFB /* RemoteUserEntity.swift */; };
 		103AF918266D1AD9009C561B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103AF917266D1AD9009C561B /* Colors.xcassets */; };
 		103AF91C266D1FDF009C561B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AF91A266D1FDF009C561B /* LoginViewController.swift */; };
 		103AF91D266D1FDF009C561B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103AF91B266D1FDF009C561B /* LoginViewController.xib */; };
@@ -54,6 +63,15 @@
 /* Begin PBXFileReference section */
 		10173FA1267310920000DAFB /* SelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionPresenter.swift; sourceTree = "<group>"; };
 		10173FA3267311FA0000DAFB /* UIGroupEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGroupEntity.swift; sourceTree = "<group>"; };
+		10173FA626731C7C0000DAFB /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		10173FA826731C9C0000DAFB /* RequestCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCaller.swift; sourceTree = "<group>"; };
+		10173FAA26731CD10000DAFB /* RawResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawResponse.swift; sourceTree = "<group>"; };
+		10173FAC26731D550000DAFB /* CustomUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUserDefaults.swift; sourceTree = "<group>"; };
+		10173FAE26731E920000DAFB /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		10173FB026731ECB0000DAFB /* UserApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiClient.swift; sourceTree = "<group>"; };
+		10173FB326731F780000DAFB /* CustomRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRemoteEntity.swift; sourceTree = "<group>"; };
+		10173FB526731F890000DAFB /* RemoteErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteErrorEntity.swift; sourceTree = "<group>"; };
+		10173FB726731FD80000DAFB /* RemoteUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserEntity.swift; sourceTree = "<group>"; };
 		103AF917266D1AD9009C561B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		103AF91A266D1FDF009C561B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		103AF91B266D1FDF009C561B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -112,6 +130,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10173FA526731C730000DAFB /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				10173FA626731C7C0000DAFB /* ApiClient.swift */,
+				10173FA826731C9C0000DAFB /* RequestCaller.swift */,
+				10173FAA26731CD10000DAFB /* RawResponse.swift */,
+				10173FAE26731E920000DAFB /* RequestModel.swift */,
+				10173FB026731ECB0000DAFB /* UserApiClient.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		10173FB226731F6F0000DAFB /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				10173FB326731F780000DAFB /* CustomRemoteEntity.swift */,
+				10173FB526731F890000DAFB /* RemoteErrorEntity.swift */,
+				10173FB726731FD80000DAFB /* RemoteUserEntity.swift */,
+			);
+			path = remote;
+			sourceTree = "<group>";
+		};
 		103AF919266D1FA9009C561B /* login */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +277,7 @@
 		10FAF11D266A8C28002640BE /* entity */ = {
 			isa = PBXGroup;
 			children = (
+				10173FB226731F6F0000DAFB /* remote */,
 				10FAF11E266A8C38002640BE /* UISliderEntity.swift */,
 				10FAC8DF267265D300538D6C /* UIPickerEntity.swift */,
 				10173FA3267311FA0000DAFB /* UIGroupEntity.swift */,
@@ -250,6 +291,7 @@
 				10FAF125266A9099002640BE /* UIGenerator.swift */,
 				103AF923266D20FE009C561B /* UIExtension.swift */,
 				103AF925266D2128009C561B /* TapGestureRecognizer.swift */,
+				10173FAC26731D550000DAFB /* CustomUserDefaults.swift */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -275,6 +317,7 @@
 		10FB8E61265FEAC8001D0E64 /* MitraRuma */ = {
 			isa = PBXGroup;
 			children = (
+				10173FA526731C730000DAFB /* manager */,
 				103AF91E266D2059009C561B /* view */,
 				10FAF124266A908A002640BE /* support */,
 				10FAF11D266A8C28002640BE /* entity */,
@@ -458,22 +501,31 @@
 				10FAC8D9267264E000538D6C /* SelectionTableViewCell.swift in Sources */,
 				10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */,
 				103AF92A266D3305009C561B /* OTPViewController.swift in Sources */,
+				10173FAF26731E920000DAFB /* RequestModel.swift in Sources */,
 				10173FA4267311FA0000DAFB /* UIGroupEntity.swift in Sources */,
 				10FAF126266A9099002640BE /* UIGenerator.swift in Sources */,
+				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
 				10FAC8EB2672740100538D6C /* SelectionViewController.swift in Sources */,
 				10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */,
+				10173FAB26731CD10000DAFB /* RawResponse.swift in Sources */,
 				10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */,
 				10FAC8F02672759100538D6C /* SearchTableViewCell.swift in Sources */,
 				103AF92D266D33D6009C561B /* SingleInputFieldView.swift in Sources */,
 				10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */,
 				10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */,
+				10173FB626731F890000DAFB /* RemoteErrorEntity.swift in Sources */,
 				103AF926266D2128009C561B /* TapGestureRecognizer.swift in Sources */,
 				10FB8E63265FEAC8001D0E64 /* AppDelegate.swift in Sources */,
 				10FAC8E22672672300538D6C /* SelectSkillPresenter.swift in Sources */,
+				10173FA926731C9C0000DAFB /* RequestCaller.swift in Sources */,
 				10FAF122266A8EE4002640BE /* SliderContentCollectionViewCell.swift in Sources */,
+				10173FB826731FD80000DAFB /* RemoteUserEntity.swift in Sources */,
+				10173FB426731F780000DAFB /* CustomRemoteEntity.swift in Sources */,
 				10FAC8E0267265D300538D6C /* UIPickerEntity.swift in Sources */,
 				10FB8E65265FEAC8001D0E64 /* SceneDelegate.swift in Sources */,
 				103AF920266D2071009C561B /* InputFieldView.swift in Sources */,
+				10173FA726731C7C0000DAFB /* ApiClient.swift in Sources */,
+				10173FB126731ECB0000DAFB /* UserApiClient.swift in Sources */,
 				10FAC8E62672723800538D6C /* CoverageViewController.swift in Sources */,
 				103AF924266D20FE009C561B /* UIExtension.swift in Sources */,
 				10FAC8DD267264ED00538D6C /* TitleTableViewCell.swift in Sources */,
