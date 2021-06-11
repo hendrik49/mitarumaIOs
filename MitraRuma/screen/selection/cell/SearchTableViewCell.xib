@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="KGk-i7-Jjw" customClass="SearchTableViewCell" customModule="MitraRuma" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih minimal 1 daerah operasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sT0-sR-Xfl">
+                        <rect key="frame" x="16" y="16" width="216.5" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZ3-5X-QNJ">
+                        <rect key="frame" x="16" y="42" width="288" height="54"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cari kota/kabupaten" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R6U-LG-fuD">
+                                <rect key="frame" x="8" y="18" width="239" height="18.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onSearchTextChanged:" destination="KGk-i7-Jjw" eventType="editingChanged" id="FKV-V8-90O"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75h-9X-JKE">
+                                <rect key="frame" x="255" y="14.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="ZrY-ri-AmI"/>
+                                    <constraint firstAttribute="height" constant="25" id="osm-9j-VOP"/>
+                                </constraints>
+                                <state key="normal" image="ic_search"/>
+                                <connections>
+                                    <action selector="onSearchClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cmP-hs-im9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R6U-LG-fuD" firstAttribute="leading" secondItem="cZ3-5X-QNJ" secondAttribute="leading" constant="8" id="B9n-ik-pcv"/>
+                            <constraint firstItem="75h-9X-JKE" firstAttribute="centerY" secondItem="cZ3-5X-QNJ" secondAttribute="centerY" id="KUd-Si-RsG"/>
+                            <constraint firstItem="75h-9X-JKE" firstAttribute="leading" secondItem="R6U-LG-fuD" secondAttribute="trailing" constant="8" id="QFM-Tu-X17"/>
+                            <constraint firstAttribute="trailing" secondItem="75h-9X-JKE" secondAttribute="trailing" constant="8" id="cGl-pA-3td"/>
+                            <constraint firstItem="R6U-LG-fuD" firstAttribute="centerY" secondItem="cZ3-5X-QNJ" secondAttribute="centerY" id="e7W-DB-AXX"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundTL" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundTR" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundBL" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundBR" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="gray_border"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cZ3-5X-QNJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="2ly-4H-SqS"/>
+                    <constraint firstItem="sT0-sR-Xfl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="CYl-9v-Dky"/>
+                    <constraint firstAttribute="trailing" secondItem="cZ3-5X-QNJ" secondAttribute="trailing" constant="16" id="UpX-IO-eMh"/>
+                    <constraint firstItem="cZ3-5X-QNJ" firstAttribute="top" secondItem="sT0-sR-Xfl" secondAttribute="bottom" constant="8" id="g77-IY-xrg"/>
+                    <constraint firstItem="sT0-sR-Xfl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qdM-0c-4oX"/>
+                    <constraint firstAttribute="bottom" secondItem="cZ3-5X-QNJ" secondAttribute="bottom" constant="16" id="zTg-Xe-vb2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="searchTextField" destination="R6U-LG-fuD" id="MaD-XC-xgZ"/>
+            </connections>
+            <point key="canvasLocation" x="-13.043478260869566" y="151.33928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_search" width="155" height="155"/>
+        <namedColor name="gray_border">
+            <color red="0.097999997437000275" green="0.097999997437000275" blue="0.097999997437000275" alpha="0.31999999284744263" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

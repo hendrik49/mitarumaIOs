@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectionViewController" customModule="MitraRuma" customModuleProvider="target">
+            <connections>
+                <outlet property="coverageInformationLabel" destination="v5y-OG-Aom" id="Y47-kg-8Dg"/>
+                <outlet property="nextButton" destination="dBl-EI-2xn" id="Y8v-Fn-eWo"/>
+                <outlet property="tableView" destination="btA-Jp-1YN" id="R1p-P2-KVc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBI-z1-EqC">
+                    <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOl-eF-qOt">
+                            <rect key="frame" x="16" y="15" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="GXK-ce-KVX"/>
+                                <constraint firstAttribute="height" constant="30" id="owR-wI-DeD"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="xmark" catalog="system"/>
+                            <connections>
+                                <action selector="onBackPressed:" destination="-1" eventType="touchUpInside" id="rvR-0s-oht"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilih Kota/Kabupaten" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCu-gG-tmy">
+                            <rect key="frame" x="62" y="20" width="170" height="20.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkC-d0-UVE">
+                            <rect key="frame" x="0.0" y="59" width="414" height="1"/>
+                            <color key="backgroundColor" name="gray_button"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="tWs-MC-CLO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="oOl-eF-qOt" firstAttribute="centerY" secondItem="MBI-z1-EqC" secondAttribute="centerY" id="2uH-BU-rFQ"/>
+                        <constraint firstAttribute="bottom" secondItem="tkC-d0-UVE" secondAttribute="bottom" id="C13-mw-06B"/>
+                        <constraint firstItem="oOl-eF-qOt" firstAttribute="leading" secondItem="MBI-z1-EqC" secondAttribute="leading" constant="16" id="FRr-4A-e7g"/>
+                        <constraint firstItem="tkC-d0-UVE" firstAttribute="leading" secondItem="MBI-z1-EqC" secondAttribute="leading" id="dOY-K1-zTi"/>
+                        <constraint firstAttribute="height" constant="60" id="kFT-gj-K8d"/>
+                        <constraint firstItem="GCu-gG-tmy" firstAttribute="leading" secondItem="oOl-eF-qOt" secondAttribute="trailing" constant="16" id="ke2-9K-9QT"/>
+                        <constraint firstAttribute="trailing" secondItem="tkC-d0-UVE" secondAttribute="trailing" id="oWa-SE-d3O"/>
+                        <constraint firstItem="GCu-gG-tmy" firstAttribute="centerY" secondItem="MBI-z1-EqC" secondAttribute="centerY" id="wEi-0b-qzL"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6h3-Gu-b4i">
+                    <rect key="frame" x="0.0" y="764" width="414" height="98"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kamu memilih 0 kota/kabupaten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5y-OG-Aom">
+                            <rect key="frame" x="16" y="8" width="219.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBl-EI-2xn">
+                            <rect key="frame" x="16" y="42" width="382" height="40"/>
+                            <color key="backgroundColor" name="red_active"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="mm3-xU-B6o"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Lanjut">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundTL" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundTR" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundBL" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundBR" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onNextClicked:" destination="-1" eventType="touchUpInside" id="4bu-zi-3vQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="v5y-OG-Aom" firstAttribute="leading" secondItem="6h3-Gu-b4i" secondAttribute="leading" constant="16" id="33v-xg-nHa"/>
+                        <constraint firstItem="dBl-EI-2xn" firstAttribute="top" secondItem="v5y-OG-Aom" secondAttribute="bottom" constant="16" id="7f5-mi-K8D"/>
+                        <constraint firstAttribute="bottom" secondItem="dBl-EI-2xn" secondAttribute="bottom" constant="16" id="FIJ-FR-Lcb"/>
+                        <constraint firstAttribute="trailing" secondItem="dBl-EI-2xn" secondAttribute="trailing" constant="16" id="g8T-t6-4lr"/>
+                        <constraint firstItem="v5y-OG-Aom" firstAttribute="top" secondItem="6h3-Gu-b4i" secondAttribute="top" constant="8" id="wbk-Ks-W8a"/>
+                        <constraint firstItem="dBl-EI-2xn" firstAttribute="leading" secondItem="6h3-Gu-b4i" secondAttribute="leading" constant="16" id="ybe-7s-xNb"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="btA-Jp-1YN">
+                    <rect key="frame" x="0.0" y="104" width="414" height="660"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="btA-Jp-1YN" firstAttribute="top" secondItem="MBI-z1-EqC" secondAttribute="bottom" id="5CZ-ha-ByK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="6h3-Gu-b4i" secondAttribute="leading" id="6qW-Ut-5Q5"/>
+                <constraint firstItem="btA-Jp-1YN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="A4F-b0-KbJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="MBI-z1-EqC" secondAttribute="leading" id="Deq-Ok-n2i"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="btA-Jp-1YN" secondAttribute="trailing" id="Pdm-XW-gvj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MBI-z1-EqC" secondAttribute="trailing" id="VRe-ec-MuO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6h3-Gu-b4i" secondAttribute="trailing" id="cas-Qm-9zf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6h3-Gu-b4i" secondAttribute="bottom" id="flZ-1m-sc0"/>
+                <constraint firstItem="MBI-z1-EqC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="iST-dE-r3p"/>
+                <constraint firstItem="6h3-Gu-b4i" firstAttribute="top" secondItem="btA-Jp-1YN" secondAttribute="bottom" id="rvy-9v-pCK"/>
+            </constraints>
+            <point key="canvasLocation" x="-12" y="110"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="gray_button">
+            <color red="0.50999999046325684" green="0.50999999046325684" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="red_active">
+            <color red="0.92199999094009399" green="0.34099999070167542" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

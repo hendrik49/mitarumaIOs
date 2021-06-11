@@ -35,7 +35,7 @@ class SelectSkillViewController: UIViewController {
     }
     
     @IBAction func onNextClicked(_ sender: Any) {
-        
+        navigationController?.pushViewController(SelectionViewController(), animated: true)
     }
     
     private func setUpTableView() {
