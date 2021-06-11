@@ -28,11 +28,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbE-M7-Ntf">
                     <rect key="frame" x="358" y="60" width="40" height="40"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_notification" translatesAutoresizingMaskIntoConstraints="NO" id="NSl-Hz-UOu">
-                            <rect key="frame" x="7.5" y="7.5" width="25" height="25"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_notification" translatesAutoresizingMaskIntoConstraints="NO" id="NSl-Hz-UOu">
+                            <rect key="frame" x="10" y="10" width="20" height="20"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="25" id="m2W-vC-Bot"/>
-                                <constraint firstAttribute="width" constant="25" id="ql0-lt-z2E"/>
+                                <constraint firstAttribute="height" constant="20" id="m2W-vC-Bot"/>
+                                <constraint firstAttribute="width" constant="20" id="ql0-lt-z2E"/>
                             </constraints>
                         </imageView>
                     </subviews>
@@ -80,24 +80,24 @@
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="30"/>
+                            <real key="value" value="22.5"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="roundTL" value="YES"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="roundTR" value="YES"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="roundBL" value="YES"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="roundBR" value="YES"/>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBound" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBound" value="NO"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                            <real key="value" value="1"/>
+                            <real key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
-                            <point key="value" x="0.0" y="1"/>
+                            <point key="value" x="0.0" y="0.0"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                            <real key="value" value="1"/>
+                            <real key="value" value="0.69999999999999996"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
@@ -135,6 +135,38 @@
                     <color key="textColor" name="white"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cF6-09-z5g">
+                    <rect key="frame" x="340" y="788" width="50" height="50"/>
+                    <color key="backgroundColor" name="red_active"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="L6E-YV-GGK"/>
+                        <constraint firstAttribute="height" constant="50" id="feG-kg-3nK"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="plus" catalog="system"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundTL" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundTR" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundBL" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="roundBR" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.69999999999999996"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                            <point key="value" x="0.0" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBound" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -147,7 +179,9 @@
                 <constraint firstItem="MAP-r8-mdW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8vg-ki-feO"/>
                 <constraint firstItem="MAP-r8-mdW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IVr-0p-qke"/>
                 <constraint firstItem="Bat-6P-IfD" firstAttribute="trailing" secondItem="6rr-Pe-Aro" secondAttribute="trailing" id="R2g-Ym-5Pd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cF6-09-z5g" secondAttribute="bottom" constant="24" id="VER-Sq-fc6"/>
                 <constraint firstItem="PgR-NI-WhE" firstAttribute="top" secondItem="Bat-6P-IfD" secondAttribute="bottom" constant="16" id="aBi-mM-Ihq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cF6-09-z5g" secondAttribute="trailing" constant="24" id="aFc-6l-RQi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6rr-Pe-Aro" secondAttribute="trailing" constant="16" id="aeh-DU-udA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jbE-M7-Ntf" secondAttribute="trailing" constant="16" id="b3G-T4-iSb"/>
                 <constraint firstItem="jbE-M7-Ntf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="bC1-18-8BP"/>
@@ -167,11 +201,15 @@
         <image name="ic_header" width="386.5" height="200.5"/>
         <image name="ic_notification" width="16.5" height="16.5"/>
         <image name="ic_search" width="155" height="155"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="red_active">
+            <color red="0.92199999094009399" green="0.34099999070167542" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="yellow">
-            <color red="0.99607843137254903" green="0.86274509803921573" blue="0.45098039215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.99599999189376831" green="0.86299997568130493" blue="0.45100000500679016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
