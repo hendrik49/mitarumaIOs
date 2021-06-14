@@ -24,4 +24,12 @@ class LoginPresenter {
             self.delegate.failed(message: error)
         }
     }
+    
+    func requestRegister(phone: String) {
+        PhoneRegisterUseCase.shared.setParams(entity: ParamsLoginEntity(phone: phone)).execute { entity in
+            self.delegate.successLogin()
+        } failed: { error in
+            self.delegate.failed(message: error)
+        }
+    }
 }

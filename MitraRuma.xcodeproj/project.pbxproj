@@ -37,6 +37,7 @@
 		103AF92F266D33E7009C561B /* SingleInputFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103AF92E266D33E7009C561B /* SingleInputFieldView.xib */; };
 		10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A56AD4266E35F40019516A /* DashboardViewController.swift */; };
 		10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A56AD5266E35F40019516A /* DashboardViewController.xib */; };
+		10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */; };
 		10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */; };
 		10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */; };
 		10FAC8D9267264E000538D6C /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8D7267264E000538D6C /* SelectionTableViewCell.swift */; };
@@ -97,6 +98,7 @@
 		103AF92E266D33E7009C561B /* SingleInputFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleInputFieldView.xib; sourceTree = "<group>"; };
 		10A56AD4266E35F40019516A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		10A56AD5266E35F40019516A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterUseCase.swift; sourceTree = "<group>"; };
 		10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillViewController.swift; sourceTree = "<group>"; };
 		10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSkillViewController.xib; sourceTree = "<group>"; };
 		10FAC8D7267264E000538D6C /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				101A345D2677AF9800C396C0 /* base */,
 				101A34602677AFFE00C396C0 /* PhoneLoginUseCase.swift */,
+				10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				10FAC8E62672723800538D6C /* CoverageViewController.swift in Sources */,
 				103AF924266D20FE009C561B /* UIExtension.swift in Sources */,
 				101A345B2677AF3200C396C0 /* LoginPresenter.swift in Sources */,
+				10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */,
 				10FAC8DD267264ED00538D6C /* TitleTableViewCell.swift in Sources */,
 				10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */,
 			);

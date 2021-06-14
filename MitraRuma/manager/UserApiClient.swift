@@ -19,4 +19,9 @@ class UserApiClient {
         return apiClient.caller.call(request)
     }
     
+    func register(params: ParamsLoginEntity) -> Observable<Result<CustomRemoteEntity<RemoteUserEntity>, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .post, path: "user/register", payload: params.toDictionary()).asURLRequest()
+        return apiClient.caller.call(request)
+    }
+    
 }

@@ -109,7 +109,8 @@ class LoginViewController: UIViewController {
         if (state == "Register") {
             if (validateRegister()) {
                 if (applicatorRadioButton.isSelected) {
-                    navigationController?.pushViewController(SelectSkillViewController(), animated: true)
+                    presenter.requestRegister(phone: "+6285280555306")
+//                    navigationController?.pushViewController(SelectSkillViewController(), animated: true)
                 } else {
                     let navigationController: UINavigationController = UINavigationController(rootViewController: OTPViewController())
                     navigationController.setNavigationBarHidden(true, animated: false)
