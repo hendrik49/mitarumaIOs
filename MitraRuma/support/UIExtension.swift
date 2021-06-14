@@ -185,3 +185,9 @@ extension UIView {
         }
     }
 }
+
+extension Encodable {
+    func toDictionary() -> [String: Any] {
+        return try! JSONSerialization.jsonObject(with: JSONEncoder().encode(self), options: []) as! [String: Any]
+    }
+}

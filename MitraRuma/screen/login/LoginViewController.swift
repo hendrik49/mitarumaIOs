@@ -27,10 +27,14 @@ class LoginViewController: UIViewController {
     private var canRegisterOrLogin: Bool = false
     private var state: String = "Login"
     
+    private let presenter: LoginPresenter = LoginPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneNumberInputView.delegate = self
         phoneNumberInputView.setUpData(hint: "Masukkan no hp", type: .numberPad)
+        
+        presenter.delegate = self
         
         clientRadioButton.contentHorizontalAlignment = .left
         applicatorRadioButton.contentHorizontalAlignment = .left
@@ -117,11 +121,12 @@ class LoginViewController: UIViewController {
                 
             }
         } else {
-            let navigationController: UINavigationController = UINavigationController(rootViewController: DashboardViewController())
-            navigationController.setNavigationBarHidden(true, animated: false)
-            navigationController.setToolbarHidden(true, animated: false)
-            navigationController.modalPresentationStyle = .fullScreen
-            self.present(navigationController, animated: true, completion: nil)
+            presenter.requestLogin(phone: "+6285280555306")
+//            let navigationController: UINavigationController = UINavigationController(rootViewController: DashboardViewController())
+//            navigationController.setNavigationBarHidden(true, animated: false)
+//            navigationController.setToolbarHidden(true, animated: false)
+//            navigationController.modalPresentationStyle = .fullScreen
+//            self.present(navigationController, animated: true, completion: nil)
         }
     }
 }
@@ -133,6 +138,20 @@ extension LoginViewController: GIDSignInDelegate {
         }
         
         print("success")
+    }
+}
+
+extension LoginViewController: LoginPresenterDelegate {
+    func successLogin() {
+        print("success login")
+    }
+    
+    func successRegister() {
+        
+    }
+    
+    func failed(message: String) {
+        print("error \(message)")
     }
 }
 

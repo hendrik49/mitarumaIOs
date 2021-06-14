@@ -14,8 +14,8 @@ class UserApiClient {
     static var shared: UserApiClient = UserApiClient()
     private let apiClient: ApiClient = ApiClient.init()
     
-    func login() -> Observable<Result<CustomRemoteEntity<RemoteUserEntity>, RemoteErrorEntity>> {
-        let request = RequestModel(httpMethod: .post, path: "v1/auth", payload: nil).asURLRequest()
+    func login(params: ParamsLoginEntity) -> Observable<Result<CustomRemoteEntity<RemoteUserEntity>, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .post, path: "user/login", payload: params.toDictionary()).asURLRequest()
         return apiClient.caller.call(request)
     }
     

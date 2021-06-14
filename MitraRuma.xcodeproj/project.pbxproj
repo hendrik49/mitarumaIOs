@@ -18,6 +18,12 @@
 		10173FB426731F780000DAFB /* CustomRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB326731F780000DAFB /* CustomRemoteEntity.swift */; };
 		10173FB626731F890000DAFB /* RemoteErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB526731F890000DAFB /* RemoteErrorEntity.swift */; };
 		10173FB826731FD80000DAFB /* RemoteUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB726731FD80000DAFB /* RemoteUserEntity.swift */; };
+		101A34552677A3D300C396C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A34532677A3D300C396C0 /* HomeViewController.swift */; };
+		101A34562677A3D300C396C0 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101A34542677A3D300C396C0 /* HomeViewController.xib */; };
+		101A34592677AE6100C396C0 /* ParamsLoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A34582677AE6100C396C0 /* ParamsLoginEntity.swift */; };
+		101A345B2677AF3200C396C0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A345A2677AF3200C396C0 /* LoginPresenter.swift */; };
+		101A345F2677AF9F00C396C0 /* BaseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A345E2677AF9F00C396C0 /* BaseUseCase.swift */; };
+		101A34612677AFFE00C396C0 /* PhoneLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A34602677AFFE00C396C0 /* PhoneLoginUseCase.swift */; };
 		103AF918266D1AD9009C561B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103AF917266D1AD9009C561B /* Colors.xcassets */; };
 		103AF91C266D1FDF009C561B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AF91A266D1FDF009C561B /* LoginViewController.swift */; };
 		103AF91D266D1FDF009C561B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103AF91B266D1FDF009C561B /* LoginViewController.xib */; };
@@ -72,6 +78,12 @@
 		10173FB326731F780000DAFB /* CustomRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRemoteEntity.swift; sourceTree = "<group>"; };
 		10173FB526731F890000DAFB /* RemoteErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteErrorEntity.swift; sourceTree = "<group>"; };
 		10173FB726731FD80000DAFB /* RemoteUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserEntity.swift; sourceTree = "<group>"; };
+		101A34532677A3D300C396C0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		101A34542677A3D300C396C0 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		101A34582677AE6100C396C0 /* ParamsLoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsLoginEntity.swift; sourceTree = "<group>"; };
+		101A345A2677AF3200C396C0 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		101A345E2677AF9F00C396C0 /* BaseUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUseCase.swift; sourceTree = "<group>"; };
+		101A34602677AFFE00C396C0 /* PhoneLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginUseCase.swift; sourceTree = "<group>"; };
 		103AF917266D1AD9009C561B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		103AF91A266D1FDF009C561B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		103AF91B266D1FDF009C561B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -152,11 +164,46 @@
 			path = remote;
 			sourceTree = "<group>";
 		};
+		101A34522677A3C100C396C0 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				101A34532677A3D300C396C0 /* HomeViewController.swift */,
+				101A34542677A3D300C396C0 /* HomeViewController.xib */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		101A34572677AE5300C396C0 /* params */ = {
+			isa = PBXGroup;
+			children = (
+				101A34582677AE6100C396C0 /* ParamsLoginEntity.swift */,
+			);
+			path = params;
+			sourceTree = "<group>";
+		};
+		101A345C2677AF9100C396C0 /* usecase */ = {
+			isa = PBXGroup;
+			children = (
+				101A345D2677AF9800C396C0 /* base */,
+				101A34602677AFFE00C396C0 /* PhoneLoginUseCase.swift */,
+			);
+			path = usecase;
+			sourceTree = "<group>";
+		};
+		101A345D2677AF9800C396C0 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				101A345E2677AF9F00C396C0 /* BaseUseCase.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
 		103AF919266D1FA9009C561B /* login */ = {
 			isa = PBXGroup;
 			children = (
 				103AF91A266D1FDF009C561B /* LoginViewController.swift */,
 				103AF91B266D1FDF009C561B /* LoginViewController.xib */,
+				101A345A2677AF3200C396C0 /* LoginPresenter.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -244,6 +291,7 @@
 		10FAF112266A8AAB002640BE /* screen */ = {
 			isa = PBXGroup;
 			children = (
+				101A34522677A3C100C396C0 /* home */,
 				10FAC8E8267273F400538D6C /* selection */,
 				10FAC8E32672722500538D6C /* coverage */,
 				10FAC8D1267261ED00538D6C /* selectskill */,
@@ -277,6 +325,7 @@
 		10FAF11D266A8C28002640BE /* entity */ = {
 			isa = PBXGroup;
 			children = (
+				101A34572677AE5300C396C0 /* params */,
 				10173FB226731F6F0000DAFB /* remote */,
 				10FAF11E266A8C38002640BE /* UISliderEntity.swift */,
 				10FAC8DF267265D300538D6C /* UIPickerEntity.swift */,
@@ -317,6 +366,7 @@
 		10FB8E61265FEAC8001D0E64 /* MitraRuma */ = {
 			isa = PBXGroup;
 			children = (
+				101A345C2677AF9100C396C0 /* usecase */,
 				10173FA526731C730000DAFB /* manager */,
 				103AF91E266D2059009C561B /* view */,
 				10FAF124266A908A002640BE /* support */,
@@ -424,6 +474,7 @@
 				10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */,
 				10FAC8DE267264ED00538D6C /* TitleTableViewCell.xib in Resources */,
 				10FAC8E72672723800538D6C /* CoverageViewController.xib in Resources */,
+				101A34562677A3D300C396C0 /* HomeViewController.xib in Resources */,
 				10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */,
 				10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */,
 				103AF922266D208E009C561B /* InputFieldView.xib in Resources */,
@@ -501,6 +552,7 @@
 				10FAC8D9267264E000538D6C /* SelectionTableViewCell.swift in Sources */,
 				10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */,
 				103AF92A266D3305009C561B /* OTPViewController.swift in Sources */,
+				101A34552677A3D300C396C0 /* HomeViewController.swift in Sources */,
 				10173FAF26731E920000DAFB /* RequestModel.swift in Sources */,
 				10173FA4267311FA0000DAFB /* UIGroupEntity.swift in Sources */,
 				10FAF126266A9099002640BE /* UIGenerator.swift in Sources */,
@@ -513,11 +565,14 @@
 				103AF92D266D33D6009C561B /* SingleInputFieldView.swift in Sources */,
 				10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */,
 				10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */,
+				101A345F2677AF9F00C396C0 /* BaseUseCase.swift in Sources */,
 				10173FB626731F890000DAFB /* RemoteErrorEntity.swift in Sources */,
 				103AF926266D2128009C561B /* TapGestureRecognizer.swift in Sources */,
+				101A34592677AE6100C396C0 /* ParamsLoginEntity.swift in Sources */,
 				10FB8E63265FEAC8001D0E64 /* AppDelegate.swift in Sources */,
 				10FAC8E22672672300538D6C /* SelectSkillPresenter.swift in Sources */,
 				10173FA926731C9C0000DAFB /* RequestCaller.swift in Sources */,
+				101A34612677AFFE00C396C0 /* PhoneLoginUseCase.swift in Sources */,
 				10FAF122266A8EE4002640BE /* SliderContentCollectionViewCell.swift in Sources */,
 				10173FB826731FD80000DAFB /* RemoteUserEntity.swift in Sources */,
 				10173FB426731F780000DAFB /* CustomRemoteEntity.swift in Sources */,
@@ -528,6 +583,7 @@
 				10173FB126731ECB0000DAFB /* UserApiClient.swift in Sources */,
 				10FAC8E62672723800538D6C /* CoverageViewController.swift in Sources */,
 				103AF924266D20FE009C561B /* UIExtension.swift in Sources */,
+				101A345B2677AF3200C396C0 /* LoginPresenter.swift in Sources */,
 				10FAC8DD267264ED00538D6C /* TitleTableViewCell.swift in Sources */,
 				10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */,
 			);
