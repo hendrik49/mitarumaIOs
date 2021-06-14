@@ -35,6 +35,7 @@ class LoginViewController: UIViewController {
         clientRadioButton.contentHorizontalAlignment = .left
         applicatorRadioButton.contentHorizontalAlignment = .left
         
+        setUpGoogleSignIn()
         switchState()
         
         switchLoginButton.onClick {
@@ -131,7 +132,7 @@ extension LoginViewController: GIDSignInDelegate {
             return
         }
         
-        
+        print("success")
     }
 }
 

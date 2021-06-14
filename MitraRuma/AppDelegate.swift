@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        GIDSignIn.sharedInstance().clientID = "1093399362978-vqv448tee09h58e1m0h967q98lte94aj.apps.googleusercontent.com"
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         let viewController = OnBoardingViewController.init()
