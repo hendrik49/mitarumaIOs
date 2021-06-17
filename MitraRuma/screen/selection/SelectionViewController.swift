@@ -13,6 +13,8 @@ class SelectionViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
     
+    var phoneNumber: String = ""
+    var skillSetList: [String] = []
     private let presenter: SelectionPresenter = SelectionPresenter()
     
     override func viewDidLoad() {
@@ -73,7 +75,7 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
                 } else if (tempIndex <= entity.child.count) {
                     let cell: SelectionTableViewCell = tableView.dequeueReusableCell(withIdentifier: String(describing: SelectionTableViewCell.self), for: indexPath) as! SelectionTableViewCell
                     cell.delegate = self
-                    cell.setUpData(entity: entity.child[tempIndex - 1], isSelected: false)
+                    cell.setUpData(entity: entity.child[tempIndex - 1])
                     return cell
                 } else {
                     tempIndex -= entity.child.count + 1
@@ -95,6 +97,25 @@ extension SelectionViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if (indexPath.row != 0) {
+            var tempIndex = indexPath.row - 1
+            for entity in presenter.list {
+                if (tempIndex <= entity.child.count) {
+                    if let index = presenter.list.firstIndex(where: { $0.title == entity.title }) {
+                        presenter.list[index].child[tempIndex - 1].isSelected = !presenter.list[index].child[tempIndex - 1].isSelected
+                        tableView.reloadData()
+                        return
+                    }
+                } else {
+                    tempIndex -= entity.child.count + 1
+                }
+            }
+        }
+    }
 }
 
 extension SelectionViewController: SearchTableViewCellDelegate {
@@ -105,6 +126,22 @@ extension SelectionViewController: SearchTableViewCellDelegate {
 
 extension SelectionViewController: OnItemSelectedDelegate {
     func onItemSelected(entity: UIPickerEntity) {
+        var groupIndex: Int = 0
+        var childIndex: Int = 0
         
+        presenter.list.forEach { groupEntity in
+            groupEntity.child.forEach { tempEntity in
+                if (entity.name == tempEntity.name) {
+                    presenter.list[groupIndex].child[childIndex].isSelected = !presenter.list[groupIndex].child[childIndex].isSelected
+                    tableView.reloadData()
+                    return
+                }
+                
+                childIndex += 1
+            }
+            
+            groupIndex += 1
+            childIndex = 0
+        }
     }
 }

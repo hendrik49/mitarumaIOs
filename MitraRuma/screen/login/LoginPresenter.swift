@@ -18,7 +18,7 @@ class LoginPresenter {
     var delegate: LoginPresenterDelegate!
     
     func requestLogin(phone: String) {
-        PhoneLoginUseCase.shared.setParams(entity: ParamsLoginEntity(phone: changePhoneNumber(phoneNumber: phone))).execute { entity in
+        PhoneLoginUseCase.shared.setParams(entity: ParamsLoginEntity(phone: UIGenerator.changePhoneNumber(phoneNumber: phone))).execute { entity in
             self.delegate.successLogin()
         } failed: { error in
             self.delegate.failed(message: error)
@@ -26,14 +26,10 @@ class LoginPresenter {
     }
     
     func requestRegister(phone: String, isApplicator: Bool) {
-        PhoneRegisterUseCase.shared.setParams(entity: ParamsLoginEntity(phone: changePhoneNumber(phoneNumber: phone))).execute { entity in
+        PhoneRegisterUseCase.shared.setParams(entity: ParamsLoginEntity(phone: UIGenerator.changePhoneNumber(phoneNumber: phone))).execute { entity in
             self.delegate.successRegister(isApplicator: isApplicator)
         } failed: { error in
             self.delegate.failed(message: error)
         }
-    }
-    
-    private func changePhoneNumber(phoneNumber: String) -> String {
-        return phoneNumber.replace("+62", at: 0)
     }
 }

@@ -11,4 +11,8 @@ struct UIPickerEntity {
     var id: String = ""
     var name: String = ""
     var isSelected: Bool = false
+    
+    func copy() -> UIPickerEntity {
+        return self
+    }
 }

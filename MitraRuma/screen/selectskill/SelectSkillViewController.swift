@@ -15,6 +15,8 @@ class SelectSkillViewController: UIViewController {
     
     private let presenter: SelectSkillPresenter = SelectSkillPresenter()
     
+    var phoneNumber: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +37,17 @@ class SelectSkillViewController: UIViewController {
     }
     
     @IBAction func onNextClicked(_ sender: Any) {
-        navigationController?.pushViewController(SelectionViewController(), animated: true)
+        var skillSetList: [String] = []
+        presenter.skillList.forEach { entity in
+            if (entity.isSelected) {
+                skillSetList.append(entity.name)
+            }
+        }
+        
+        let viewController: SelectionViewController = SelectionViewController()
+        viewController.phoneNumber = phoneNumber
+        viewController.skillSetList = skillSetList
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func setUpTableView() {
@@ -57,13 +69,9 @@ extension SelectSkillViewController: UITableViewDelegate, UITableViewDataSource 
             let cell: TitleTableViewCell = tableView.dequeueReusableCell(withIdentifier: String(describing: TitleTableViewCell.self), for: indexPath) as! TitleTableViewCell
             return cell
         } else {
-            let isSelected = presenter.selectedSkillList.first { entity in
-                entity.id == presenter.skillList[indexPath.row - 1].id
-            }
-            
             let cell: SelectionTableViewCell = tableView.dequeueReusableCell(withIdentifier: String(describing: SelectionTableViewCell.self), for: indexPath) as! SelectionTableViewCell
             cell.delegate = self
-            cell.setUpData(entity: presenter.skillList[indexPath.row - 1], isSelected: isSelected != nil)
+            cell.setUpData(entity: presenter.skillList[indexPath.row - 1])
             return cell
         }
     }
@@ -72,13 +80,17 @@ extension SelectSkillViewController: UITableViewDelegate, UITableViewDataSource 
         if (indexPath.row != 0) {
             presenter.selectItem(entity: presenter.skillList[indexPath.row - 1])
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 extension SelectSkillViewController: SelectSkillPresenterDelegate {
     func shouldUpdateCounter() {
         tableView.reloadData()
-        selectedInformationLabel.text = "Kamu memilih \(presenter.selectedSkillList.count) skill"
+        
+        let count: Int = presenter.skillList.filter { $0.isSelected }.count
+        selectedInformationLabel.text = "Kamu memilih \(count) skill"
     }
 }
 

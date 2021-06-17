@@ -23,4 +23,8 @@ class UIGenerator {
         headerRequest["Authorization"] = "Bearer \(CustomUserDefaults.getAuthToken())"
         return headerRequest
     }
+    
+    static func changePhoneNumber(phoneNumber: String) -> String {
+        return phoneNumber.replace("+62", at: 0)
+    }
 }

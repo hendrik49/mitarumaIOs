@@ -39,6 +39,7 @@
 		1062B11B267B9888004C9858 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1062B119267B9888004C9858 /* BannerCollectionViewCell.xib */; };
 		1062B11D267B98E3004C9858 /* RemoteBannerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B11C267B98E3004C9858 /* RemoteBannerEntity.swift */; };
 		1062B11F267B99DF004C9858 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B11E267B99DF004C9858 /* DashboardPresenter.swift */; };
+		1062B121267BA405004C9858 /* ParamsExtensionAttributesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B120267BA405004C9858 /* ParamsExtensionAttributesEntity.swift */; };
 		10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A56AD4266E35F40019516A /* DashboardViewController.swift */; };
 		10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A56AD5266E35F40019516A /* DashboardViewController.xib */; };
 		10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */; };
@@ -105,6 +106,7 @@
 		1062B119267B9888004C9858 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		1062B11C267B98E3004C9858 /* RemoteBannerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBannerEntity.swift; sourceTree = "<group>"; };
 		1062B11E267B99DF004C9858 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		1062B120267BA405004C9858 /* ParamsExtensionAttributesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsExtensionAttributesEntity.swift; sourceTree = "<group>"; };
 		10A56AD4266E35F40019516A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		10A56AD5266E35F40019516A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterUseCase.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				101A34582677AE6100C396C0 /* ParamsLoginEntity.swift */,
+				1062B120267BA405004C9858 /* ParamsExtensionAttributesEntity.swift */,
 			);
 			path = params;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				103AF91C266D1FDF009C561B /* LoginViewController.swift in Sources */,
+				1062B121267BA405004C9858 /* ParamsExtensionAttributesEntity.swift in Sources */,
 				10173FA2267310920000DAFB /* SelectionPresenter.swift in Sources */,
 				10FAC8D9267264E000538D6C /* SelectionTableViewCell.swift in Sources */,
 				10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */,

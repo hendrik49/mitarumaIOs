@@ -10,9 +10,11 @@ import Foundation
 struct ParamsLoginEntity: Codable {
     var phone: String = ""
     var googleToken: String = ""
+    var extensionAttributes: ParamsExtensionAttributesEntity = ParamsExtensionAttributesEntity()
     
     enum CodingKeys: String, CodingKey {
         case phone = "phone_number"
         case googleToken = "google_token"
+        case extensionAttributes = "extension_attributes"
     }
 }

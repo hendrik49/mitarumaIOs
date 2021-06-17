@@ -28,9 +28,9 @@ class SelectionTableViewCell: UITableViewCell {
         delegate?.onItemSelected(entity: entity)
     }
     
-    func setUpData(entity: UIPickerEntity, isSelected: Bool) {
+    func setUpData(entity: UIPickerEntity) {
         self.entity = entity
         label.text = entity.name
-        checkBox.isChecked = isSelected
+        checkBox.isChecked = entity.isSelected
     }
 }

@@ -24,4 +24,8 @@ class UserApiClient {
         return apiClient.caller.call(request)
     }
     
+    func registerAsApplicator(params: ParamsLoginEntity) -> Observable<Result<CustomRemoteEntity<RemoteUserEntity>, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .post, path: "applicator/register", payload: params.toDictionary()).asURLRequest()
+        return apiClient.caller.call(request)
+    }
 }

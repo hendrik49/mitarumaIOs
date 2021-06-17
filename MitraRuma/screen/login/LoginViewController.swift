@@ -44,6 +44,8 @@ class LoginViewController: UIViewController {
         setUpGoogleSignIn()
         switchState()
         
+        loadingState(isLoading: false)
+        
         switchLoginButton.onClick {
             if (self.state == "Register") {
                 self.state = "Login"
@@ -55,14 +57,8 @@ class LoginViewController: UIViewController {
         }
         
         signInGoogleView.onClick {
-            self
-                .loadingState(isLoading: true)
+            self.loadingState(isLoading: true)
             GIDSignIn.sharedInstance()?.signIn()
-//            let navigationController: UINavigationController = UINavigationController(rootViewController: OTPViewController())
-//            navigationController.setNavigationBarHidden(true, animated: false)
-//            navigationController.setToolbarHidden(true, animated: false)
-//            navigationController.modalPresentationStyle = .fullScreen
-//            self.present(navigationController, animated: true, completion: nil)
         }
     }
     
@@ -117,6 +113,14 @@ class LoginViewController: UIViewController {
         self.present(navigationController, animated: true, completion: nil)
     }
     
+    private func goToHome() {
+        let navigationController: UINavigationController = UINavigationController(rootViewController: HomeViewController())
+        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.setToolbarHidden(true, animated: false)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
     private func loadingState(isLoading: Bool) {
         self.registerGoogleIndicatorView.isHidden = !isLoading
         self.registerPhoneIndicatorView.isHidden = !isLoading
@@ -129,17 +133,19 @@ class LoginViewController: UIViewController {
             loadingState(isLoading: true)
             if (state == "Register") {
                 if (validateRegister()) {
-                    presenter.requestRegister(phone: phoneNumberInputView.text, isApplicator: applicatorRadioButton.isSelected)
-                } else {
+                    if (applicatorRadioButton.isSelected) {
+                        loadingState(isLoading: false)
+                        
+                        let viewController: SelectSkillViewController = SelectSkillViewController()
+                        viewController.phoneNumber = phoneNumberInputView.text
+                        navigationController?.pushViewController(viewController, animated: true)
+                        return
+                    }
                     
+                    presenter.requestRegister(phone: phoneNumberInputView.text, isApplicator: applicatorRadioButton.isSelected)
                 }
             } else {
                 presenter.requestLogin(phone: phoneNumberInputView.text)
-//                let navigationController: UINavigationController = UINavigationController(rootViewController: HomeViewController())
-//                navigationController.setNavigationBarHidden(true, animated: false)
-//                navigationController.setToolbarHidden(true, animated: false)
-//                navigationController.modalPresentationStyle = .fullScreen
-//                self.present(navigationController, animated: true, completion: nil)
             }
         }
     }
@@ -162,12 +168,7 @@ extension LoginViewController: LoginPresenterDelegate {
     }
     
     func successRegister(isApplicator: Bool) {
-        if (isApplicator) {
-            loadingState(isLoading: false)
-            navigationController?.pushViewController(SelectSkillViewController(), animated: true)
-        } else {
-            goToOTPScreen()
-        }
+        goToOTPScreen()
     }
     
     func failed(message: String) {
