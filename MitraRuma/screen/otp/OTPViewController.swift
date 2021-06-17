@@ -18,10 +18,17 @@ class OTPViewController: UIViewController {
     @IBOutlet weak var otpWarningLabel: UILabel!
     @IBOutlet weak var otpResendButton: UIButton!
     
+    private let presenter: OTPPresenter = OTPPresenter()
     private var seconds: Int = 60
+    var shouldGoToHomeAfterSuccess: Bool = false
+    var phoneNumber: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter.phoneNumber = phoneNumber
+        presenter.delegate = self
+        
         otpField1View.id = "1"
         otpField2View.id = "2"
         otpField3View.id = "3"
@@ -43,6 +50,14 @@ class OTPViewController: UIViewController {
     
     private func setUpWording() {
         otpWarningLabel.text = "Kami telah mengirimkan kode OTP ke nomor anda (0\(seconds == 60 ? "1" : "0"):\(seconds == 60 ? "00" : "\(seconds)"))"
+    }
+    
+    private func goToHome() {
+        let navigationController: UINavigationController = UINavigationController(rootViewController: HomeViewController())
+        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.setToolbarHidden(true, animated: false)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true, completion: nil)
     }
     
     @IBAction func onResendOTPButton(_ sender: Any) {
@@ -92,12 +107,23 @@ extension OTPViewController: SingleInputFieldViewDelegate {
             }
         } else if (id == "6") {
             if (text.count == 1) {
-                // should send
                 let code = "\(otpField1View.getText())\(otpField2View.getText())\(otpField3View.getText())\(otpField4View.getText())\(otpField5View.getText())\(otpField6View.getText())"
-                print(code)
+                presenter.sendOTP(otp: code)
             } else {
                 otpField5View.requestFocusTextField()
             }
         }
+    }
+}
+
+extension OTPViewController: OTPPresenterDelegate {
+    func successOTP() {
+        if (shouldGoToHomeAfterSuccess) {
+            goToHome()
+        }
+    }
+    
+    func failed(message: String) {
+        print(message)
     }
 }

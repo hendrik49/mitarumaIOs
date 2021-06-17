@@ -28,4 +28,9 @@ class UserApiClient {
         let request = RequestModel(httpMethod: .post, path: "applicator/register", payload: params.toDictionary()).asURLRequest()
         return apiClient.caller.call(request)
     }
+    
+    func sendOTP(params: ParamsOTPEntity) -> Observable<Result<CustomRemoteEntity<RemoteUserEntity>, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .post, path: "user/login/otp", payload: params.toDictionary()).asURLRequest()
+        return apiClient.caller.call(request)
+    }
 }

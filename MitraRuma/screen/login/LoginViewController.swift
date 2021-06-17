@@ -105,8 +105,11 @@ class LoginViewController: UIViewController {
         return false
     }
     
-    private func goToOTPScreen() {
-        let navigationController: UINavigationController = UINavigationController(rootViewController: OTPViewController())
+    private func goToOTPScreen(shouldGoToHomeAfterSuccessOTP: Bool) {
+        let viewController: OTPViewController = OTPViewController()
+        viewController.shouldGoToHomeAfterSuccess = shouldGoToHomeAfterSuccessOTP
+        
+        let navigationController: UINavigationController = UINavigationController(rootViewController: viewController)
         navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.setToolbarHidden(true, animated: false)
         navigationController.modalPresentationStyle = .fullScreen
@@ -164,11 +167,11 @@ extension LoginViewController: GIDSignInDelegate {
 
 extension LoginViewController: LoginPresenterDelegate {
     func successLogin() {
-        goToOTPScreen()
+        goToOTPScreen(shouldGoToHomeAfterSuccessOTP: true)
     }
     
     func successRegister(isApplicator: Bool) {
-        goToOTPScreen()
+        goToOTPScreen(shouldGoToHomeAfterSuccessOTP: false)
     }
     
     func failed(message: String) {

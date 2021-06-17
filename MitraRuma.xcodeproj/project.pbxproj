@@ -41,6 +41,9 @@
 		1062B11F267B99DF004C9858 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B11E267B99DF004C9858 /* DashboardPresenter.swift */; };
 		1062B121267BA405004C9858 /* ParamsExtensionAttributesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B120267BA405004C9858 /* ParamsExtensionAttributesEntity.swift */; };
 		1062B123267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B122267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift */; };
+		1062B125267BB29B004C9858 /* OTPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B124267BB29B004C9858 /* OTPPresenter.swift */; };
+		1062B127267BB2CA004C9858 /* ParamsOTPEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B126267BB2CA004C9858 /* ParamsOTPEntity.swift */; };
+		1062B129267BB330004C9858 /* SendOTPUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B128267BB330004C9858 /* SendOTPUseCase.swift */; };
 		10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A56AD4266E35F40019516A /* DashboardViewController.swift */; };
 		10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A56AD5266E35F40019516A /* DashboardViewController.xib */; };
 		10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */; };
@@ -109,6 +112,9 @@
 		1062B11E267B99DF004C9858 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 		1062B120267BA405004C9858 /* ParamsExtensionAttributesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsExtensionAttributesEntity.swift; sourceTree = "<group>"; };
 		1062B122267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterApplicatorUseCase.swift; sourceTree = "<group>"; };
+		1062B124267BB29B004C9858 /* OTPPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPresenter.swift; sourceTree = "<group>"; };
+		1062B126267BB2CA004C9858 /* ParamsOTPEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsOTPEntity.swift; sourceTree = "<group>"; };
+		1062B128267BB330004C9858 /* SendOTPUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOTPUseCase.swift; sourceTree = "<group>"; };
 		10A56AD4266E35F40019516A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		10A56AD5266E35F40019516A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterUseCase.swift; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 			children = (
 				101A34582677AE6100C396C0 /* ParamsLoginEntity.swift */,
 				1062B120267BA405004C9858 /* ParamsExtensionAttributesEntity.swift */,
+				1062B126267BB2CA004C9858 /* ParamsOTPEntity.swift */,
 			);
 			path = params;
 			sourceTree = "<group>";
@@ -206,6 +213,7 @@
 				101A34602677AFFE00C396C0 /* PhoneLoginUseCase.swift */,
 				10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */,
 				1062B122267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift */,
+				1062B128267BB330004C9858 /* SendOTPUseCase.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -244,6 +252,7 @@
 			children = (
 				103AF928266D3305009C561B /* OTPViewController.swift */,
 				103AF929266D3305009C561B /* OTPViewController.xib */,
+				1062B124267BB29B004C9858 /* OTPPresenter.swift */,
 			);
 			path = otp;
 			sourceTree = "<group>";
@@ -585,6 +594,8 @@
 				1062B121267BA405004C9858 /* ParamsExtensionAttributesEntity.swift in Sources */,
 				10173FA2267310920000DAFB /* SelectionPresenter.swift in Sources */,
 				10FAC8D9267264E000538D6C /* SelectionTableViewCell.swift in Sources */,
+				1062B125267BB29B004C9858 /* OTPPresenter.swift in Sources */,
+				1062B129267BB330004C9858 /* SendOTPUseCase.swift in Sources */,
 				10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */,
 				103AF92A266D3305009C561B /* OTPViewController.swift in Sources */,
 				101A34552677A3D300C396C0 /* HomeViewController.swift in Sources */,
@@ -597,6 +608,7 @@
 				10FAC8EB2672740100538D6C /* SelectionViewController.swift in Sources */,
 				1062B11A267B9888004C9858 /* BannerCollectionViewCell.swift in Sources */,
 				10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */,
+				1062B127267BB2CA004C9858 /* ParamsOTPEntity.swift in Sources */,
 				10173FAB26731CD10000DAFB /* RawResponse.swift in Sources */,
 				10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */,
 				10FAC8F02672759100538D6C /* SearchTableViewCell.swift in Sources */,
