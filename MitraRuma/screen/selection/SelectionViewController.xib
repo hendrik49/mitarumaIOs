@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectionViewController" customModule="MitraRuma" customModuleProvider="target">
             <connections>
                 <outlet property="coverageInformationLabel" destination="v5y-OG-Aom" id="Y47-kg-8Dg"/>
+                <outlet property="loadingRegisterIndicatorView" destination="sIk-tB-11V" id="bPy-XB-tmE"/>
                 <outlet property="nextButton" destination="dBl-EI-2xn" id="Y8v-Fn-eWo"/>
                 <outlet property="tableView" destination="btA-Jp-1YN" id="R1p-P2-KVc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -95,6 +96,9 @@
                                 <action selector="onNextClicked:" destination="-1" eventType="touchUpInside" id="4bu-zi-3vQ"/>
                             </connections>
                         </button>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sIk-tB-11V">
+                            <rect key="frame" x="197" y="52" width="20" height="20"/>
+                        </activityIndicatorView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
@@ -102,6 +106,8 @@
                         <constraint firstItem="dBl-EI-2xn" firstAttribute="top" secondItem="v5y-OG-Aom" secondAttribute="bottom" constant="16" id="7f5-mi-K8D"/>
                         <constraint firstAttribute="bottom" secondItem="dBl-EI-2xn" secondAttribute="bottom" constant="16" id="FIJ-FR-Lcb"/>
                         <constraint firstAttribute="trailing" secondItem="dBl-EI-2xn" secondAttribute="trailing" constant="16" id="g8T-t6-4lr"/>
+                        <constraint firstItem="sIk-tB-11V" firstAttribute="centerY" secondItem="dBl-EI-2xn" secondAttribute="centerY" id="iB4-bX-qhH"/>
+                        <constraint firstItem="sIk-tB-11V" firstAttribute="centerX" secondItem="dBl-EI-2xn" secondAttribute="centerX" id="iZg-d7-uXP"/>
                         <constraint firstItem="v5y-OG-Aom" firstAttribute="top" secondItem="6h3-Gu-b4i" secondAttribute="top" constant="8" id="wbk-Ks-W8a"/>
                         <constraint firstItem="dBl-EI-2xn" firstAttribute="leading" secondItem="6h3-Gu-b4i" secondAttribute="leading" constant="16" id="ybe-7s-xNb"/>
                     </constraints>

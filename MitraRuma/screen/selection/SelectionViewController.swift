@@ -12,6 +12,7 @@ class SelectionViewController: UIViewController {
     @IBOutlet weak var coverageInformationLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var loadingRegisterIndicatorView: UIActivityIndicatorView!
     
     var phoneNumber: String = ""
     var skillSetList: [String] = []
@@ -20,6 +21,7 @@ class SelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        presenter.delegate = self
         
         for a in 0 ..< 5 {
             var item = UIGroupEntity(title: "Title ke \(a + 1)", child: [])
@@ -40,13 +42,39 @@ class SelectionViewController: UIViewController {
         tableView.register(UINib(nibName: String(describing: TitleTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TitleTableViewCell.self))
         tableView.register(UINib(nibName: String(describing: SelectionTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SelectionTableViewCell.self))
     }
+    
+    private func goToOTPScreen() {
+        let navigationController: UINavigationController = UINavigationController(rootViewController: OTPViewController())
+        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.setToolbarHidden(true, animated: false)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
+    private func setLoadingState(isLoading: Bool) {
+        loadingRegisterIndicatorView.isHidden = !isLoading
+        nextButton.isHidden = isLoading
+    }
 
     @IBAction func onBackPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func onNextClicked(_ sender: Any) {
-        
+        setLoadingState(isLoading: true)
+        presenter.register(phoneNumber: phoneNumber, skillSet: skillSetList)
+    }
+}
+
+extension SelectionViewController: SelectionPresenterDelegate {
+    func successRegister() {
+        setLoadingState(isLoading: false)
+        goToOTPScreen()
+    }
+    
+    func failed(message: String) {
+        setLoadingState(isLoading: false)
+        print(message)
     }
 }
 

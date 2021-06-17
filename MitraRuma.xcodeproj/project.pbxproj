@@ -40,6 +40,7 @@
 		1062B11D267B98E3004C9858 /* RemoteBannerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B11C267B98E3004C9858 /* RemoteBannerEntity.swift */; };
 		1062B11F267B99DF004C9858 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B11E267B99DF004C9858 /* DashboardPresenter.swift */; };
 		1062B121267BA405004C9858 /* ParamsExtensionAttributesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B120267BA405004C9858 /* ParamsExtensionAttributesEntity.swift */; };
+		1062B123267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B122267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift */; };
 		10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A56AD4266E35F40019516A /* DashboardViewController.swift */; };
 		10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A56AD5266E35F40019516A /* DashboardViewController.xib */; };
 		10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */; };
@@ -107,6 +108,7 @@
 		1062B11C267B98E3004C9858 /* RemoteBannerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBannerEntity.swift; sourceTree = "<group>"; };
 		1062B11E267B99DF004C9858 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 		1062B120267BA405004C9858 /* ParamsExtensionAttributesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsExtensionAttributesEntity.swift; sourceTree = "<group>"; };
+		1062B122267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterApplicatorUseCase.swift; sourceTree = "<group>"; };
 		10A56AD4266E35F40019516A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		10A56AD5266E35F40019516A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterUseCase.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				101A345D2677AF9800C396C0 /* base */,
 				101A34602677AFFE00C396C0 /* PhoneLoginUseCase.swift */,
 				10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */,
+				1062B122267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				10FAF126266A9099002640BE /* UIGenerator.swift in Sources */,
 				1062B11F267B99DF004C9858 /* DashboardPresenter.swift in Sources */,
 				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
+				1062B123267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift in Sources */,
 				10FAC8EB2672740100538D6C /* SelectionViewController.swift in Sources */,
 				1062B11A267B9888004C9858 /* BannerCollectionViewCell.swift in Sources */,
 				10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */,
