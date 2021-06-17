@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BannerCollectionViewCell" customModule="MitraRuma" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="227"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="227"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGG-e7-e72">
+                        <rect key="frame" x="0.0" y="0.0" width="349" height="227"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xan-xZ-toR">
+                                <rect key="frame" x="0.0" y="0.0" width="349" height="227"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundTL" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundTR" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundBL" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundBR" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xan-xZ-toR" secondAttribute="bottom" id="JbH-ju-ORo"/>
+                            <constraint firstAttribute="trailing" secondItem="xan-xZ-toR" secondAttribute="trailing" id="V2h-CL-YZA"/>
+                            <constraint firstItem="xan-xZ-toR" firstAttribute="top" secondItem="ZGG-e7-e72" secondAttribute="top" id="XjH-2l-o3g"/>
+                            <constraint firstItem="xan-xZ-toR" firstAttribute="leading" secondItem="ZGG-e7-e72" secondAttribute="leading" id="aLp-1a-f6i"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZGG-e7-e72" secondAttribute="trailing" id="61W-Xz-CUI"/>
+                <constraint firstItem="ZGG-e7-e72" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9u8-av-NGU"/>
+                <constraint firstAttribute="bottom" secondItem="ZGG-e7-e72" secondAttribute="bottom" id="Lck-c0-dha"/>
+                <constraint firstItem="ZGG-e7-e72" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gWB-gO-Dud"/>
+            </constraints>
+            <size key="customSize" width="349" height="227"/>
+            <connections>
+                <outlet property="imageView" destination="xan-xZ-toR" id="bgn-qv-YUZ"/>
+            </connections>
+            <point key="canvasLocation" x="203.62318840579712" y="187.83482142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
