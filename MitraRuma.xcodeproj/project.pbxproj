@@ -64,6 +64,7 @@
 		10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 10FB8E6B265FEAC8001D0E64 /* MitraRuma.xcdatamodeld */; };
 		10FB8E6F265FEAC9001D0E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10FB8E6E265FEAC9001D0E64 /* Assets.xcassets */; };
 		10FB8E72265FEAC9001D0E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10FB8E70265FEAC9001D0E64 /* LaunchScreen.storyboard */; };
+		10FE9FD42678BC8200A005FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10FE9FD32678BC8200A005FA /* GoogleService-Info.plist */; };
 		43AD33C09F8573DB1155649C /* Pods_MitraRuma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A849433DFF8EFA459D38FE /* Pods_MitraRuma.framework */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +128,7 @@
 		10FB8E6E265FEAC9001D0E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10FB8E71265FEAC9001D0E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10FB8E73265FEAC9001D0E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10FE9FD32678BC8200A005FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6806E69678042BD95BDE0942 /* Pods-MitraRuma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MitraRuma.release.xcconfig"; path = "Target Support Files/Pods-MitraRuma/Pods-MitraRuma.release.xcconfig"; sourceTree = "<group>"; };
 		C5A849433DFF8EFA459D38FE /* Pods_MitraRuma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MitraRuma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACE7840FC85CD7C7558920D /* Pods-MitraRuma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MitraRuma.debug.xcconfig"; path = "Target Support Files/Pods-MitraRuma/Pods-MitraRuma.debug.xcconfig"; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 		10FB8E61265FEAC8001D0E64 /* MitraRuma */ = {
 			isa = PBXGroup;
 			children = (
+				10FE9FD32678BC8200A005FA /* GoogleService-Info.plist */,
 				101A345C2677AF9100C396C0 /* usecase */,
 				10173FA526731C730000DAFB /* manager */,
 				103AF91E266D2059009C561B /* view */,
@@ -475,6 +478,7 @@
 				103AF91D266D1FDF009C561B /* LoginViewController.xib in Resources */,
 				10FB8E6F265FEAC9001D0E64 /* Assets.xcassets in Resources */,
 				10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */,
+				10FE9FD42678BC8200A005FA /* GoogleService-Info.plist in Resources */,
 				10FAC8DE267264ED00538D6C /* TitleTableViewCell.xib in Resources */,
 				10FAC8E72672723800538D6C /* CoverageViewController.xib in Resources */,
 				101A34562677A3D300C396C0 /* HomeViewController.xib in Resources */,

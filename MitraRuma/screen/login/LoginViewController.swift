@@ -122,12 +122,12 @@ class LoginViewController: UIViewController {
                 
             }
         } else {
-            presenter.requestLogin(phone: "+6285280555306")
-//            let navigationController: UINavigationController = UINavigationController(rootViewController: DashboardViewController())
-//            navigationController.setNavigationBarHidden(true, animated: false)
-//            navigationController.setToolbarHidden(true, animated: false)
-//            navigationController.modalPresentationStyle = .fullScreen
-//            self.present(navigationController, animated: true, completion: nil)
+//            presenter.requestLogin(phone: "+6285280555306")
+            let navigationController: UINavigationController = UINavigationController(rootViewController: HomeViewController())
+            navigationController.setNavigationBarHidden(true, animated: false)
+            navigationController.setToolbarHidden(true, animated: false)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true, completion: nil)
         }
     }
 }
