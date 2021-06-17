@@ -17,6 +17,7 @@ class InputFieldView: UIView {
     @IBOutlet weak var borderView: UIView!
     @IBOutlet weak var inputTextField: UITextField!
     
+    var text: String = ""
     var delegate: InputFieldViewDelegate? = nil
     
     override init(frame: CGRect) {
@@ -43,6 +44,7 @@ class InputFieldView: UIView {
     }
     
     @IBAction func onTextFieldChanged(_ sender: Any) {
-        delegate?.onTextChanged(text: inputTextField.text ?? "")
+        text = inputTextField.text ?? ""
+        delegate?.onTextChanged(text: text)
     }
 }

@@ -17,7 +17,9 @@
                 <outlet property="registerAsContainerVie" destination="3Ds-e7-dOk" id="c6m-9p-bdD"/>
                 <outlet property="registerAskLabel" destination="Xru-Ob-wRq" id="71n-Vt-7NV"/>
                 <outlet property="registerButton" destination="2RL-It-s0K" id="XDH-pq-rCd"/>
+                <outlet property="registerGoogleIndicatorView" destination="Cch-lo-ZgK" id="hpE-lQ-gc5"/>
                 <outlet property="registerLabel" destination="6LN-Xn-QEP" id="YBl-R4-ePs"/>
+                <outlet property="registerPhoneIndicatorView" destination="ZSl-ER-eSc" id="UVf-CR-b1n"/>
                 <outlet property="signInGoogleView" destination="gQg-5W-C6L" id="CgH-ZJ-dB6"/>
                 <outlet property="switchLoginButton" destination="gFi-3Z-ypQ" id="cO1-ff-P5i"/>
                 <outlet property="topRegisterAsConstraintLayout" destination="egT-bO-inx" id="MqE-IG-LWE"/>
@@ -255,16 +257,24 @@
                         <constraint firstAttribute="height" constant="1" id="Hb6-uZ-1Y0"/>
                     </constraints>
                 </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Cch-lo-ZgK">
+                    <rect key="frame" x="197" y="463.5" width="20" height="20"/>
+                </activityIndicatorView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ZSl-ER-eSc">
+                    <rect key="frame" x="197" y="362.5" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="ZSl-ER-eSc" firstAttribute="centerY" secondItem="2RL-It-s0K" secondAttribute="centerY" id="3Ln-Nr-e3k"/>
                 <constraint firstItem="gQg-5W-C6L" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4IV-hz-iLT"/>
                 <constraint firstItem="6LN-Xn-QEP" firstAttribute="top" secondItem="G3J-FK-LcU" secondAttribute="bottom" constant="16" id="4hP-Ni-uV2"/>
                 <constraint firstItem="G3J-FK-LcU" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6PR-G5-ffy"/>
                 <constraint firstItem="6LN-Xn-QEP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="71e-WK-WLu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C4M-zk-Lev" secondAttribute="trailing" id="7qU-wo-Xut"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8UD-hL-Iqv" secondAttribute="trailing" id="ABj-1A-WRe"/>
+                <constraint firstItem="ZSl-ER-eSc" firstAttribute="centerX" secondItem="2RL-It-s0K" secondAttribute="centerX" id="Bko-Pz-idW"/>
                 <constraint firstItem="8UD-hL-Iqv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Cfs-Hv-3ZE"/>
                 <constraint firstItem="gQg-5W-C6L" firstAttribute="top" secondItem="RmC-Oc-l3K" secondAttribute="bottom" constant="16" id="Cyq-1K-qva"/>
                 <constraint firstItem="3Ds-e7-dOk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="E8u-Wv-7kU"/>
@@ -274,12 +284,14 @@
                 <constraint firstItem="2RL-It-s0K" firstAttribute="top" secondItem="3Ds-e7-dOk" secondAttribute="bottom" constant="16" id="YMt-gQ-JAp"/>
                 <constraint firstItem="hKj-y0-aAY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="alH-qV-DEm"/>
                 <constraint firstItem="RmC-Oc-l3K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dAG-Fm-ryV"/>
+                <constraint firstItem="Cch-lo-ZgK" firstAttribute="centerX" secondItem="gQg-5W-C6L" secondAttribute="centerX" id="dvi-i2-FxW"/>
                 <constraint firstItem="3Ds-e7-dOk" firstAttribute="top" secondItem="hKj-y0-aAY" secondAttribute="bottom" constant="16" id="egT-bO-inx"/>
                 <constraint firstItem="G3J-FK-LcU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="hpf-gr-QxV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RmC-Oc-l3K" secondAttribute="trailing" id="iv4-tN-Cqd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hKj-y0-aAY" secondAttribute="trailing" id="kZt-NQ-uuT"/>
                 <constraint firstItem="8UD-hL-Iqv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lzY-xc-6Pt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IHS-4B-qFq" secondAttribute="bottom" constant="16" id="oxq-lf-8JO"/>
+                <constraint firstItem="Cch-lo-ZgK" firstAttribute="centerY" secondItem="gQg-5W-C6L" secondAttribute="centerY" id="pjG-ga-qdl"/>
                 <constraint firstItem="IHS-4B-qFq" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="u5y-Eb-sfT"/>
                 <constraint firstItem="RmC-Oc-l3K" firstAttribute="top" secondItem="2RL-It-s0K" secondAttribute="bottom" constant="8" id="xQQ-rP-in2"/>
                 <constraint firstItem="IHS-4B-qFq" firstAttribute="top" secondItem="C4M-zk-Lev" secondAttribute="bottom" constant="16" id="yV8-aw-81z"/>

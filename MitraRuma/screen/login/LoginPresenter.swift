@@ -9,7 +9,7 @@ import Foundation
 
 protocol LoginPresenterDelegate {
     func successLogin()
-    func successRegister()
+    func successRegister(isApplicator: Bool)
     func failed(message: String)
 }
 
@@ -18,18 +18,22 @@ class LoginPresenter {
     var delegate: LoginPresenterDelegate!
     
     func requestLogin(phone: String) {
-        PhoneLoginUseCase.shared.setParams(entity: ParamsLoginEntity(phone: phone)).execute { entity in
+        PhoneLoginUseCase.shared.setParams(entity: ParamsLoginEntity(phone: changePhoneNumber(phoneNumber: phone))).execute { entity in
             self.delegate.successLogin()
         } failed: { error in
             self.delegate.failed(message: error)
         }
     }
     
-    func requestRegister(phone: String) {
-        PhoneRegisterUseCase.shared.setParams(entity: ParamsLoginEntity(phone: phone)).execute { entity in
-            self.delegate.successLogin()
+    func requestRegister(phone: String, isApplicator: Bool) {
+        PhoneRegisterUseCase.shared.setParams(entity: ParamsLoginEntity(phone: changePhoneNumber(phoneNumber: phone))).execute { entity in
+            self.delegate.successRegister(isApplicator: isApplicator)
         } failed: { error in
             self.delegate.failed(message: error)
         }
+    }
+    
+    private func changePhoneNumber(phoneNumber: String) -> String {
+        return phoneNumber.replace("+62", at: 0)
     }
 }

@@ -21,6 +21,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var clientRadioButton: DLRadioButton!
     @IBOutlet weak var applicatorRadioButton: DLRadioButton!
     @IBOutlet weak var registerAsContainerVie: UIView!
+    @IBOutlet weak var registerPhoneIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var registerGoogleIndicatorView: UIActivityIndicatorView!
     
     @IBOutlet weak var topRegisterAsConstraintLayout: NSLayoutConstraint!
     
@@ -53,6 +55,8 @@ class LoginViewController: UIViewController {
         }
         
         signInGoogleView.onClick {
+            self
+                .loadingState(isLoading: true)
             GIDSignIn.sharedInstance()?.signIn()
 //            let navigationController: UINavigationController = UINavigationController(rootViewController: OTPViewController())
 //            navigationController.setNavigationBarHidden(true, animated: false)
@@ -105,29 +109,38 @@ class LoginViewController: UIViewController {
         return false
     }
     
+    private func goToOTPScreen() {
+        let navigationController: UINavigationController = UINavigationController(rootViewController: OTPViewController())
+        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.setToolbarHidden(true, animated: false)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
+    private func loadingState(isLoading: Bool) {
+        self.registerGoogleIndicatorView.isHidden = !isLoading
+        self.registerPhoneIndicatorView.isHidden = !isLoading
+        self.registerButton.isHidden = isLoading
+        self.signInGoogleView.isHidden = isLoading
+    }
+    
     @IBAction func onRegisterClicked(_ sender: Any) {
-        if (state == "Register") {
-            if (validateRegister()) {
-                if (applicatorRadioButton.isSelected) {
-                    presenter.requestRegister(phone: "+6285280555306")
-//                    navigationController?.pushViewController(SelectSkillViewController(), animated: true)
+        if (canRegisterOrLogin) {
+            loadingState(isLoading: true)
+            if (state == "Register") {
+                if (validateRegister()) {
+                    presenter.requestRegister(phone: phoneNumberInputView.text, isApplicator: applicatorRadioButton.isSelected)
                 } else {
-                    let navigationController: UINavigationController = UINavigationController(rootViewController: OTPViewController())
-                    navigationController.setNavigationBarHidden(true, animated: false)
-                    navigationController.setToolbarHidden(true, animated: false)
-                    navigationController.modalPresentationStyle = .fullScreen
-                    self.present(navigationController, animated: true, completion: nil)
+                    
                 }
             } else {
-                
+                presenter.requestLogin(phone: phoneNumberInputView.text)
+//                let navigationController: UINavigationController = UINavigationController(rootViewController: HomeViewController())
+//                navigationController.setNavigationBarHidden(true, animated: false)
+//                navigationController.setToolbarHidden(true, animated: false)
+//                navigationController.modalPresentationStyle = .fullScreen
+//                self.present(navigationController, animated: true, completion: nil)
             }
-        } else {
-//            presenter.requestLogin(phone: "+6285280555306")
-            let navigationController: UINavigationController = UINavigationController(rootViewController: HomeViewController())
-            navigationController.setNavigationBarHidden(true, animated: false)
-            navigationController.setToolbarHidden(true, animated: false)
-            navigationController.modalPresentationStyle = .fullScreen
-            self.present(navigationController, animated: true, completion: nil)
         }
     }
 }
@@ -135,6 +148,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if (error != nil) {
+            loadingState(isLoading: false)
             return
         }
         
@@ -144,15 +158,20 @@ extension LoginViewController: GIDSignInDelegate {
 
 extension LoginViewController: LoginPresenterDelegate {
     func successLogin() {
-        print("success login")
+        goToOTPScreen()
     }
     
-    func successRegister() {
-        
+    func successRegister(isApplicator: Bool) {
+        if (isApplicator) {
+            loadingState(isLoading: false)
+            navigationController?.pushViewController(SelectSkillViewController(), animated: true)
+        } else {
+            goToOTPScreen()
+        }
     }
     
     func failed(message: String) {
-        print("error \(message)")
+        loadingState(isLoading: false)
     }
 }
 
