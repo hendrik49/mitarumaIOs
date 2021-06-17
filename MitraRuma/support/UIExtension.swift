@@ -191,3 +191,31 @@ extension Encodable {
         return try! JSONSerialization.jsonObject(with: JSONEncoder().encode(self), options: []) as! [String: Any]
     }
 }
+
+extension String {
+    func htmlToAttributedString(font: UIFont?) ->  NSAttributedString? {
+        guard
+            let data = data(using: .utf8)
+            else { return nil }
+        do {
+
+            let string = try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+
+            let newString = NSMutableAttributedString(attributedString: string)
+            string.enumerateAttributes(in: NSRange.init(location: 0, length: string.length), options: .reverse) { (_: [NSAttributedString.Key : Any], range, _) in
+                newString.removeAttribute(.foregroundColor, range: range)
+                newString.addAttribute(.foregroundColor, value: UIColor(red: CGFloat(0.098), green: CGFloat(0.165), blue: CGFloat(0.337), alpha: CGFloat(1)), range: range)
+                if let font = font {
+                    newString.removeAttribute(.font, range: range)
+                    newString.addAttribute(.font, value: font, range: range)
+                }
+            }
+        
+            return newString
+            
+        } catch let error as NSError {
+            print(error.localizedDescription)
+            return  nil
+        }
+    }
+}

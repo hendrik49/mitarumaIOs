@@ -171,18 +171,16 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="QXf-zM-zQM" firstAttribute="width" secondItem="kax-UW-rnx" secondAttribute="width" multiplier="1:3" id="2Ny-uc-4cm"/>
                                 <constraint firstAttribute="trailing" secondItem="QXf-zM-zQM" secondAttribute="trailing" id="41A-K6-Y6Z"/>
                                 <constraint firstAttribute="bottom" secondItem="eFf-0P-2nc" secondAttribute="bottom" id="78e-YX-dRj"/>
+                                <constraint firstItem="eFf-0P-2nc" firstAttribute="width" secondItem="kax-UW-rnx" secondAttribute="width" multiplier="1:3" id="GCf-ZI-vwd"/>
+                                <constraint firstItem="5Lk-dz-PV4" firstAttribute="width" secondItem="kax-UW-rnx" secondAttribute="width" multiplier="1:3" id="HoT-LC-W8S"/>
                                 <constraint firstItem="5Lk-dz-PV4" firstAttribute="top" secondItem="kax-UW-rnx" secondAttribute="top" id="J3O-r2-T3D"/>
-                                <constraint firstItem="QXf-zM-zQM" firstAttribute="height" secondItem="5Lk-dz-PV4" secondAttribute="height" id="JCc-CZ-JH8"/>
                                 <constraint firstItem="eFf-0P-2nc" firstAttribute="height" secondItem="kax-UW-rnx" secondAttribute="height" id="K71-UE-CBn"/>
                                 <constraint firstItem="eFf-0P-2nc" firstAttribute="top" secondItem="kax-UW-rnx" secondAttribute="top" id="VnP-gI-HXr"/>
-                                <constraint firstItem="5Lk-dz-PV4" firstAttribute="height" secondItem="kax-UW-rnx" secondAttribute="height" id="ZqI-UO-HQa"/>
-                                <constraint firstItem="QXf-zM-zQM" firstAttribute="width" secondItem="5Lk-dz-PV4" secondAttribute="width" id="dzx-nv-pJv"/>
                                 <constraint firstItem="5Lk-dz-PV4" firstAttribute="leading" secondItem="eFf-0P-2nc" secondAttribute="trailing" id="fOB-s6-RIL"/>
                                 <constraint firstItem="QXf-zM-zQM" firstAttribute="top" secondItem="kax-UW-rnx" secondAttribute="top" id="lSg-j7-rx2"/>
-                                <constraint firstItem="eFf-0P-2nc" firstAttribute="width" secondItem="kax-UW-rnx" secondAttribute="width" multiplier="1:3" id="lx1-Jx-HmA"/>
-                                <constraint firstItem="5Lk-dz-PV4" firstAttribute="width" secondItem="eFf-0P-2nc" secondAttribute="width" id="oft-z9-5qF"/>
                                 <constraint firstAttribute="bottom" secondItem="QXf-zM-zQM" secondAttribute="bottom" id="pLL-Vo-Zb1"/>
                                 <constraint firstItem="QXf-zM-zQM" firstAttribute="leading" secondItem="5Lk-dz-PV4" secondAttribute="trailing" id="r6r-hA-E26"/>
                                 <constraint firstAttribute="bottom" secondItem="5Lk-dz-PV4" secondAttribute="bottom" id="um2-GA-zUF"/>
