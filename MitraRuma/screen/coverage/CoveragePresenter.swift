@@ -10,11 +10,13 @@ import Foundation
 protocol CoveragePresenterDelegate {
     func successRegister()
     func failed(message: String)
+    func successFilter()
 }
 
 class CoveragePresenter {
     
     var list: [UIGroupEntity] = []
+    var viewedList: [UIGroupEntity] = []
     var delegate: CoveragePresenterDelegate!
     
     func register(phoneNumber: String, skillSet: [String]) {
@@ -23,6 +25,26 @@ class CoveragePresenter {
         } failed: { error in
             self.delegate.failed(message: error)
         }
+    }
+    
+    func onSearch(text: String) {
+        viewedList.removeAll()
+        if (text.count == 0) {
+            viewedList.append(contentsOf: list)
+            delegate.successFilter()
+            return
+        }
+        
+        list.forEach { groupEntity in
+            let result = groupEntity.child.filter { $0.name.contains(text) }
+            if (result.count >= 0) {
+                var tempGroupEntity: UIGroupEntity = UIGroupEntity(title: groupEntity.title, child: [])
+                tempGroupEntity.child.append(contentsOf: result)
+                viewedList.append(tempGroupEntity)
+            }
+        }
+        
+        delegate.successFilter()
     }
     
     private func buildExtensionAttributes(skillSet: [String]) -> [ParamsExtensionAttributesEntity] {

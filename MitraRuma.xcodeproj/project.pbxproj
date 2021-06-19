@@ -54,6 +54,8 @@
 		10BE32F4267DC58100639C61 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10BE32F2267DC58100639C61 /* NotificationTableViewCell.xib */; };
 		10BE32F6267DC6DE00639C61 /* RemoteNotificationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32F5267DC6DE00639C61 /* RemoteNotificationEntity.swift */; };
 		10BE32F8267DC81700639C61 /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32F7267DC81700639C61 /* NotificationPresenter.swift */; };
+		10BE32FD267DCB1100639C61 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32FB267DCB1100639C61 /* TransactionViewController.swift */; };
+		10BE32FE267DCB1100639C61 /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10BE32FC267DCB1100639C61 /* TransactionViewController.xib */; };
 		10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */; };
 		10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */; };
 		10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */; };
@@ -131,6 +133,8 @@
 		10BE32F2267DC58100639C61 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
 		10BE32F5267DC6DE00639C61 /* RemoteNotificationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationEntity.swift; sourceTree = "<group>"; };
 		10BE32F7267DC81700639C61 /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
+		10BE32FB267DCB1100639C61 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		10BE32FC267DCB1100639C61 /* TransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionViewController.xib; sourceTree = "<group>"; };
 		10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterUseCase.swift; sourceTree = "<group>"; };
 		10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillViewController.swift; sourceTree = "<group>"; };
 		10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSkillViewController.xib; sourceTree = "<group>"; };
@@ -312,6 +316,22 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		10BE32F9267DCAE100639C61 /* transaction */ = {
+			isa = PBXGroup;
+			children = (
+				10BE32FB267DCB1100639C61 /* TransactionViewController.swift */,
+				10BE32FC267DCB1100639C61 /* TransactionViewController.xib */,
+			);
+			path = transaction;
+			sourceTree = "<group>";
+		};
+		10BE32FA267DCAE500639C61 /* account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = account;
+			sourceTree = "<group>";
+		};
 		10FAC8D1267261ED00538D6C /* selectskill */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +377,8 @@
 		10FAF112266A8AAB002640BE /* screen */ = {
 			isa = PBXGroup;
 			children = (
+				10BE32FA267DCAE500639C61 /* account */,
+				10BE32F9267DCAE100639C61 /* transaction */,
 				10BE32EB267DC45800639C61 /* notification */,
 				101A34522677A3C100C396C0 /* home */,
 				10FAC8E8267273F400538D6C /* coverage */,
@@ -531,6 +553,7 @@
 				10FAC8EC2672740100538D6C /* CoverageViewController.xib in Resources */,
 				10FAC8F12672759100538D6C /* SearchTableViewCell.xib in Resources */,
 				10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */,
+				10BE32FE267DCB1100639C61 /* TransactionViewController.xib in Resources */,
 				103AF92F266D33E7009C561B /* SingleInputFieldView.xib in Resources */,
 				1062B11B267B9888004C9858 /* BannerCollectionViewCell.xib in Resources */,
 				10BE32F4267DC58100639C61 /* NotificationTableViewCell.xib in Resources */,
@@ -661,6 +684,7 @@
 				10173FB426731F780000DAFB /* CustomRemoteEntity.swift in Sources */,
 				10FAC8E0267265D300538D6C /* UIPickerEntity.swift in Sources */,
 				10FB8E65265FEAC8001D0E64 /* SceneDelegate.swift in Sources */,
+				10BE32FD267DCB1100639C61 /* TransactionViewController.swift in Sources */,
 				103AF920266D2071009C561B /* InputFieldView.swift in Sources */,
 				10173FA726731C7C0000DAFB /* ApiClient.swift in Sources */,
 				10173FB126731ECB0000DAFB /* UserApiClient.swift in Sources */,
