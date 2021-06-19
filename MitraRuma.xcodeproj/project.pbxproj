@@ -46,6 +46,8 @@
 		1062B129267BB330004C9858 /* SendOTPUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B128267BB330004C9858 /* SendOTPUseCase.swift */; };
 		10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A56AD4266E35F40019516A /* DashboardViewController.swift */; };
 		10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A56AD5266E35F40019516A /* DashboardViewController.xib */; };
+		10BE32E9267DB83600639C61 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32E7267DB83600639C61 /* CategoryCollectionViewCell.swift */; };
+		10BE32EA267DB83600639C61 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10BE32E8267DB83600639C61 /* CategoryCollectionViewCell.xib */; };
 		10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */; };
 		10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */; };
 		10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */; };
@@ -117,6 +119,8 @@
 		1062B128267BB330004C9858 /* SendOTPUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOTPUseCase.swift; sourceTree = "<group>"; };
 		10A56AD4266E35F40019516A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		10A56AD5266E35F40019516A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		10BE32E7267DB83600639C61 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		10BE32E8267DB83600639C61 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterUseCase.swift; sourceTree = "<group>"; };
 		10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillViewController.swift; sourceTree = "<group>"; };
 		10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSkillViewController.xib; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 			children = (
 				1062B118267B9888004C9858 /* BannerCollectionViewCell.swift */,
 				1062B119267B9888004C9858 /* BannerCollectionViewCell.xib */,
+				10BE32E7267DB83600639C61 /* CategoryCollectionViewCell.swift */,
+				10BE32E8267DB83600639C61 /* CategoryCollectionViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 				10FAC8DE267264ED00538D6C /* TitleTableViewCell.xib in Resources */,
 				10FAC8E72672723800538D6C /* CoverageViewController.xib in Resources */,
 				101A34562677A3D300C396C0 /* HomeViewController.xib in Resources */,
+				10BE32EA267DB83600639C61 /* CategoryCollectionViewCell.xib in Resources */,
 				10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */,
 				10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */,
 				103AF922266D208E009C561B /* InputFieldView.xib in Resources */,
@@ -602,6 +609,7 @@
 				10173FAF26731E920000DAFB /* RequestModel.swift in Sources */,
 				10173FA4267311FA0000DAFB /* UIGroupEntity.swift in Sources */,
 				10FAF126266A9099002640BE /* UIGenerator.swift in Sources */,
+				10BE32E9267DB83600639C61 /* CategoryCollectionViewCell.swift in Sources */,
 				1062B11F267B99DF004C9858 /* DashboardPresenter.swift in Sources */,
 				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
 				1062B123267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift in Sources */,

@@ -156,12 +156,12 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        loadingState(isLoading: false)
         if (error != nil) {
-            loadingState(isLoading: false)
             return
         }
         
-        print("success")
+        goToHome()
     }
 }
 

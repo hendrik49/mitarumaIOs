@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="bannerCollectionView" destination="6rr-Pe-Aro" id="Vfv-Nn-xuR"/>
                 <outlet property="bannerLabel" destination="NXD-gu-S1F" id="Qcj-Ne-oyR"/>
+                <outlet property="categoryCollectionView" destination="Pza-cL-Ihg" id="fci-64-o1U"/>
+                <outlet property="categoryHeightConstraint" destination="S0M-e2-ql0" id="ubq-vX-80R"/>
                 <outlet property="contentView" destination="fto-Mk-hps" id="XEp-pF-FDp"/>
                 <outlet property="pageControl" destination="Bat-6P-IfD" id="okO-F9-POn"/>
                 <outlet property="scrollView" destination="xdx-Nq-504" id="zbx-Hc-vHa"/>
@@ -207,6 +209,19 @@
                                         <constraint firstItem="NXD-gu-S1F" firstAttribute="top" secondItem="XPk-n2-u73" secondAttribute="top" constant="16" id="zyu-mc-c1A"/>
                                     </constraints>
                                 </view>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Pza-cL-Ihg">
+                                    <rect key="frame" x="24" y="403.5" width="366" height="128"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="128" id="S0M-e2-ql0"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Onq-3z-NB0">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -217,10 +232,12 @@
                                 <constraint firstItem="MAP-r8-mdW" firstAttribute="leading" secondItem="fto-Mk-hps" secondAttribute="leading" id="Dy4-6R-S48"/>
                                 <constraint firstAttribute="trailing" secondItem="6rr-Pe-Aro" secondAttribute="trailing" id="Fln-OH-Ery"/>
                                 <constraint firstAttribute="trailing" secondItem="Bat-6P-IfD" secondAttribute="trailing" id="Iyl-aF-uH7"/>
+                                <constraint firstItem="Pza-cL-Ihg" firstAttribute="top" secondItem="PgR-NI-WhE" secondAttribute="bottom" constant="8" id="MzW-zz-5wJ"/>
                                 <constraint firstItem="MAP-r8-mdW" firstAttribute="top" secondItem="fto-Mk-hps" secondAttribute="top" id="ULr-YQ-kC3"/>
                                 <constraint firstItem="k6b-KO-csC" firstAttribute="leading" secondItem="fto-Mk-hps" secondAttribute="leading" constant="24" id="UQw-yv-qEG"/>
                                 <constraint firstItem="ZmN-Ot-H3O" firstAttribute="leading" secondItem="fto-Mk-hps" secondAttribute="leading" constant="24" id="Va3-OI-9NM"/>
                                 <constraint firstItem="6rr-Pe-Aro" firstAttribute="top" secondItem="ZmN-Ot-H3O" secondAttribute="bottom" constant="16" id="Vvc-0e-7Ss"/>
+                                <constraint firstItem="Pza-cL-Ihg" firstAttribute="leading" secondItem="fto-Mk-hps" secondAttribute="leading" constant="24" id="WJh-8e-xWe"/>
                                 <constraint firstAttribute="bottom" secondItem="XPk-n2-u73" secondAttribute="bottom" constant="50" id="Xwz-4z-zvh"/>
                                 <constraint firstItem="gLT-uI-pR2" firstAttribute="leading" secondItem="fto-Mk-hps" secondAttribute="leading" constant="24" id="Z4t-Rh-adX"/>
                                 <constraint firstAttribute="trailing" secondItem="MAP-r8-mdW" secondAttribute="trailing" id="bXX-wN-PNH"/>
@@ -230,6 +247,8 @@
                                 <constraint firstAttribute="trailing" secondItem="jbE-M7-Ntf" secondAttribute="trailing" constant="24" id="h3Y-18-1td"/>
                                 <constraint firstItem="gLT-uI-pR2" firstAttribute="top" secondItem="jbE-M7-Ntf" secondAttribute="top" constant="10" id="hO1-gV-yeI"/>
                                 <constraint firstItem="6rr-Pe-Aro" firstAttribute="leading" secondItem="fto-Mk-hps" secondAttribute="leading" id="jXh-41-wmD"/>
+                                <constraint firstItem="XPk-n2-u73" firstAttribute="top" secondItem="Pza-cL-Ihg" secondAttribute="bottom" constant="18" id="kGW-oa-hZj"/>
+                                <constraint firstAttribute="trailing" secondItem="Pza-cL-Ihg" secondAttribute="trailing" constant="24" id="nru-Dr-ssp"/>
                                 <constraint firstItem="PgR-NI-WhE" firstAttribute="top" secondItem="Bat-6P-IfD" secondAttribute="bottom" id="ozT-5i-4od"/>
                                 <constraint firstItem="ZmN-Ot-H3O" firstAttribute="top" secondItem="MAP-r8-mdW" secondAttribute="bottom" constant="-30" id="txS-3H-Eka"/>
                                 <constraint firstItem="jbE-M7-Ntf" firstAttribute="leading" secondItem="k6b-KO-csC" secondAttribute="trailing" constant="16" id="xJc-Rx-ETF"/>
@@ -278,33 +297,16 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBound" value="NO"/>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Pza-cL-Ihg">
-                    <rect key="frame" x="24" y="449.5" width="366" height="128"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="128" id="S0M-e2-ql0"/>
-                    </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Onq-3z-NB0">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="xdx-Nq-504" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3A0-mQ-s7z"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pza-cL-Ihg" secondAttribute="trailing" constant="24" id="DxS-W6-x3n"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xdx-Nq-504" secondAttribute="bottom" id="Kvp-TQ-bC7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xdx-Nq-504" secondAttribute="trailing" id="ON2-6l-Ctd"/>
-                <constraint firstItem="Pza-cL-Ihg" firstAttribute="top" secondItem="PgR-NI-WhE" secondAttribute="bottom" constant="10" id="Ohn-9P-c5s"/>
                 <constraint firstItem="xdx-Nq-504" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QcD-V7-ast"/>
-                <constraint firstItem="Pza-cL-Ihg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="QzG-ur-4pd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cF6-09-z5g" secondAttribute="bottom" constant="24" id="VER-Sq-fc6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cF6-09-z5g" secondAttribute="trailing" constant="24" id="aFc-6l-RQi"/>
-                <constraint firstItem="XPk-n2-u73" firstAttribute="top" secondItem="Pza-cL-Ihg" secondAttribute="bottom" constant="16" id="ivE-jU-dOp"/>
             </constraints>
             <point key="canvasLocation" x="126" y="134"/>
         </view>
