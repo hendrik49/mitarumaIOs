@@ -15,6 +15,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    @IBOutlet weak var notificationView: UIView!
     
     @IBOutlet weak var categoryHeightConstraint: NSLayoutConstraint!
     private let presenter: DashboardPresenter = DashboardPresenter()
@@ -25,6 +26,10 @@ class DashboardViewController: UIViewController {
         setUpText()
         setUpBannerCollectionView()
         setUpMenuCollectionView()
+        
+        notificationView.onClick {
+            self.navigationController?.pushViewController(NotificationViewController(), animated: true)
+        }
     }
     
     private func setUpBannerCollectionView() {

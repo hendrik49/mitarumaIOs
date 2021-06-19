@@ -16,6 +16,7 @@
                 <outlet property="categoryCollectionView" destination="Pza-cL-Ihg" id="fci-64-o1U"/>
                 <outlet property="categoryHeightConstraint" destination="S0M-e2-ql0" id="ubq-vX-80R"/>
                 <outlet property="contentView" destination="fto-Mk-hps" id="XEp-pF-FDp"/>
+                <outlet property="notificationView" destination="jbE-M7-Ntf" id="37m-R9-T6V"/>
                 <outlet property="pageControl" destination="Bat-6P-IfD" id="okO-F9-POn"/>
                 <outlet property="scrollView" destination="xdx-Nq-504" id="zbx-Hc-vHa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
