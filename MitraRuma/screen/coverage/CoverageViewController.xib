@@ -9,11 +9,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectionViewController" customModule="MitraRuma" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoverageViewController" customModule="MitraRuma" customModuleProvider="target">
             <connections>
                 <outlet property="coverageInformationLabel" destination="v5y-OG-Aom" id="Y47-kg-8Dg"/>
                 <outlet property="loadingRegisterIndicatorView" destination="sIk-tB-11V" id="bPy-XB-tmE"/>
                 <outlet property="nextButton" destination="dBl-EI-2xn" id="Y8v-Fn-eWo"/>
+                <outlet property="noDataFoundLabel" destination="Nhv-Ye-2YJ" id="Rvf-SK-chf"/>
                 <outlet property="tableView" destination="btA-Jp-1YN" id="R1p-P2-KVc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,6 +24,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="btA-Jp-1YN">
+                    <rect key="frame" x="0.0" y="104" width="414" height="660"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBI-z1-EqC">
                     <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                     <subviews>
@@ -112,10 +117,12 @@
                         <constraint firstItem="dBl-EI-2xn" firstAttribute="leading" secondItem="6h3-Gu-b4i" secondAttribute="leading" constant="16" id="ybe-7s-xNb"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="btA-Jp-1YN">
-                    <rect key="frame" x="0.0" y="104" width="414" height="660"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data found!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhv-Ye-2YJ">
+                    <rect key="frame" x="147" y="442.5" width="120.5" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,7 +131,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="6h3-Gu-b4i" secondAttribute="leading" id="6qW-Ut-5Q5"/>
                 <constraint firstItem="btA-Jp-1YN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="A4F-b0-KbJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="MBI-z1-EqC" secondAttribute="leading" id="Deq-Ok-n2i"/>
+                <constraint firstItem="Nhv-Ye-2YJ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="IT1-Nx-oIA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="btA-Jp-1YN" secondAttribute="trailing" id="Pdm-XW-gvj"/>
+                <constraint firstItem="Nhv-Ye-2YJ" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="VJc-fa-dSj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MBI-z1-EqC" secondAttribute="trailing" id="VRe-ec-MuO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6h3-Gu-b4i" secondAttribute="trailing" id="cas-Qm-9zf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6h3-Gu-b4i" secondAttribute="bottom" id="flZ-1m-sc0"/>

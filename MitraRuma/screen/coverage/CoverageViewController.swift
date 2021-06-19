@@ -12,6 +12,7 @@ class CoverageViewController: UIViewController {
     @IBOutlet weak var coverageInformationLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var noDataFoundLabel: UILabel!
     @IBOutlet weak var loadingRegisterIndicatorView: UIActivityIndicatorView!
     
     var phoneNumber: String = ""
@@ -30,6 +31,8 @@ class CoverageViewController: UIViewController {
             }
             presenter.list.append(item)
         }
+        
+        presenter.onSearch(text: "")
         
         tableView.reloadData()
     }
@@ -67,6 +70,11 @@ class CoverageViewController: UIViewController {
 }
 
 extension CoverageViewController: CoveragePresenterDelegate {
+    func successFilter() {
+        noDataFoundLabel.isHidden = presenter.viewedList.count != 0
+        tableView.reloadData()
+    }
+    
     func successRegister() {
         setLoadingState(isLoading: false)
         goToOTPScreen()
@@ -81,7 +89,7 @@ extension CoverageViewController: CoveragePresenterDelegate {
 extension CoverageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var countNumber = 0
-        presenter.list.forEach { entity in
+        presenter.viewedList.forEach { entity in
             countNumber += entity.child.count + 1
         }
         
@@ -95,7 +103,7 @@ extension CoverageViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             var tempIndex = indexPath.row - 1
-            for entity in presenter.list {
+            for entity in presenter.viewedList {
                 if (tempIndex == 0) {
                     let cell: TitleTableViewCell = tableView.dequeueReusableCell(withIdentifier: String(describing: TitleTableViewCell.self), for: indexPath) as! TitleTableViewCell
                     cell.setUpData(text: entity.title)
@@ -148,7 +156,7 @@ extension CoverageViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension CoverageViewController: SearchTableViewCellDelegate {
     func onSearchTextChanged(text: String) {
-        
+        presenter.onSearch(text: text)
     }
 }
 
@@ -157,10 +165,10 @@ extension CoverageViewController: OnItemSelectedDelegate {
         var groupIndex: Int = 0
         var childIndex: Int = 0
         
-        presenter.list.forEach { groupEntity in
+        presenter.viewedList.forEach { groupEntity in
             groupEntity.child.forEach { tempEntity in
                 if (entity.name == tempEntity.name) {
-                    presenter.list[groupIndex].child[childIndex].isSelected = !presenter.list[groupIndex].child[childIndex].isSelected
+                    presenter.viewedList[groupIndex].child[childIndex].isSelected = !presenter.viewedList[groupIndex].child[childIndex].isSelected
                     tableView.reloadData()
                     return
                 }

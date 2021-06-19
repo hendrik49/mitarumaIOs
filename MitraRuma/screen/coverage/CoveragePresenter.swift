@@ -36,8 +36,8 @@ class CoveragePresenter {
         }
         
         list.forEach { groupEntity in
-            let result = groupEntity.child.filter { $0.name.contains(text) }
-            if (result.count >= 0) {
+            let result = groupEntity.child.filter { $0.name.lowercased().contains(text.lowercased()) }
+            if (result.count > 0) {
                 var tempGroupEntity: UIGroupEntity = UIGroupEntity(title: groupEntity.title, child: [])
                 tempGroupEntity.child.append(contentsOf: result)
                 viewedList.append(tempGroupEntity)
