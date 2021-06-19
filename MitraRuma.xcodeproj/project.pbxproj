@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10173FA2267310920000DAFB /* SelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA1267310920000DAFB /* SelectionPresenter.swift */; };
+		10173FA2267310920000DAFB /* CoveragePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA1267310920000DAFB /* CoveragePresenter.swift */; };
 		10173FA4267311FA0000DAFB /* UIGroupEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA3267311FA0000DAFB /* UIGroupEntity.swift */; };
 		10173FA726731C7C0000DAFB /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA626731C7C0000DAFB /* ApiClient.swift */; };
 		10173FA926731C9C0000DAFB /* RequestCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA826731C9C0000DAFB /* RequestCaller.swift */; };
@@ -57,10 +57,8 @@
 		10FAC8DE267264ED00538D6C /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8DC267264ED00538D6C /* TitleTableViewCell.xib */; };
 		10FAC8E0267265D300538D6C /* UIPickerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8DF267265D300538D6C /* UIPickerEntity.swift */; };
 		10FAC8E22672672300538D6C /* SelectSkillPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8E12672672300538D6C /* SelectSkillPresenter.swift */; };
-		10FAC8E62672723800538D6C /* CoverageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8E42672723800538D6C /* CoverageViewController.swift */; };
-		10FAC8E72672723800538D6C /* CoverageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8E52672723800538D6C /* CoverageViewController.xib */; };
-		10FAC8EB2672740100538D6C /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8E92672740100538D6C /* SelectionViewController.swift */; };
-		10FAC8EC2672740100538D6C /* SelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8EA2672740100538D6C /* SelectionViewController.xib */; };
+		10FAC8EB2672740100538D6C /* CoverageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8E92672740100538D6C /* CoverageViewController.swift */; };
+		10FAC8EC2672740100538D6C /* CoverageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8EA2672740100538D6C /* CoverageViewController.xib */; };
 		10FAC8F02672759100538D6C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8EE2672759100538D6C /* SearchTableViewCell.swift */; };
 		10FAC8F12672759100538D6C /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8EF2672759100538D6C /* SearchTableViewCell.xib */; };
 		10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF114266A8AD0002640BE /* OnBoardingViewController.swift */; };
@@ -80,7 +78,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		10173FA1267310920000DAFB /* SelectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionPresenter.swift; sourceTree = "<group>"; };
+		10173FA1267310920000DAFB /* CoveragePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoveragePresenter.swift; sourceTree = "<group>"; };
 		10173FA3267311FA0000DAFB /* UIGroupEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGroupEntity.swift; sourceTree = "<group>"; };
 		10173FA626731C7C0000DAFB /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		10173FA826731C9C0000DAFB /* RequestCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCaller.swift; sourceTree = "<group>"; };
@@ -130,10 +128,8 @@
 		10FAC8DC267264ED00538D6C /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		10FAC8DF267265D300538D6C /* UIPickerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerEntity.swift; sourceTree = "<group>"; };
 		10FAC8E12672672300538D6C /* SelectSkillPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillPresenter.swift; sourceTree = "<group>"; };
-		10FAC8E42672723800538D6C /* CoverageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageViewController.swift; sourceTree = "<group>"; };
-		10FAC8E52672723800538D6C /* CoverageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoverageViewController.xib; sourceTree = "<group>"; };
-		10FAC8E92672740100538D6C /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
-		10FAC8EA2672740100538D6C /* SelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionViewController.xib; sourceTree = "<group>"; };
+		10FAC8E92672740100538D6C /* CoverageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageViewController.swift; sourceTree = "<group>"; };
+		10FAC8EA2672740100538D6C /* CoverageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoverageViewController.xib; sourceTree = "<group>"; };
 		10FAC8EE2672759100538D6C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		10FAC8EF2672759100538D6C /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		10FAF114266A8AD0002640BE /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
@@ -305,24 +301,15 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
-		10FAC8E32672722500538D6C /* coverage */ = {
-			isa = PBXGroup;
-			children = (
-				10FAC8E42672723800538D6C /* CoverageViewController.swift */,
-				10FAC8E52672723800538D6C /* CoverageViewController.xib */,
-			);
-			path = coverage;
-			sourceTree = "<group>";
-		};
-		10FAC8E8267273F400538D6C /* selection */ = {
+		10FAC8E8267273F400538D6C /* coverage */ = {
 			isa = PBXGroup;
 			children = (
 				10FAC8ED2672757F00538D6C /* cell */,
-				10FAC8E92672740100538D6C /* SelectionViewController.swift */,
-				10FAC8EA2672740100538D6C /* SelectionViewController.xib */,
-				10173FA1267310920000DAFB /* SelectionPresenter.swift */,
+				10FAC8E92672740100538D6C /* CoverageViewController.swift */,
+				10FAC8EA2672740100538D6C /* CoverageViewController.xib */,
+				10173FA1267310920000DAFB /* CoveragePresenter.swift */,
 			);
-			path = selection;
+			path = coverage;
 			sourceTree = "<group>";
 		};
 		10FAC8ED2672757F00538D6C /* cell */ = {
@@ -338,8 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				101A34522677A3C100C396C0 /* home */,
-				10FAC8E8267273F400538D6C /* selection */,
-				10FAC8E32672722500538D6C /* coverage */,
+				10FAC8E8267273F400538D6C /* coverage */,
 				10FAC8D1267261ED00538D6C /* selectskill */,
 				10A56AD3266E35E20019516A /* dashboard */,
 				103AF927266D32EF009C561B /* otp */,
@@ -508,7 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10FAC8EC2672740100538D6C /* SelectionViewController.xib in Resources */,
+				10FAC8EC2672740100538D6C /* CoverageViewController.xib in Resources */,
 				10FAC8F12672759100538D6C /* SearchTableViewCell.xib in Resources */,
 				10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */,
 				103AF92F266D33E7009C561B /* SingleInputFieldView.xib in Resources */,
@@ -522,7 +508,6 @@
 				10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */,
 				10FE9FD42678BC8200A005FA /* GoogleService-Info.plist in Resources */,
 				10FAC8DE267264ED00538D6C /* TitleTableViewCell.xib in Resources */,
-				10FAC8E72672723800538D6C /* CoverageViewController.xib in Resources */,
 				101A34562677A3D300C396C0 /* HomeViewController.xib in Resources */,
 				10BE32EA267DB83600639C61 /* CategoryCollectionViewCell.xib in Resources */,
 				10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */,
@@ -599,7 +584,7 @@
 			files = (
 				103AF91C266D1FDF009C561B /* LoginViewController.swift in Sources */,
 				1062B121267BA405004C9858 /* ParamsExtensionAttributesEntity.swift in Sources */,
-				10173FA2267310920000DAFB /* SelectionPresenter.swift in Sources */,
+				10173FA2267310920000DAFB /* CoveragePresenter.swift in Sources */,
 				10FAC8D9267264E000538D6C /* SelectionTableViewCell.swift in Sources */,
 				1062B125267BB29B004C9858 /* OTPPresenter.swift in Sources */,
 				1062B129267BB330004C9858 /* SendOTPUseCase.swift in Sources */,
@@ -613,7 +598,7 @@
 				1062B11F267B99DF004C9858 /* DashboardPresenter.swift in Sources */,
 				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
 				1062B123267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift in Sources */,
-				10FAC8EB2672740100538D6C /* SelectionViewController.swift in Sources */,
+				10FAC8EB2672740100538D6C /* CoverageViewController.swift in Sources */,
 				1062B11A267B9888004C9858 /* BannerCollectionViewCell.swift in Sources */,
 				10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */,
 				1062B127267BB2CA004C9858 /* ParamsOTPEntity.swift in Sources */,
@@ -639,7 +624,6 @@
 				103AF920266D2071009C561B /* InputFieldView.swift in Sources */,
 				10173FA726731C7C0000DAFB /* ApiClient.swift in Sources */,
 				10173FB126731ECB0000DAFB /* UserApiClient.swift in Sources */,
-				10FAC8E62672723800538D6C /* CoverageViewController.swift in Sources */,
 				103AF924266D20FE009C561B /* UIExtension.swift in Sources */,
 				101A345B2677AF3200C396C0 /* LoginPresenter.swift in Sources */,
 				10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */,

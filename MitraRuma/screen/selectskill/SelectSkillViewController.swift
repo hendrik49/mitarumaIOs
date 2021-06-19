@@ -44,7 +44,7 @@ class SelectSkillViewController: UIViewController {
             }
         }
         
-        let viewController: SelectionViewController = SelectionViewController()
+        let viewController: CoverageViewController = CoverageViewController()
         viewController.phoneNumber = phoneNumber
         viewController.skillSetList = skillSetList
         navigationController?.pushViewController(viewController, animated: true)

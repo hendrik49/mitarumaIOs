@@ -7,15 +7,15 @@
 
 import Foundation
 
-protocol SelectionPresenterDelegate {
+protocol CoveragePresenterDelegate {
     func successRegister()
     func failed(message: String)
 }
 
-class SelectionPresenter {
+class CoveragePresenter {
     
     var list: [UIGroupEntity] = []
-    var delegate: SelectionPresenterDelegate!
+    var delegate: CoveragePresenterDelegate!
     
     func register(phoneNumber: String, skillSet: [String]) {
         PhoneRegisterApplicatorUseCase.shared.setParams(entity: ParamsLoginEntity(phone: phoneNumber, extensionAttributes: buildExtensionAttributes(skillSet: skillSet))).execute { entity in
