@@ -40,17 +40,17 @@ class HomeViewController: UIViewController {
         let dashboardViewController: UIViewController = DashboardViewController()
         addChild(dashboardViewController)
         dashboardViewController.view.frame = CGRect(x: 0, y: 0, width: dashboardContentView.frame.width, height: dashboardContentView.frame.height)
-        view.addSubview(dashboardViewController.view)
+        dashboardContentView.addSubview(dashboardViewController.view)
         
-        let dashboardViewController2: UIViewController = DashboardViewController()
+        let dashboardViewController2: UIViewController = TransactionViewController()
         addChild(dashboardViewController2)
         dashboardViewController2.view.frame = CGRect(x: 0, y: 0, width: transactionContentView.frame.width, height: transactionContentView.frame.height)
-        view.addSubview(dashboardViewController2.view)
+        transactionContentView.addSubview(dashboardViewController2.view)
         
         let dashboardViewController3: UIViewController = DashboardViewController()
         addChild(dashboardViewController3)
         dashboardViewController3.view.frame = CGRect(x: 0, y: 0, width: accountContentView.frame.width, height: accountContentView.frame.height)
-        view.addSubview(dashboardViewController3.view)
+        accountContentView.addSubview(dashboardViewController3.view)
     }
     
     private func setOnClick() {
