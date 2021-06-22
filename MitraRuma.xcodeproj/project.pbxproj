@@ -46,6 +46,8 @@
 		1062B129267BB330004C9858 /* SendOTPUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B128267BB330004C9858 /* SendOTPUseCase.swift */; };
 		10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A56AD4266E35F40019516A /* DashboardViewController.swift */; };
 		10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A56AD5266E35F40019516A /* DashboardViewController.xib */; };
+		10B9B89C26821B080067075D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9B89A26821B080067075D /* AccountViewController.swift */; };
+		10B9B89D26821B080067075D /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B9B89B26821B080067075D /* AccountViewController.xib */; };
 		10BE32E9267DB83600639C61 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32E7267DB83600639C61 /* CategoryCollectionViewCell.swift */; };
 		10BE32EA267DB83600639C61 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10BE32E8267DB83600639C61 /* CategoryCollectionViewCell.xib */; };
 		10BE32EE267DC46A00639C61 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32EC267DC46A00639C61 /* NotificationViewController.swift */; };
@@ -125,6 +127,8 @@
 		1062B128267BB330004C9858 /* SendOTPUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendOTPUseCase.swift; sourceTree = "<group>"; };
 		10A56AD4266E35F40019516A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		10A56AD5266E35F40019516A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		10B9B89A26821B080067075D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		10B9B89B26821B080067075D /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		10BE32E7267DB83600639C61 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		10BE32E8267DB83600639C61 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		10BE32EC267DC46A00639C61 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -328,6 +332,8 @@
 		10BE32FA267DCAE500639C61 /* account */ = {
 			isa = PBXGroup;
 			children = (
+				10B9B89A26821B080067075D /* AccountViewController.swift */,
+				10B9B89B26821B080067075D /* AccountViewController.xib */,
 			);
 			path = account;
 			sourceTree = "<group>";
@@ -571,6 +577,7 @@
 				10BE32EA267DB83600639C61 /* CategoryCollectionViewCell.xib in Resources */,
 				10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */,
 				10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */,
+				10B9B89D26821B080067075D /* AccountViewController.xib in Resources */,
 				103AF922266D208E009C561B /* InputFieldView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,6 +656,7 @@
 				1062B125267BB29B004C9858 /* OTPPresenter.swift in Sources */,
 				1062B129267BB330004C9858 /* SendOTPUseCase.swift in Sources */,
 				10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */,
+				10B9B89C26821B080067075D /* AccountViewController.swift in Sources */,
 				103AF92A266D3305009C561B /* OTPViewController.swift in Sources */,
 				101A34552677A3D300C396C0 /* HomeViewController.swift in Sources */,
 				10173FAF26731E920000DAFB /* RequestModel.swift in Sources */,

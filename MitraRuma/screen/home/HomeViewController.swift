@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
         dashboardViewController2.view.frame = CGRect(x: 0, y: 0, width: transactionContentView.frame.width, height: transactionContentView.frame.height)
         transactionContentView.addSubview(dashboardViewController2.view)
         
-        let dashboardViewController3: UIViewController = DashboardViewController()
+        let dashboardViewController3: UIViewController = AccountViewController()
         addChild(dashboardViewController3)
         dashboardViewController3.view.frame = CGRect(x: 0, y: 0, width: accountContentView.frame.width, height: accountContentView.frame.height)
         accountContentView.addSubview(dashboardViewController3.view)
