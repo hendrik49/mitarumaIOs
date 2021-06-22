@@ -161,6 +161,9 @@ extension LoginViewController: GIDSignInDelegate {
             return
         }
         
+        let token = signIn.currentUser.authentication.idToken ?? ""
+        print(token)
+        
         goToHome()
     }
 }
