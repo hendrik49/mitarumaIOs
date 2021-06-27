@@ -21,6 +21,7 @@ class UIGenerator {
     static func generateHeaders() -> [String: String] {
         var headerRequest: [String: String] = [:]
         headerRequest["Authorization"] = "Bearer \(CustomUserDefaults.getAuthToken())"
+        headerRequest["user-agent"] = "ios"
         return headerRequest
     }
     

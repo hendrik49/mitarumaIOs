@@ -21,7 +21,7 @@ class CoveragePresenter {
     var delegate: CoveragePresenterDelegate!
     
     func register(phoneNumber: String, skillSet: [String]) {
-        PhoneRegisterApplicatorUseCase.shared.setParams(entity: ParamsLoginEntity(phone: phoneNumber, extensionAttributes: buildExtensionAttributes(skillSet: skillSet))).execute { entity in
+        PhoneRegisterApplicatorUseCase.shared.setParams(entity: ParamsLoginEntity(phone: UIGenerator.changePhoneNumber(phoneNumber: phoneNumber), extensionAttributes: buildExtensionAttributes(skillSet: skillSet))).execute { entity in
             self.delegate.successRegister()
         } failed: { error in
             self.delegate.failed(message: error)
