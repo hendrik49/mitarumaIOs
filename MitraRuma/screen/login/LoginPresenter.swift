@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftJWT
 
 protocol LoginPresenterDelegate {
-    func successLogin()
+    func successLogin(shouldByPassToDashboard: Bool)
     func successRegister(isApplicator: Bool)
     func failed(message: String)
 }
@@ -19,7 +20,15 @@ class LoginPresenter {
     
     func requestLogin(phone: String) {
         PhoneLoginUseCase.shared.setParams(entity: ParamsLoginEntity(phone: UIGenerator.changePhoneNumber(phoneNumber: phone))).execute { entity in
-            self.delegate.successLogin()
+            self.delegate.successLogin(shouldByPassToDashboard: false)
+        } failed: { error in
+            self.delegate.failed(message: error)
+        }
+    }
+    
+    func requestLoginGoogle(token: String) {
+        LoginByGoogleUseCase.shared.setParams(entity: ParamsLoginEntity(googleToken: token)).execute { entity in
+            self.delegate.successLogin(shouldByPassToDashboard: true)
         } failed: { error in
             self.delegate.failed(message: error)
         }

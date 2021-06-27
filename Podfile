@@ -12,6 +12,7 @@ target 'MitraRuma' do
   pod 'RxRetroSwift'
   pod 'DLRadioButton', '~> 1.4'
   pod 'SimpleCheckbox'
+  pod 'SwiftJWT'
 
   # Pods for MitraRuma
 

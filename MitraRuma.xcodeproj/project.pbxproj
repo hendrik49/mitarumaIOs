@@ -29,6 +29,8 @@
 		101A345B2677AF3200C396C0 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A345A2677AF3200C396C0 /* LoginPresenter.swift */; };
 		101A345F2677AF9F00C396C0 /* BaseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A345E2677AF9F00C396C0 /* BaseUseCase.swift */; };
 		101A34612677AFFE00C396C0 /* PhoneLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A34602677AFFE00C396C0 /* PhoneLoginUseCase.swift */; };
+		1027DD632688CFAC00E70798 /* LoginByGoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027DD622688CFAC00E70798 /* LoginByGoogleUseCase.swift */; };
+		1027DD652688D2B700E70798 /* RemoteGoogleLoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027DD642688D2B700E70798 /* RemoteGoogleLoginEntity.swift */; };
 		103AF918266D1AD9009C561B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103AF917266D1AD9009C561B /* Colors.xcassets */; };
 		103AF91C266D1FDF009C561B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AF91A266D1FDF009C561B /* LoginViewController.swift */; };
 		103AF91D266D1FDF009C561B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103AF91B266D1FDF009C561B /* LoginViewController.xib */; };
@@ -115,6 +117,8 @@
 		101A345A2677AF3200C396C0 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		101A345E2677AF9F00C396C0 /* BaseUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUseCase.swift; sourceTree = "<group>"; };
 		101A34602677AFFE00C396C0 /* PhoneLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginUseCase.swift; sourceTree = "<group>"; };
+		1027DD622688CFAC00E70798 /* LoginByGoogleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginByGoogleUseCase.swift; sourceTree = "<group>"; };
+		1027DD642688D2B700E70798 /* RemoteGoogleLoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGoogleLoginEntity.swift; sourceTree = "<group>"; };
 		103AF917266D1AD9009C561B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		103AF91A266D1FDF009C561B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		103AF91B266D1FDF009C561B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				10BE32F5267DC6DE00639C61 /* RemoteNotificationEntity.swift */,
 				1019E2CC26888D2300EB5DF9 /* RemoteSelectionEntity.swift */,
 				1019E2CE26888D7E00EB5DF9 /* RemoteGroupEntity.swift */,
+				1027DD642688D2B700E70798 /* RemoteGoogleLoginEntity.swift */,
 			);
 			path = remote;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				1062B128267BB330004C9858 /* SendOTPUseCase.swift */,
 				1019E2D026888DE600EB5DF9 /* GetSkillSetUseCase.swift */,
 				1019E2D226888FBB00EB5DF9 /* GetCoverageUseCase.swift */,
+				1027DD622688CFAC00E70798 /* LoginByGoogleUseCase.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -674,6 +680,7 @@
 				10B9B89C26821B080067075D /* AccountViewController.swift in Sources */,
 				103AF92A266D3305009C561B /* OTPViewController.swift in Sources */,
 				101A34552677A3D300C396C0 /* HomeViewController.swift in Sources */,
+				1027DD652688D2B700E70798 /* RemoteGoogleLoginEntity.swift in Sources */,
 				10173FAF26731E920000DAFB /* RequestModel.swift in Sources */,
 				10173FA4267311FA0000DAFB /* UIGroupEntity.swift in Sources */,
 				10FAF126266A9099002640BE /* UIGenerator.swift in Sources */,
@@ -686,6 +693,7 @@
 				1019E2CB26888C1B00EB5DF9 /* ContentApiClient.swift in Sources */,
 				1062B11A267B9888004C9858 /* BannerCollectionViewCell.swift in Sources */,
 				10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */,
+				1027DD632688CFAC00E70798 /* LoginByGoogleUseCase.swift in Sources */,
 				1062B127267BB2CA004C9858 /* ParamsOTPEntity.swift in Sources */,
 				10173FAB26731CD10000DAFB /* RawResponse.swift in Sources */,
 				10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */,

@@ -33,4 +33,9 @@ class UserApiClient {
         let request = RequestModel(httpMethod: .post, path: "user/login/otp", payload: params.toDictionary()).asURLRequest()
         return apiClient.caller.call(request)
     }
+    
+    func loginWithGoogle(params: ParamsLoginEntity) -> Observable<Result<RemoteGoogleLoginEntity, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .post, path: "login/google/token", payload: params.toDictionary()).asURLRequest()
+        return apiClient.caller.call(request)
+    }
 }

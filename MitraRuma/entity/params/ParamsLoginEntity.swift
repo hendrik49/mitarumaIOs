@@ -14,7 +14,7 @@ struct ParamsLoginEntity: Codable {
     
     enum CodingKeys: String, CodingKey {
         case phone = "user_phone_number"
-        case googleToken = "google_token"
+        case googleToken = "token"
         case extensionAttributes = "extension_attributes"
     }
 }

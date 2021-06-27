@@ -167,15 +167,18 @@ extension LoginViewController: GIDSignInDelegate {
         }
         
         let token = signIn.currentUser.authentication.idToken ?? ""
+        presenter.requestLoginGoogle(token: token)
         print(token)
-        
-        goToHome()
     }
 }
 
 extension LoginViewController: LoginPresenterDelegate {
-    func successLogin() {
-        goToOTPScreen(shouldGoToHomeAfterSuccessOTP: true)
+    func successLogin(shouldByPassToDashboard: Bool) {
+        if (shouldByPassToDashboard) {
+            goToHome()
+        } else {
+            goToOTPScreen(shouldGoToHomeAfterSuccessOTP: true)
+        }
     }
     
     func successRegister(isApplicator: Bool) {
