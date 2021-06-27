@@ -20,6 +20,9 @@ class SelectSkillPresenter {
     
     func requestSkillList() {
         GetSkillSetUseCase.shared.execute { entity in
+            self.skillList.append(contentsOf: entity.values?.map({ remoteEntity in
+                return UIPickerEntity(id: remoteEntity.name, name: remoteEntity.name, isSelected: false)
+            }) ?? [])
             self.delegate?.onSuccessGetList()
         } failed: { error in
             self.delegate?.onFailed(message: error)

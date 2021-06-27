@@ -10,12 +10,11 @@ import Foundation
 struct CustomRemoteEntity<T: Codable>: Decodable {
     
     var code: Int = 200
-    var message = ""
+    var message: String? = ""
     var values: T? = nil
     
     enum CodingKeys: String, CodingKey {
-        case message = "message"
-        case values = "values"
+        case values = "value"
     }
     
     init() {
@@ -26,7 +25,7 @@ struct CustomRemoteEntity<T: Codable>: Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        message = try container.decode(String.self, forKey: .message)
+//        message = try container.decode(String.self, forKey: .message)
         values = try container.decode(T.self, forKey: .values)
     }
 }
