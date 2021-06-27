@@ -13,7 +13,7 @@ class ApiClient {
     var caller: RequestCaller = RequestCaller.init()
     
     init() {
-        RequestModel.defaults.baseUrl = "http://149.28.148.227:8080"
+        RequestModel.defaults.baseUrl = "http://149.28.148.227:8081/api"
         RequestModel.defaults.headers = UIGenerator.generateHeaders()
     }
 }

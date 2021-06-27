@@ -23,18 +23,19 @@ class CoverageViewController: UIViewController {
         super.viewDidLoad()
         setUpTableView()
         presenter.delegate = self
+        presenter.getCoverageList()
         
-        for a in 0 ..< 5 {
-            var item = UIGroupEntity(title: "Title ke \(a + 1)", child: [])
-            for b in 0 ..< 10 {
-                item.child.append(UIPickerEntity(id: "\(b + 1)", name: "Child ke \(b + 1)", isSelected: false))
-            }
-            presenter.list.append(item)
-        }
+//        for a in 0 ..< 5 {
+//            var item = UIGroupEntity(title: "Title ke \(a + 1)", child: [])
+//            for b in 0 ..< 10 {
+//                item.child.append(UIPickerEntity(id: "\(b + 1)", name: "Child ke \(b + 1)", isSelected: false))
+//            }
+//            presenter.list.append(item)
+//        }
         
-        presenter.onSearch(text: "")
+//        presenter.onSearch(text: "")
         
-        tableView.reloadData()
+//        tableView.reloadData()
     }
     
     private func setUpTableView() {
@@ -70,6 +71,10 @@ class CoverageViewController: UIViewController {
 }
 
 extension CoverageViewController: CoveragePresenterDelegate {
+    func successLoadCoverage() {
+        tableView.reloadData()
+    }
+    
     func successFilter() {
         noDataFoundLabel.isHidden = presenter.viewedList.count != 0
         tableView.reloadData()

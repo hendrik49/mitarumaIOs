@@ -18,6 +18,11 @@
 		10173FB426731F780000DAFB /* CustomRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB326731F780000DAFB /* CustomRemoteEntity.swift */; };
 		10173FB626731F890000DAFB /* RemoteErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB526731F890000DAFB /* RemoteErrorEntity.swift */; };
 		10173FB826731FD80000DAFB /* RemoteUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB726731FD80000DAFB /* RemoteUserEntity.swift */; };
+		1019E2CB26888C1B00EB5DF9 /* ContentApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019E2CA26888C1B00EB5DF9 /* ContentApiClient.swift */; };
+		1019E2CD26888D2300EB5DF9 /* RemoteSelectionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019E2CC26888D2300EB5DF9 /* RemoteSelectionEntity.swift */; };
+		1019E2CF26888D7E00EB5DF9 /* RemoteGroupEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019E2CE26888D7E00EB5DF9 /* RemoteGroupEntity.swift */; };
+		1019E2D126888DE600EB5DF9 /* GetSkillSetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019E2D026888DE600EB5DF9 /* GetSkillSetUseCase.swift */; };
+		1019E2D326888FBB00EB5DF9 /* GetCoverageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019E2D226888FBB00EB5DF9 /* GetCoverageUseCase.swift */; };
 		101A34552677A3D300C396C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A34532677A3D300C396C0 /* HomeViewController.swift */; };
 		101A34562677A3D300C396C0 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101A34542677A3D300C396C0 /* HomeViewController.xib */; };
 		101A34592677AE6100C396C0 /* ParamsLoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A34582677AE6100C396C0 /* ParamsLoginEntity.swift */; };
@@ -99,6 +104,11 @@
 		10173FB326731F780000DAFB /* CustomRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRemoteEntity.swift; sourceTree = "<group>"; };
 		10173FB526731F890000DAFB /* RemoteErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteErrorEntity.swift; sourceTree = "<group>"; };
 		10173FB726731FD80000DAFB /* RemoteUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserEntity.swift; sourceTree = "<group>"; };
+		1019E2CA26888C1B00EB5DF9 /* ContentApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentApiClient.swift; sourceTree = "<group>"; };
+		1019E2CC26888D2300EB5DF9 /* RemoteSelectionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSelectionEntity.swift; sourceTree = "<group>"; };
+		1019E2CE26888D7E00EB5DF9 /* RemoteGroupEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGroupEntity.swift; sourceTree = "<group>"; };
+		1019E2D026888DE600EB5DF9 /* GetSkillSetUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSkillSetUseCase.swift; sourceTree = "<group>"; };
+		1019E2D226888FBB00EB5DF9 /* GetCoverageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoverageUseCase.swift; sourceTree = "<group>"; };
 		101A34532677A3D300C396C0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		101A34542677A3D300C396C0 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		101A34582677AE6100C396C0 /* ParamsLoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsLoginEntity.swift; sourceTree = "<group>"; };
@@ -192,6 +202,7 @@
 				10173FAA26731CD10000DAFB /* RawResponse.swift */,
 				10173FAE26731E920000DAFB /* RequestModel.swift */,
 				10173FB026731ECB0000DAFB /* UserApiClient.swift */,
+				1019E2CA26888C1B00EB5DF9 /* ContentApiClient.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -204,6 +215,8 @@
 				10173FB726731FD80000DAFB /* RemoteUserEntity.swift */,
 				1062B11C267B98E3004C9858 /* RemoteBannerEntity.swift */,
 				10BE32F5267DC6DE00639C61 /* RemoteNotificationEntity.swift */,
+				1019E2CC26888D2300EB5DF9 /* RemoteSelectionEntity.swift */,
+				1019E2CE26888D7E00EB5DF9 /* RemoteGroupEntity.swift */,
 			);
 			path = remote;
 			sourceTree = "<group>";
@@ -235,6 +248,8 @@
 				10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */,
 				1062B122267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift */,
 				1062B128267BB330004C9858 /* SendOTPUseCase.swift */,
+				1019E2D026888DE600EB5DF9 /* GetSkillSetUseCase.swift */,
+				1019E2D226888FBB00EB5DF9 /* GetCoverageUseCase.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -422,8 +437,8 @@
 				101A34572677AE5300C396C0 /* params */,
 				10173FB226731F6F0000DAFB /* remote */,
 				10FAF11E266A8C38002640BE /* UISliderEntity.swift */,
-				10FAC8DF267265D300538D6C /* UIPickerEntity.swift */,
 				10173FA3267311FA0000DAFB /* UIGroupEntity.swift */,
+				10FAC8DF267265D300538D6C /* UIPickerEntity.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -668,6 +683,7 @@
 				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
 				1062B123267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift in Sources */,
 				10FAC8EB2672740100538D6C /* CoverageViewController.swift in Sources */,
+				1019E2CB26888C1B00EB5DF9 /* ContentApiClient.swift in Sources */,
 				1062B11A267B9888004C9858 /* BannerCollectionViewCell.swift in Sources */,
 				10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */,
 				1062B127267BB2CA004C9858 /* ParamsOTPEntity.swift in Sources */,
@@ -676,6 +692,7 @@
 				10FAC8F02672759100538D6C /* SearchTableViewCell.swift in Sources */,
 				103AF92D266D33D6009C561B /* SingleInputFieldView.swift in Sources */,
 				10BE32EE267DC46A00639C61 /* NotificationViewController.swift in Sources */,
+				1019E2D326888FBB00EB5DF9 /* GetCoverageUseCase.swift in Sources */,
 				10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */,
 				10BE32F3267DC58100639C61 /* NotificationTableViewCell.swift in Sources */,
 				10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */,
@@ -684,6 +701,7 @@
 				103AF926266D2128009C561B /* TapGestureRecognizer.swift in Sources */,
 				101A34592677AE6100C396C0 /* ParamsLoginEntity.swift in Sources */,
 				10FB8E63265FEAC8001D0E64 /* AppDelegate.swift in Sources */,
+				1019E2CD26888D2300EB5DF9 /* RemoteSelectionEntity.swift in Sources */,
 				10FAC8E22672672300538D6C /* SelectSkillPresenter.swift in Sources */,
 				10173FA926731C9C0000DAFB /* RequestCaller.swift in Sources */,
 				101A34612677AFFE00C396C0 /* PhoneLoginUseCase.swift in Sources */,
@@ -691,12 +709,14 @@
 				10173FB826731FD80000DAFB /* RemoteUserEntity.swift in Sources */,
 				10173FB426731F780000DAFB /* CustomRemoteEntity.swift in Sources */,
 				10FAC8E0267265D300538D6C /* UIPickerEntity.swift in Sources */,
+				1019E2D126888DE600EB5DF9 /* GetSkillSetUseCase.swift in Sources */,
 				10FB8E65265FEAC8001D0E64 /* SceneDelegate.swift in Sources */,
 				10BE32FD267DCB1100639C61 /* TransactionViewController.swift in Sources */,
 				103AF920266D2071009C561B /* InputFieldView.swift in Sources */,
 				10173FA726731C7C0000DAFB /* ApiClient.swift in Sources */,
 				10173FB126731ECB0000DAFB /* UserApiClient.swift in Sources */,
 				103AF924266D20FE009C561B /* UIExtension.swift in Sources */,
+				1019E2CF26888D7E00EB5DF9 /* RemoteGroupEntity.swift in Sources */,
 				101A345B2677AF3200C396C0 /* LoginPresenter.swift in Sources */,
 				10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */,
 				10FAC8DD267264ED00538D6C /* TitleTableViewCell.swift in Sources */,

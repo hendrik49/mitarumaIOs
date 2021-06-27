@@ -23,13 +23,7 @@ class SelectSkillViewController: UIViewController {
         presenter.delegate = self
         
         setUpTableView()
-        
-        presenter.skillList.append(UIPickerEntity(id: "1", name: "Memasak", isSelected: false))
-        presenter.skillList.append(UIPickerEntity(id: "2", name: "Menggunjing", isSelected: false))
-        presenter.skillList.append(UIPickerEntity(id: "3", name: "Menanak", isSelected: false))
-        presenter.skillList.append(UIPickerEntity(id: "4", name: "Bercocok tanam", isSelected: false))
-        
-        tableView.reloadData()
+        presenter.requestSkillList()
     }
     
     @IBAction func onBackPressed(_ sender: Any) {
@@ -86,6 +80,14 @@ extension SelectSkillViewController: UITableViewDelegate, UITableViewDataSource 
 }
 
 extension SelectSkillViewController: SelectSkillPresenterDelegate {
+    func onSuccessGetList() {
+        tableView.reloadData()
+    }
+    
+    func onFailed(message: String) {
+        print(message)
+    }
+    
     func shouldUpdateCounter() {
         tableView.reloadData()
         
