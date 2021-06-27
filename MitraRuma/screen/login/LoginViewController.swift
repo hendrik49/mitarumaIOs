@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerAsContainerVie: UIView!
     @IBOutlet weak var registerPhoneIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var registerGoogleIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var signInSeparator: UIView!
     
     @IBOutlet weak var topRegisterAsConstraintLayout: NSLayoutConstraint!
     
@@ -74,12 +75,16 @@ class LoginViewController: UIViewController {
             registerAskLabel.text = "Belum punya akun?"
             switchLoginButton.text = "Register"
             registerAsContainerVie.isHidden = true
+            signInSeparator.isHidden = false
+            signInGoogleView.isHidden = false
             topRegisterAsConstraintLayout.constant = -registerAsContainerVie.frame.height
         } else {
             registerLabel.text = "Register"
             registerButton.setTitle("Register", for: .normal)
             registerAskLabel.text = "Sudah punya akun?"
             switchLoginButton.text = "Login"
+            signInSeparator.isHidden = true
+            signInGoogleView.isHidden = true
             registerAsContainerVie.isHidden = false
             topRegisterAsConstraintLayout.constant = 16
         }

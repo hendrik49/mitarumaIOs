@@ -21,6 +21,7 @@
                 <outlet property="registerLabel" destination="6LN-Xn-QEP" id="YBl-R4-ePs"/>
                 <outlet property="registerPhoneIndicatorView" destination="ZSl-ER-eSc" id="UVf-CR-b1n"/>
                 <outlet property="signInGoogleView" destination="gQg-5W-C6L" id="CgH-ZJ-dB6"/>
+                <outlet property="signInSeparator" destination="RmC-Oc-l3K" id="rHc-7s-zt8"/>
                 <outlet property="switchLoginButton" destination="gFi-3Z-ypQ" id="cO1-ff-P5i"/>
                 <outlet property="topRegisterAsConstraintLayout" destination="egT-bO-inx" id="MqE-IG-LWE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
