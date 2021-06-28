@@ -18,7 +18,7 @@ class CustomUserDefaults {
     }
     
     static func getName() -> String {
-        return UserDefaults.standard.string(forKey: "auth_token") ?? ""
+        return UserDefaults.standard.string(forKey: "name") ?? ""
     }
     
     static func setName(name: String) {

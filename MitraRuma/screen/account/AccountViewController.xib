@@ -11,7 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountViewController" customModule="MitraRuma" customModuleProvider="target">
             <connections>
+                <outlet property="addressLabel" destination="82f-3Y-lwG" id="LSP-ep-3YL"/>
                 <outlet property="coverageButton" destination="2M9-hD-b3z" id="cXE-74-fTO"/>
+                <outlet property="emailLabel" destination="TnL-K9-uM1" id="Fm9-Sx-zdf"/>
+                <outlet property="logoutView" destination="2py-fJ-s1w" id="mvn-Ld-Y4j"/>
+                <outlet property="nameLabel" destination="1Qr-sP-Ngy" id="EfJ-ZM-N59"/>
+                <outlet property="phoneNumberLabel" destination="zPv-xG-A2m" id="etc-FM-Z3P"/>
+                <outlet property="profileImage" destination="x3y-ea-FoC" id="J9c-PB-kOF"/>
                 <outlet property="skillSetButton" destination="hzW-wD-pf0" id="o5p-W7-kCM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
