@@ -67,6 +67,15 @@
 		10BE32FE267DCB1100639C61 /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10BE32FC267DCB1100639C61 /* TransactionViewController.xib */; };
 		10D61EEC268A205200F336B9 /* RemoteOTPEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EEB268A205200F336B9 /* RemoteOTPEntity.swift */; };
 		10D61EEE268A23C600F336B9 /* UIUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EED268A23C600F336B9 /* UIUserEntity.swift */; };
+		10D61EF2268A2ACA00F336B9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EF0268A2ACA00F336B9 /* SettingViewController.swift */; };
+		10D61EF3268A2ACA00F336B9 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D61EF1268A2ACA00F336B9 /* SettingViewController.xib */; };
+		10D61EF5268A2E7E00F336B9 /* SingleInputFieldWithTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EF4268A2E7E00F336B9 /* SingleInputFieldWithTitleView.swift */; };
+		10D61EF7268A2E8F00F336B9 /* SingleInputFieldWithTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D61EF6268A2E8F00F336B9 /* SingleInputFieldWithTitleView.xib */; };
+		10D61EFC268A308600F336B9 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EFA268A308600F336B9 /* FormViewController.swift */; };
+		10D61EFD268A308600F336B9 /* FormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D61EFB268A308600F336B9 /* FormViewController.xib */; };
+		10D61EFF268A320900F336B9 /* UIFormBuilderEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EFE268A320900F336B9 /* UIFormBuilderEntity.swift */; };
+		10D61F03268A326100F336B9 /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61F01268A326100F336B9 /* FormTableViewCell.swift */; };
+		10D61F04268A326100F336B9 /* FormTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D61F02268A326100F336B9 /* FormTableViewCell.xib */; };
 		10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */; };
 		10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */; };
 		10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */; };
@@ -157,6 +166,15 @@
 		10BE32FC267DCB1100639C61 /* TransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionViewController.xib; sourceTree = "<group>"; };
 		10D61EEB268A205200F336B9 /* RemoteOTPEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteOTPEntity.swift; sourceTree = "<group>"; };
 		10D61EED268A23C600F336B9 /* UIUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUserEntity.swift; sourceTree = "<group>"; };
+		10D61EF0268A2ACA00F336B9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		10D61EF1268A2ACA00F336B9 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		10D61EF4268A2E7E00F336B9 /* SingleInputFieldWithTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleInputFieldWithTitleView.swift; sourceTree = "<group>"; };
+		10D61EF6268A2E8F00F336B9 /* SingleInputFieldWithTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleInputFieldWithTitleView.xib; sourceTree = "<group>"; };
+		10D61EFA268A308600F336B9 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		10D61EFB268A308600F336B9 /* FormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormViewController.xib; sourceTree = "<group>"; };
+		10D61EFE268A320900F336B9 /* UIFormBuilderEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFormBuilderEntity.swift; sourceTree = "<group>"; };
+		10D61F01268A326100F336B9 /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
+		10D61F02268A326100F336B9 /* FormTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTableViewCell.xib; sourceTree = "<group>"; };
 		10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterUseCase.swift; sourceTree = "<group>"; };
 		10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillViewController.swift; sourceTree = "<group>"; };
 		10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSkillViewController.xib; sourceTree = "<group>"; };
@@ -290,6 +308,8 @@
 				103AF921266D208E009C561B /* InputFieldView.xib */,
 				103AF92C266D33D6009C561B /* SingleInputFieldView.swift */,
 				103AF92E266D33E7009C561B /* SingleInputFieldView.xib */,
+				10D61EF4268A2E7E00F336B9 /* SingleInputFieldWithTitleView.swift */,
+				10D61EF6268A2E8F00F336B9 /* SingleInputFieldWithTitleView.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -364,6 +384,34 @@
 			path = account;
 			sourceTree = "<group>";
 		};
+		10D61EEF268A2AB700F336B9 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				10D61EF0268A2ACA00F336B9 /* SettingViewController.swift */,
+				10D61EF1268A2ACA00F336B9 /* SettingViewController.xib */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
+		10D61EF9268A306A00F336B9 /* selection */ = {
+			isa = PBXGroup;
+			children = (
+				10D61F00268A324C00F336B9 /* cell */,
+				10D61EFA268A308600F336B9 /* FormViewController.swift */,
+				10D61EFB268A308600F336B9 /* FormViewController.xib */,
+			);
+			path = selection;
+			sourceTree = "<group>";
+		};
+		10D61F00268A324C00F336B9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				10D61F01268A326100F336B9 /* FormTableViewCell.swift */,
+				10D61F02268A326100F336B9 /* FormTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		10FAC8D1267261ED00538D6C /* selectskill */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +457,8 @@
 		10FAF112266A8AAB002640BE /* screen */ = {
 			isa = PBXGroup;
 			children = (
+				10D61EF9268A306A00F336B9 /* selection */,
+				10D61EEF268A2AB700F336B9 /* setting */,
 				10BE32FA267DCAE500639C61 /* account */,
 				10BE32F9267DCAE100639C61 /* transaction */,
 				10BE32EB267DC45800639C61 /* notification */,
@@ -451,6 +501,7 @@
 				10173FA3267311FA0000DAFB /* UIGroupEntity.swift */,
 				10FAC8DF267265D300538D6C /* UIPickerEntity.swift */,
 				10D61EED268A23C600F336B9 /* UIUserEntity.swift */,
+				10D61EFE268A320900F336B9 /* UIFormBuilderEntity.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -590,17 +641,21 @@
 				103AF92F266D33E7009C561B /* SingleInputFieldView.xib in Resources */,
 				1062B11B267B9888004C9858 /* BannerCollectionViewCell.xib in Resources */,
 				10BE32F4267DC58100639C61 /* NotificationTableViewCell.xib in Resources */,
+				10D61EF3268A2ACA00F336B9 /* SettingViewController.xib in Resources */,
 				10BE32EF267DC46A00639C61 /* NotificationViewController.xib in Resources */,
+				10D61EF7268A2E8F00F336B9 /* SingleInputFieldWithTitleView.xib in Resources */,
 				103AF92B266D3305009C561B /* OTPViewController.xib in Resources */,
 				103AF918266D1AD9009C561B /* Colors.xcassets in Resources */,
 				10FAC8DA267264E000538D6C /* SelectionTableViewCell.xib in Resources */,
 				10FB8E72265FEAC9001D0E64 /* LaunchScreen.storyboard in Resources */,
+				10D61F04268A326100F336B9 /* FormTableViewCell.xib in Resources */,
 				103AF91D266D1FDF009C561B /* LoginViewController.xib in Resources */,
 				10FB8E6F265FEAC9001D0E64 /* Assets.xcassets in Resources */,
 				10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */,
 				10FE9FD42678BC8200A005FA /* GoogleService-Info.plist in Resources */,
 				10FAC8DE267264ED00538D6C /* TitleTableViewCell.xib in Resources */,
 				101A34562677A3D300C396C0 /* HomeViewController.xib in Resources */,
+				10D61EFD268A308600F336B9 /* FormViewController.xib in Resources */,
 				10BE32EA267DB83600639C61 /* CategoryCollectionViewCell.xib in Resources */,
 				10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */,
 				10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */,
@@ -687,6 +742,7 @@
 				103AF92A266D3305009C561B /* OTPViewController.swift in Sources */,
 				101A34552677A3D300C396C0 /* HomeViewController.swift in Sources */,
 				1027DD652688D2B700E70798 /* RemoteGoogleLoginEntity.swift in Sources */,
+				10D61EFC268A308600F336B9 /* FormViewController.swift in Sources */,
 				10173FAF26731E920000DAFB /* RequestModel.swift in Sources */,
 				10173FA4267311FA0000DAFB /* UIGroupEntity.swift in Sources */,
 				10FAF126266A9099002640BE /* UIGenerator.swift in Sources */,
@@ -694,10 +750,13 @@
 				10BE32E9267DB83600639C61 /* CategoryCollectionViewCell.swift in Sources */,
 				1062B11F267B99DF004C9858 /* DashboardPresenter.swift in Sources */,
 				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
+				10D61EF2268A2ACA00F336B9 /* SettingViewController.swift in Sources */,
+				10D61F03268A326100F336B9 /* FormTableViewCell.swift in Sources */,
 				1062B123267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift in Sources */,
 				10FAC8EB2672740100538D6C /* CoverageViewController.swift in Sources */,
 				1019E2CB26888C1B00EB5DF9 /* ContentApiClient.swift in Sources */,
 				1062B11A267B9888004C9858 /* BannerCollectionViewCell.swift in Sources */,
+				10D61EF5268A2E7E00F336B9 /* SingleInputFieldWithTitleView.swift in Sources */,
 				10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */,
 				1027DD632688CFAC00E70798 /* LoginByGoogleUseCase.swift in Sources */,
 				1062B127267BB2CA004C9858 /* ParamsOTPEntity.swift in Sources */,
@@ -705,6 +764,7 @@
 				10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */,
 				10FAC8F02672759100538D6C /* SearchTableViewCell.swift in Sources */,
 				103AF92D266D33D6009C561B /* SingleInputFieldView.swift in Sources */,
+				10D61EFF268A320900F336B9 /* UIFormBuilderEntity.swift in Sources */,
 				10BE32EE267DC46A00639C61 /* NotificationViewController.swift in Sources */,
 				10D61EEE268A23C600F336B9 /* UIUserEntity.swift in Sources */,
 				1019E2D326888FBB00EB5DF9 /* GetCoverageUseCase.swift in Sources */,

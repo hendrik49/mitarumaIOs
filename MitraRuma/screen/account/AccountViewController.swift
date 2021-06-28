@@ -16,6 +16,7 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var skillSetButton: UIButton!
     @IBOutlet weak var coverageButton: UIButton!
+    @IBOutlet weak var settingView: UIView!
     @IBOutlet weak var logoutView: UIView!
     
     override func viewDidLoad() {
@@ -29,6 +30,10 @@ class AccountViewController: UIViewController {
         phoneNumberLabel.text = CustomUserDefaults.getPhoneNumber().isEmpty ? "-" : CustomUserDefaults.getPhoneNumber()
         addressLabel.text = CustomUserDefaults.getAddress().isEmpty ? "-" : CustomUserDefaults.getAddress()
         
+        settingView.onClick {
+            self.goToSetting()
+        }
+        
         logoutView.onClick {
             CustomUserDefaults.setType(type: "")
             CustomUserDefaults.setAddress(address: "")
@@ -40,6 +45,10 @@ class AccountViewController: UIViewController {
             
             self.goToLogin()
         }
+    }
+    
+    private func goToSetting() {
+        navigationController?.pushViewController(SettingViewController(), animated: true)
     }
     
     private func goToLogin() {

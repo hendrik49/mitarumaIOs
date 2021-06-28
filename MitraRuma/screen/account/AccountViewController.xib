@@ -18,6 +18,7 @@
                 <outlet property="nameLabel" destination="1Qr-sP-Ngy" id="EfJ-ZM-N59"/>
                 <outlet property="phoneNumberLabel" destination="zPv-xG-A2m" id="etc-FM-Z3P"/>
                 <outlet property="profileImage" destination="x3y-ea-FoC" id="J9c-PB-kOF"/>
+                <outlet property="settingView" destination="aRH-ez-a42" id="Lqx-QI-EcU"/>
                 <outlet property="skillSetButton" destination="hzW-wD-pf0" id="o5p-W7-kCM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
