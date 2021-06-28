@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxRetroSwift
 
-class PhoneRegisterApplicatorUseCase: BaseUseCase<RemoteUserEntity> {
+class PhoneRegisterApplicatorUseCase: BaseUseCase<CustomRemoteEntity<RemoteUserEntity>> {
 
     private var entity: ParamsLoginEntity!
     
@@ -20,7 +20,7 @@ class PhoneRegisterApplicatorUseCase: BaseUseCase<RemoteUserEntity> {
         return .shared
     }
     
-    override func getObservable<ResultEntity>() -> Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>> {
-        return UserApiClient.shared.registerAsApplicator(params: entity) as! Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>>
+    override func getObservable<ResultEntity>() -> Observable<Result<ResultEntity, RemoteErrorEntity>> {
+        return UserApiClient.shared.registerAsApplicator(params: entity) as! Observable<Result<ResultEntity, RemoteErrorEntity>>
     }
 }

@@ -10,16 +10,16 @@ import RxSwift
 import RxRetroSwift
 
 protocol BaseUseCaseProtocol {
-    func getObservable<ResultEntity: Codable>() -> Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>>
+    func getObservable<ResultEntity: Codable>() -> Observable<Result<ResultEntity, RemoteErrorEntity>>
 }
 
 class BaseUseCase<ResultEntity: Codable>: BaseUseCaseProtocol {
-    func getObservable<ResultEntity>() -> Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>> where ResultEntity : Decodable, ResultEntity : Encodable {
+    func getObservable<ResultEntity>() -> Observable<Result<ResultEntity, RemoteErrorEntity>> where ResultEntity : Decodable, ResultEntity : Encodable {
         fatalError("Should implement observable")
     }
     
-    func execute(success: @escaping (_ entity: CustomRemoteEntity<ResultEntity>) -> Void, failed: @escaping (_ message: String) -> Void) {
-        _ = (getObservable() as Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>>).subscribe { result in
+    func execute(success: @escaping (_ entity: ResultEntity) -> Void, failed: @escaping (_ message: String) -> Void) {
+        _ = (getObservable() as Observable<Result<ResultEntity, RemoteErrorEntity>>).subscribe { result in
             DispatchQueue.main.async {
                 if let error = result.error {
                     var defaultMessage: String = "Error"

@@ -112,6 +112,7 @@ class LoginViewController: UIViewController {
     
     private func goToOTPScreen(shouldGoToHomeAfterSuccessOTP: Bool) {
         let viewController: OTPViewController = OTPViewController()
+        viewController.phoneNumber = UIGenerator.changePhoneNumber(phoneNumber: phoneNumberInputView.text)
         viewController.shouldGoToHomeAfterSuccess = shouldGoToHomeAfterSuccessOTP
         
         let navigationController: UINavigationController = UINavigationController(rootViewController: viewController)

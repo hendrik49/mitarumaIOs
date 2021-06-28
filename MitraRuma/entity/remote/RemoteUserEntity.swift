@@ -8,5 +8,9 @@
 import Foundation
 
 struct RemoteUserEntity: Codable {
+    var token: String = ""
     
+    enum CodingKeys: String, CodingKey {
+        case token = "token"
+    }
 }

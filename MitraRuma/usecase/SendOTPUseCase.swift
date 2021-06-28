@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxRetroSwift
 
-class SendOTPUseCase: BaseUseCase<RemoteUserEntity> {
+class SendOTPUseCase: BaseUseCase<RemoteGoogleLoginEntity> {
 
     private var entity: ParamsOTPEntity!
     
@@ -20,7 +20,7 @@ class SendOTPUseCase: BaseUseCase<RemoteUserEntity> {
         return .shared
     }
     
-    override func getObservable<ResultEntity>() -> Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>> {
-        return UserApiClient.shared.sendOTP(params: entity) as! Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>>
+    override func getObservable<ResultEntity>() -> Observable<Result<ResultEntity, RemoteErrorEntity>> {
+        return UserApiClient.shared.sendOTP(params: entity) as! Observable<Result<ResultEntity, RemoteErrorEntity>>
     }
 }

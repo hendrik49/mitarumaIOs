@@ -9,11 +9,11 @@ import Foundation
 import RxSwift
 import RxRetroSwift
 
-class GetSkillSetUseCase: BaseUseCase<[RemoteSelectionEntity]> {
+class GetSkillSetUseCase: BaseUseCase<CustomRemoteEntity<[RemoteSelectionEntity]>> {
     
     static let shared: GetSkillSetUseCase = GetSkillSetUseCase()
     
-    override func getObservable<ResultEntity>() -> Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>> {
-        return ContentApiClient.shared.getSkillSet() as! Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>>
+    override func getObservable<ResultEntity>() -> Observable<Result<ResultEntity, RemoteErrorEntity>> {
+        return ContentApiClient.shared.getSkillSet() as! Observable<Result<ResultEntity, RemoteErrorEntity>>
     }
 }

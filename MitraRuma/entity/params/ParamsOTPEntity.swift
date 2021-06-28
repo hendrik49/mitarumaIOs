@@ -12,7 +12,7 @@ struct ParamsOTPEntity: Codable {
     var otp: String = ""
     
     enum CodingKeys: String, CodingKey {
-        case phone = "phone_number"
+        case phone = "user_phone_number"
         case otp = "otp"
     }
 }

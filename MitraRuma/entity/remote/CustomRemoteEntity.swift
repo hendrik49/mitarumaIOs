@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CustomRemoteEntity<T: Codable>: Decodable {
+struct CustomRemoteEntity<T: Codable>: Codable {
     
     var code: Int = 200
     var message: String? = ""

@@ -65,6 +65,7 @@
 		10BE32F8267DC81700639C61 /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32F7267DC81700639C61 /* NotificationPresenter.swift */; };
 		10BE32FD267DCB1100639C61 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32FB267DCB1100639C61 /* TransactionViewController.swift */; };
 		10BE32FE267DCB1100639C61 /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10BE32FC267DCB1100639C61 /* TransactionViewController.xib */; };
+		10D61EEC268A205200F336B9 /* RemoteOTPEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EEB268A205200F336B9 /* RemoteOTPEntity.swift */; };
 		10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */; };
 		10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */; };
 		10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */; };
@@ -153,6 +154,7 @@
 		10BE32F7267DC81700639C61 /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
 		10BE32FB267DCB1100639C61 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		10BE32FC267DCB1100639C61 /* TransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionViewController.xib; sourceTree = "<group>"; };
+		10D61EEB268A205200F336B9 /* RemoteOTPEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteOTPEntity.swift; sourceTree = "<group>"; };
 		10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterUseCase.swift; sourceTree = "<group>"; };
 		10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillViewController.swift; sourceTree = "<group>"; };
 		10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSkillViewController.xib; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				1019E2CC26888D2300EB5DF9 /* RemoteSelectionEntity.swift */,
 				1019E2CE26888D7E00EB5DF9 /* RemoteGroupEntity.swift */,
 				1027DD642688D2B700E70798 /* RemoteGoogleLoginEntity.swift */,
+				10D61EEB268A205200F336B9 /* RemoteOTPEntity.swift */,
 			);
 			path = remote;
 			sourceTree = "<group>";
@@ -723,6 +726,7 @@
 				103AF920266D2071009C561B /* InputFieldView.swift in Sources */,
 				10173FA726731C7C0000DAFB /* ApiClient.swift in Sources */,
 				10173FB126731ECB0000DAFB /* UserApiClient.swift in Sources */,
+				10D61EEC268A205200F336B9 /* RemoteOTPEntity.swift in Sources */,
 				103AF924266D20FE009C561B /* UIExtension.swift in Sources */,
 				1019E2CF26888D7E00EB5DF9 /* RemoteGroupEntity.swift in Sources */,
 				101A345B2677AF3200C396C0 /* LoginPresenter.swift in Sources */,

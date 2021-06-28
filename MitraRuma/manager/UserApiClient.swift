@@ -14,8 +14,8 @@ class UserApiClient {
     static var shared: UserApiClient = UserApiClient()
     private let apiClient: ApiClient = ApiClient.init()
     
-    func login(params: ParamsLoginEntity) -> Observable<Result<CustomRemoteEntity<RemoteUserEntity>, RemoteErrorEntity>> {
-        let request = RequestModel(httpMethod: .post, path: "user/login", payload: params.toDictionary()).asURLRequest()
+    func login(params: ParamsLoginEntity) -> Observable<Result<CustomRemoteEntity<RemoteOTPEntity>, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .post, path: "login", payload: params.toDictionary()).asURLRequest()
         return apiClient.caller.call(request)
     }
     
@@ -29,8 +29,8 @@ class UserApiClient {
         return apiClient.caller.call(request)
     }
     
-    func sendOTP(params: ParamsOTPEntity) -> Observable<Result<CustomRemoteEntity<RemoteUserEntity>, RemoteErrorEntity>> {
-        let request = RequestModel(httpMethod: .post, path: "user/login/otp", payload: params.toDictionary()).asURLRequest()
+    func sendOTP(params: ParamsOTPEntity) -> Observable<Result<RemoteGoogleLoginEntity, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .post, path: "login/otp", payload: params.toDictionary()).asURLRequest()
         return apiClient.caller.call(request)
     }
     

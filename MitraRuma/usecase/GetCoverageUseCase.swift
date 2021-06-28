@@ -9,11 +9,11 @@ import Foundation
 import RxSwift
 import RxRetroSwift
 
-class GetCoverageUseCase: BaseUseCase<[RemoteGroupEntity]> {
+class GetCoverageUseCase: BaseUseCase<CustomRemoteEntity<[RemoteGroupEntity]>> {
     
     static let shared: GetCoverageUseCase = GetCoverageUseCase()
     
-    override func getObservable<ResultEntity>() -> Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>> {
-        return ContentApiClient.shared.getCoverageArea() as! Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>>
+    override func getObservable<ResultEntity>() -> Observable<Result<ResultEntity, RemoteErrorEntity>> {
+        return ContentApiClient.shared.getCoverageArea() as! Observable<Result<ResultEntity, RemoteErrorEntity>>
     }
 }

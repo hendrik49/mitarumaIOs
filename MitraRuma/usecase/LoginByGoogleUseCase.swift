@@ -20,7 +20,7 @@ class LoginByGoogleUseCase: BaseUseCase<RemoteGoogleLoginEntity> {
         return .shared
     }
     
-    override func getObservable<ResultEntity>() -> Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>> {
-        return UserApiClient.shared.loginWithGoogle(params: entity) as! Observable<Result<CustomRemoteEntity<ResultEntity>, RemoteErrorEntity>>
+    override func getObservable<ResultEntity>() -> Observable<Result<ResultEntity, RemoteErrorEntity>> {
+        return UserApiClient.shared.loginWithGoogle(params: entity) as! Observable<Result<ResultEntity, RemoteErrorEntity>>
     }
 }
