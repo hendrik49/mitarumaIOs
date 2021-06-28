@@ -66,6 +66,7 @@
 		10BE32FD267DCB1100639C61 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32FB267DCB1100639C61 /* TransactionViewController.swift */; };
 		10BE32FE267DCB1100639C61 /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10BE32FC267DCB1100639C61 /* TransactionViewController.xib */; };
 		10D61EEC268A205200F336B9 /* RemoteOTPEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EEB268A205200F336B9 /* RemoteOTPEntity.swift */; };
+		10D61EEE268A23C600F336B9 /* UIUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EED268A23C600F336B9 /* UIUserEntity.swift */; };
 		10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */; };
 		10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */; };
 		10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */; };
@@ -155,6 +156,7 @@
 		10BE32FB267DCB1100639C61 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		10BE32FC267DCB1100639C61 /* TransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionViewController.xib; sourceTree = "<group>"; };
 		10D61EEB268A205200F336B9 /* RemoteOTPEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteOTPEntity.swift; sourceTree = "<group>"; };
+		10D61EED268A23C600F336B9 /* UIUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUserEntity.swift; sourceTree = "<group>"; };
 		10F3B7FA2677B33300FA7601 /* PhoneRegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneRegisterUseCase.swift; sourceTree = "<group>"; };
 		10FAC8D2267261FE00538D6C /* SelectSkillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillViewController.swift; sourceTree = "<group>"; };
 		10FAC8D3267261FE00538D6C /* SelectSkillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSkillViewController.xib; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 				10FAF11E266A8C38002640BE /* UISliderEntity.swift */,
 				10173FA3267311FA0000DAFB /* UIGroupEntity.swift */,
 				10FAC8DF267265D300538D6C /* UIPickerEntity.swift */,
+				10D61EED268A23C600F336B9 /* UIUserEntity.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				10FAC8F02672759100538D6C /* SearchTableViewCell.swift in Sources */,
 				103AF92D266D33D6009C561B /* SingleInputFieldView.swift in Sources */,
 				10BE32EE267DC46A00639C61 /* NotificationViewController.swift in Sources */,
+				10D61EEE268A23C600F336B9 /* UIUserEntity.swift in Sources */,
 				1019E2D326888FBB00EB5DF9 /* GetCoverageUseCase.swift in Sources */,
 				10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */,
 				10BE32F3267DC58100639C61 /* NotificationTableViewCell.swift in Sources */,

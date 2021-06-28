@@ -18,7 +18,24 @@ class OnBoardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUpCollectionView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        checkSession()
+    }
+    
+    private func checkSession() {
+        if (!CustomUserDefaults.getAuthToken().isEmpty) {
+            let navigationController: UINavigationController = UINavigationController(rootViewController: HomeViewController())
+            navigationController.setNavigationBarHidden(true, animated: false)
+            navigationController.setToolbarHidden(true, animated: false)
+            navigationController.modalPresentationStyle = .fullScreen
+            present(navigationController, animated: true, completion: nil)
+        }
+    }
+    
+    private func setUpCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "SliderContentCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SliderContentCollectionViewCell")

@@ -56,4 +56,12 @@ class CustomUserDefaults {
     static func setPhoto(photo: String) {
         UserDefaults.standard.setValue(photo, forKey: "photo")
     }
+    
+    static func getType() -> String {
+        return UserDefaults.standard.string(forKey: "photo") ?? ""
+    }
+    
+    static func setType(type: String) {
+        UserDefaults.standard.setValue(type, forKey: "user_type")
+    }
 }
