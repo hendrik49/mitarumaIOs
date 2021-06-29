@@ -11,8 +11,8 @@ class FormTableViewCell: UITableViewCell {
 
     @IBOutlet weak var singleInputVie: SingleInputFieldWithTitleView!
     
-    func setUpData(entity: UIFormBuilderEntity) {
+    func setUpData(entity: UIFormBuilderEntity, delegate: SingleInputFieldWithTitleViewDelegate) {
+        singleInputVie.delegate = delegate
         singleInputVie.setUp(entity: entity)
-        
     }
 }
