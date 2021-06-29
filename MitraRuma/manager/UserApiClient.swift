@@ -39,7 +39,17 @@ class UserApiClient {
         return apiClient.caller.call(request)
     }
     
-    func updateProfile(params: ParamsProfileEntity) -> Observable<Result<RemoteUserEntity, RemoteErrorEntity>> {
+    func updateProfileName(params: ParamsUpdateProfileNameEntity) -> Observable<Result<RemoteUserEntity, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .put, path: "user/profile", payload: params.toDictionary()).asURLRequest()
+        return apiClient.caller.call(request)
+    }
+    
+    func updateProfileEmail(params: ParamsUpdateProfileEmailEntity) -> Observable<Result<RemoteUserEntity, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .put, path: "user/profile", payload: params.toDictionary()).asURLRequest()
+        return apiClient.caller.call(request)
+    }
+    
+    func updateProfilePhone(params: ParamsUpdateProfilePhoneNumberEntity) -> Observable<Result<RemoteUserEntity, RemoteErrorEntity>> {
         let request = RequestModel(httpMethod: .put, path: "user/profile", payload: params.toDictionary()).asURLRequest()
         return apiClient.caller.call(request)
     }

@@ -18,9 +18,8 @@ struct RemoteUserEntity: Codable {
     var user_activation_key: String = ""
     var user_status: Int = 0
     var display_name: String = ""
-    var user_phone_number: String = ""
+    var user_phone_number: String? = nil
     var created_at: String = ""
-    var updated_at: String = ""
     
     enum CodingKeys: String, CodingKey {
         case id = "ID"
@@ -34,6 +33,5 @@ struct RemoteUserEntity: Codable {
         case display_name = "display_name"
         case user_phone_number = "user_phone_number"
         case created_at = "created_at"
-        case updated_at = "updated_at"
     }
 }
