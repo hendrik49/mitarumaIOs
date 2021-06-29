@@ -8,7 +8,7 @@
 import Foundation
 
 struct ParamsUpdateAddressEntity: Codable {
-    var id: String = ""
+    var id: Int = 0
     var street: String = ""
     var city: String = ""
     var zipcode: String = ""

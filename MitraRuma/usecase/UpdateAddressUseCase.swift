@@ -15,7 +15,7 @@ class UpdateAddressUseCase: BaseUseCase<RemoteAddressEntity> {
     
     static let shared: UpdateAddressUseCase = UpdateAddressUseCase()
     
-    func setParams(entity: ParamsUpdateAddressEntity) -> AddAddressUseCase {
+    func setParams(entity: ParamsUpdateAddressEntity) -> UpdateAddressUseCase {
         self.entity = entity
         return .shared
     }

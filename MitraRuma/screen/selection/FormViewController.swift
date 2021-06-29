@@ -26,6 +26,8 @@ class FormViewController: UIViewController {
         super.viewDidLoad()
         presenter.delegate = self
         presenter.id = id
+        presenter.list = list
+        presenter.getAddress()
         
         titleLabel.text = toolbarTitle
         setUpTableView()
@@ -43,27 +45,27 @@ class FormViewController: UIViewController {
     }
     
     @IBAction func onSaveClicked(_ sender: Any) {
-        let tempName: String = list.first { entity in
+        let tempName: String = presenter.list.first { entity in
             return entity.id == "name"
         }?.text ?? ""
         
-        let tempEmail: String = list.first { entity in
+        let tempEmail: String = presenter.list.first { entity in
             return entity.id == "email"
         }?.text ?? ""
         
-        let tempPhoneNumber: String = list.first { entity in
+        let tempPhoneNumber: String = presenter.list.first { entity in
             return entity.id == "phoneNumber"
         }?.text ?? ""
         
-        let tempAddress: String = list.first { entity in
+        let tempAddress: String = presenter.list.first { entity in
             return entity.id == "alamat"
         }?.text ?? ""
         
-        let tempCity: String = list.first { entity in
+        let tempCity: String = presenter.list.first { entity in
             return entity.id == "kecamatan"
         }?.text ?? ""
         
-        let tempZipCode: String = list.first { entity in
+        let tempZipCode: String = presenter.list.first { entity in
             return entity.id == "kode_pos"
         }?.text ?? ""
         
@@ -93,24 +95,15 @@ extension FormViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension FormViewController: SingleInputFieldWithTitleViewDelegate {
     func onTextChanged(id: String, text: String) {
-        if let tempEntity: UIFormBuilderEntity = list.first(where: { entity in
-            return entity.id == id
-        }) {
-            var temp = tempEntity
-            temp.text = text
-            
-            let index: Int = list.firstIndex { indexEntity in
-                return indexEntity.id == temp.id
-            } ?? -1
-            
-            if (index != -1) {
-                list[index] = temp
-            }
-        }
+        presenter.onTextChanged(id: id, text: text)
     }
 }
 
 extension FormViewController: FormPresenterDelegate {
+    func onSuccessLoadAddress() {
+        tableView.reloadData()
+    }
+    
     func onSuccessChange() {
         delegate.onSaveClicked(id: id, list: list)
         navigationController?.popViewController(animated: true)

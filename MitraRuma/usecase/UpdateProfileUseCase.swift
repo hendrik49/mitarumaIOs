@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxRetroSwift
 
-class UpdateProfileUseCase: BaseUseCase<RemoteGoogleLoginEntity> {
+class UpdateProfileUseCase: BaseUseCase<RemoteUserEntity> {
 
     private var entity: ParamsProfileEntity!
     
