@@ -45,32 +45,37 @@ class FormPresenter {
         }
         
         GetAddressUseCase.shared.execute { response in
-            self.addressId = response.id
-            if let indexAddress: Int = self.list.firstIndex(where: { entity in
-                return entity.id == "alamat"
-            }) {
-                var tempAddress = self.list[indexAddress]
-                tempAddress.text = response.street
-                self.list[indexAddress] = tempAddress
+            if let firstAddress = response.first {
+                self.addressId = firstAddress.id
+                if let indexAddress: Int = self.list.firstIndex(where: { entity in
+                    return entity.id == "alamat"
+                }) {
+                    var tempAddress = self.list[indexAddress]
+                    tempAddress.text = firstAddress.street
+                    self.list[indexAddress] = tempAddress
+                }
+                
+                if let indexCity: Int = self.list.firstIndex(where: { entity in
+                    return entity.id == "kecamatan"
+                }) {
+                    var tempCity = self.list[indexCity]
+                    tempCity.text = firstAddress.street
+                    self.list[indexCity] = tempCity
+                }
+                
+                if let indexZipCode: Int = self.list.firstIndex(where: { entity in
+                    return entity.id == "kode_pos"
+                }) {
+                    var tempZipCode = self.list[indexZipCode]
+                    tempZipCode.text = firstAddress.street
+                    self.list[indexZipCode] = tempZipCode
+                }
+                
+                self.delegate.onSuccessLoadAddress()
+                return
             }
             
-            if let indexCity: Int = self.list.firstIndex(where: { entity in
-                return entity.id == "kecamatan"
-            }) {
-                var tempCity = self.list[indexCity]
-                tempCity.text = response.street
-                self.list[indexCity] = tempCity
-            }
-            
-            if let indexZipCode: Int = self.list.firstIndex(where: { entity in
-                return entity.id == "kode_pos"
-            }) {
-                var tempZipCode = self.list[indexZipCode]
-                tempZipCode.text = response.street
-                self.list[indexZipCode] = tempZipCode
-            }
-            
-            self.delegate.onSuccessLoadAddress()
+            self.delegate.onFailed(message: "")
         } failed: { error in
             self.delegate.onFailed(message: error)
         }

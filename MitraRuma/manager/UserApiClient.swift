@@ -54,7 +54,7 @@ class UserApiClient {
         return apiClient.caller.call(request)
     }
     
-    func getAddress() -> Observable<Result<RemoteAddressEntity, RemoteErrorEntity>> {
+    func getAddress() -> Observable<Result<[RemoteAddressEntity], RemoteErrorEntity>> {
         let request = RequestModel(httpMethod: .get, path: "user/profile/address").asURLRequest()
         return apiClient.caller.call(request)
     }

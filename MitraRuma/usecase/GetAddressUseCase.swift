@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxRetroSwift
 
-class GetAddressUseCase: BaseUseCase<RemoteAddressEntity> {
+class GetAddressUseCase: BaseUseCase<[RemoteAddressEntity]> {
     
     static let shared: GetAddressUseCase = GetAddressUseCase()
     

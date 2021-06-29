@@ -75,12 +75,12 @@ class FormViewController: UIViewController {
 
 extension FormViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return presenter.list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: FormTableViewCell = tableView.dequeueReusableCell(withIdentifier: String(describing: FormTableViewCell.self), for: indexPath) as! FormTableViewCell
-        cell.setUpData(entity: list[indexPath.row], delegate: self)
+        cell.setUpData(entity: presenter.list[indexPath.row], delegate: self)
         return cell
     }
     
