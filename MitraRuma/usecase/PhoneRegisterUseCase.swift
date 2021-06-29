@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxRetroSwift
 
-class PhoneRegisterUseCase: BaseUseCase<CustomRemoteEntity<RemoteUserEntity>> {
+class PhoneRegisterUseCase: BaseUseCase<CustomRemoteEntity<RemoteGoogleLoginEntity>> {
 
     private var entity: ParamsLoginEntity!
     

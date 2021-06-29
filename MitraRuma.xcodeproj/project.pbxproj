@@ -65,6 +65,14 @@
 		10BE32F8267DC81700639C61 /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32F7267DC81700639C61 /* NotificationPresenter.swift */; };
 		10BE32FD267DCB1100639C61 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32FB267DCB1100639C61 /* TransactionViewController.swift */; };
 		10BE32FE267DCB1100639C61 /* TransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10BE32FC267DCB1100639C61 /* TransactionViewController.xib */; };
+		10D131AC268B1E5000A286BF /* FormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D131AB268B1E5000A286BF /* FormPresenter.swift */; };
+		10D131AE268B1F1C00A286BF /* ParamsProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D131AD268B1F1C00A286BF /* ParamsProfileEntity.swift */; };
+		10D131B0268B20E800A286BF /* UpdateProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D131AF268B20E800A286BF /* UpdateProfileUseCase.swift */; };
+		10D131B2268B24D300A286BF /* ParamsUpdateAddressEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D131B1268B24D300A286BF /* ParamsUpdateAddressEntity.swift */; };
+		10D131B4268B25BC00A286BF /* RemoteAddressEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D131B3268B25BC00A286BF /* RemoteAddressEntity.swift */; };
+		10D131B6268B277000A286BF /* GetAddressUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D131B5268B277000A286BF /* GetAddressUseCase.swift */; };
+		10D131B8268B279D00A286BF /* AddAddressUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D131B7268B279D00A286BF /* AddAddressUseCase.swift */; };
+		10D131BA268B27D600A286BF /* UpdateAddressUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D131B9268B27D600A286BF /* UpdateAddressUseCase.swift */; };
 		10D61EEC268A205200F336B9 /* RemoteOTPEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EEB268A205200F336B9 /* RemoteOTPEntity.swift */; };
 		10D61EEE268A23C600F336B9 /* UIUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EED268A23C600F336B9 /* UIUserEntity.swift */; };
 		10D61EF2268A2ACA00F336B9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D61EF0268A2ACA00F336B9 /* SettingViewController.swift */; };
@@ -164,6 +172,14 @@
 		10BE32F7267DC81700639C61 /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
 		10BE32FB267DCB1100639C61 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		10BE32FC267DCB1100639C61 /* TransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionViewController.xib; sourceTree = "<group>"; };
+		10D131AB268B1E5000A286BF /* FormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPresenter.swift; sourceTree = "<group>"; };
+		10D131AD268B1F1C00A286BF /* ParamsProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsProfileEntity.swift; sourceTree = "<group>"; };
+		10D131AF268B20E800A286BF /* UpdateProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileUseCase.swift; sourceTree = "<group>"; };
+		10D131B1268B24D300A286BF /* ParamsUpdateAddressEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsUpdateAddressEntity.swift; sourceTree = "<group>"; };
+		10D131B3268B25BC00A286BF /* RemoteAddressEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddressEntity.swift; sourceTree = "<group>"; };
+		10D131B5268B277000A286BF /* GetAddressUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAddressUseCase.swift; sourceTree = "<group>"; };
+		10D131B7268B279D00A286BF /* AddAddressUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressUseCase.swift; sourceTree = "<group>"; };
+		10D131B9268B27D600A286BF /* UpdateAddressUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAddressUseCase.swift; sourceTree = "<group>"; };
 		10D61EEB268A205200F336B9 /* RemoteOTPEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteOTPEntity.swift; sourceTree = "<group>"; };
 		10D61EED268A23C600F336B9 /* UIUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUserEntity.swift; sourceTree = "<group>"; };
 		10D61EF0268A2ACA00F336B9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +261,7 @@
 				1019E2CE26888D7E00EB5DF9 /* RemoteGroupEntity.swift */,
 				1027DD642688D2B700E70798 /* RemoteGoogleLoginEntity.swift */,
 				10D61EEB268A205200F336B9 /* RemoteOTPEntity.swift */,
+				10D131B3268B25BC00A286BF /* RemoteAddressEntity.swift */,
 			);
 			path = remote;
 			sourceTree = "<group>";
@@ -264,6 +281,8 @@
 				101A34582677AE6100C396C0 /* ParamsLoginEntity.swift */,
 				1062B120267BA405004C9858 /* ParamsExtensionAttributesEntity.swift */,
 				1062B126267BB2CA004C9858 /* ParamsOTPEntity.swift */,
+				10D131AD268B1F1C00A286BF /* ParamsProfileEntity.swift */,
+				10D131B1268B24D300A286BF /* ParamsUpdateAddressEntity.swift */,
 			);
 			path = params;
 			sourceTree = "<group>";
@@ -279,6 +298,10 @@
 				1019E2D026888DE600EB5DF9 /* GetSkillSetUseCase.swift */,
 				1019E2D226888FBB00EB5DF9 /* GetCoverageUseCase.swift */,
 				1027DD622688CFAC00E70798 /* LoginByGoogleUseCase.swift */,
+				10D131AF268B20E800A286BF /* UpdateProfileUseCase.swift */,
+				10D131B5268B277000A286BF /* GetAddressUseCase.swift */,
+				10D131B7268B279D00A286BF /* AddAddressUseCase.swift */,
+				10D131B9268B27D600A286BF /* UpdateAddressUseCase.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -399,6 +422,7 @@
 				10D61F00268A324C00F336B9 /* cell */,
 				10D61EFA268A308600F336B9 /* FormViewController.swift */,
 				10D61EFB268A308600F336B9 /* FormViewController.xib */,
+				10D131AB268B1E5000A286BF /* FormPresenter.swift */,
 			);
 			path = selection;
 			sourceTree = "<group>";
@@ -738,15 +762,19 @@
 				1062B125267BB29B004C9858 /* OTPPresenter.swift in Sources */,
 				1062B129267BB330004C9858 /* SendOTPUseCase.swift in Sources */,
 				10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */,
+				10D131B8268B279D00A286BF /* AddAddressUseCase.swift in Sources */,
 				10B9B89C26821B080067075D /* AccountViewController.swift in Sources */,
 				103AF92A266D3305009C561B /* OTPViewController.swift in Sources */,
+				10D131B4268B25BC00A286BF /* RemoteAddressEntity.swift in Sources */,
 				101A34552677A3D300C396C0 /* HomeViewController.swift in Sources */,
 				1027DD652688D2B700E70798 /* RemoteGoogleLoginEntity.swift in Sources */,
+				10D131B2268B24D300A286BF /* ParamsUpdateAddressEntity.swift in Sources */,
 				10D61EFC268A308600F336B9 /* FormViewController.swift in Sources */,
 				10173FAF26731E920000DAFB /* RequestModel.swift in Sources */,
 				10173FA4267311FA0000DAFB /* UIGroupEntity.swift in Sources */,
 				10FAF126266A9099002640BE /* UIGenerator.swift in Sources */,
 				10BE32F8267DC81700639C61 /* NotificationPresenter.swift in Sources */,
+				10D131AC268B1E5000A286BF /* FormPresenter.swift in Sources */,
 				10BE32E9267DB83600639C61 /* CategoryCollectionViewCell.swift in Sources */,
 				1062B11F267B99DF004C9858 /* DashboardPresenter.swift in Sources */,
 				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
@@ -773,6 +801,7 @@
 				10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */,
 				101A345F2677AF9F00C396C0 /* BaseUseCase.swift in Sources */,
 				10173FB626731F890000DAFB /* RemoteErrorEntity.swift in Sources */,
+				10D131BA268B27D600A286BF /* UpdateAddressUseCase.swift in Sources */,
 				103AF926266D2128009C561B /* TapGestureRecognizer.swift in Sources */,
 				101A34592677AE6100C396C0 /* ParamsLoginEntity.swift in Sources */,
 				10FB8E63265FEAC8001D0E64 /* AppDelegate.swift in Sources */,
@@ -786,6 +815,7 @@
 				10FAC8E0267265D300538D6C /* UIPickerEntity.swift in Sources */,
 				1019E2D126888DE600EB5DF9 /* GetSkillSetUseCase.swift in Sources */,
 				10FB8E65265FEAC8001D0E64 /* SceneDelegate.swift in Sources */,
+				10D131B6268B277000A286BF /* GetAddressUseCase.swift in Sources */,
 				10BE32FD267DCB1100639C61 /* TransactionViewController.swift in Sources */,
 				103AF920266D2071009C561B /* InputFieldView.swift in Sources */,
 				10173FA726731C7C0000DAFB /* ApiClient.swift in Sources */,
@@ -793,6 +823,8 @@
 				10D61EEC268A205200F336B9 /* RemoteOTPEntity.swift in Sources */,
 				103AF924266D20FE009C561B /* UIExtension.swift in Sources */,
 				1019E2CF26888D7E00EB5DF9 /* RemoteGroupEntity.swift in Sources */,
+				10D131AE268B1F1C00A286BF /* ParamsProfileEntity.swift in Sources */,
+				10D131B0268B20E800A286BF /* UpdateProfileUseCase.swift in Sources */,
 				101A345B2677AF3200C396C0 /* LoginPresenter.swift in Sources */,
 				10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */,
 				10FAC8DD267264ED00538D6C /* TitleTableViewCell.swift in Sources */,

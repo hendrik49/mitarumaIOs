@@ -22,7 +22,7 @@ class SettingViewController: UIViewController {
     private func setUpOnClick() {
         changeNameView.onClick {
             var list: [UIFormBuilderEntity] = []
-            list.append(UIFormBuilderEntity(id: "", title: "Masukkan nama baru kamu", hint: "Nama", text: ""))
+            list.append(UIFormBuilderEntity(id: "name", title: "Masukkan nama baru kamu", hint: "Nama", text: ""))
             
             let viewController: FormViewController = FormViewController()
             viewController.delegate = self
@@ -34,7 +34,7 @@ class SettingViewController: UIViewController {
         
         changeEmailView.onClick {
             var list: [UIFormBuilderEntity] = []
-            list.append(UIFormBuilderEntity(id: "", title: "Masukkan alamat email baru kamu", hint: "Email", text: ""))
+            list.append(UIFormBuilderEntity(id: "email", title: "Masukkan alamat email baru kamu", hint: "Email", text: ""))
             
             let viewController: FormViewController = FormViewController()
             viewController.delegate = self
@@ -46,7 +46,7 @@ class SettingViewController: UIViewController {
         
         changePhoneNumberView.onClick {
             var list: [UIFormBuilderEntity] = []
-            list.append(UIFormBuilderEntity(id: "", title: "Masukkan nomor telepon baru", hint: "Nomor telepon", text: ""))
+            list.append(UIFormBuilderEntity(id: "phoneNumber", title: "Masukkan nomor telepon baru", hint: "Nomor telepon", text: ""))
             
             let viewController: FormViewController = FormViewController()
             viewController.delegate = self

@@ -19,12 +19,12 @@ class UserApiClient {
         return apiClient.caller.call(request)
     }
     
-    func register(params: ParamsLoginEntity) -> Observable<Result<CustomRemoteEntity<RemoteUserEntity>, RemoteErrorEntity>> {
+    func register(params: ParamsLoginEntity) -> Observable<Result<CustomRemoteEntity<RemoteGoogleLoginEntity>, RemoteErrorEntity>> {
         let request = RequestModel(httpMethod: .post, path: "user/register", payload: params.toDictionary()).asURLRequest()
         return apiClient.caller.call(request)
     }
     
-    func registerAsApplicator(params: ParamsLoginEntity) -> Observable<Result<CustomRemoteEntity<RemoteUserEntity>, RemoteErrorEntity>> {
+    func registerAsApplicator(params: ParamsLoginEntity) -> Observable<Result<CustomRemoteEntity<RemoteGoogleLoginEntity>, RemoteErrorEntity>> {
         let request = RequestModel(httpMethod: .post, path: "applicator/register", payload: params.toDictionary()).asURLRequest()
         return apiClient.caller.call(request)
     }
@@ -36,6 +36,26 @@ class UserApiClient {
     
     func loginWithGoogle(params: ParamsLoginEntity) -> Observable<Result<RemoteGoogleLoginEntity, RemoteErrorEntity>> {
         let request = RequestModel(httpMethod: .post, path: "login/google/token", payload: params.toDictionary()).asURLRequest()
+        return apiClient.caller.call(request)
+    }
+    
+    func updateProfile(params: ParamsProfileEntity) -> Observable<Result<RemoteUserEntity, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .put, path: "user/profile", payload: params.toDictionary()).asURLRequest()
+        return apiClient.caller.call(request)
+    }
+    
+    func addAddress(params: ParamsUpdateAddressEntity) -> Observable<Result<RemoteAddressEntity, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .post, path: "user/profile/address", payload: params.toDictionary()).asURLRequest()
+        return apiClient.caller.call(request)
+    }
+    
+    func updateAddress(params: ParamsUpdateAddressEntity) -> Observable<Result<RemoteAddressEntity, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .put, path: "user/profile/address/\(params.id)", payload: params.toDictionary()).asURLRequest()
+        return apiClient.caller.call(request)
+    }
+    
+    func getAddress() -> Observable<Result<RemoteAddressEntity, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .get, path: "user/profile/address").asURLRequest()
         return apiClient.caller.call(request)
     }
 }

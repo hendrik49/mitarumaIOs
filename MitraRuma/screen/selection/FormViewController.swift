@@ -20,9 +20,12 @@ class FormViewController: UIViewController {
     var toolbarTitle: String = ""
     var list: [UIFormBuilderEntity] = []
     var delegate: FormViewControllerDelegate!
+    private let presenter: FormPresenter = FormPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.delegate = self
+        presenter.id = id
         
         titleLabel.text = toolbarTitle
         setUpTableView()
@@ -40,7 +43,31 @@ class FormViewController: UIViewController {
     }
     
     @IBAction func onSaveClicked(_ sender: Any) {
-        delegate.onSaveClicked(id: id, list: list)
+        let tempName: String = list.first { entity in
+            return entity.id == "name"
+        }?.text ?? ""
+        
+        let tempEmail: String = list.first { entity in
+            return entity.id == "email"
+        }?.text ?? ""
+        
+        let tempPhoneNumber: String = list.first { entity in
+            return entity.id == "phoneNumber"
+        }?.text ?? ""
+        
+        let tempAddress: String = list.first { entity in
+            return entity.id == "alamat"
+        }?.text ?? ""
+        
+        let tempCity: String = list.first { entity in
+            return entity.id == "kecamatan"
+        }?.text ?? ""
+        
+        let tempZipCode: String = list.first { entity in
+            return entity.id == "kode_pos"
+        }?.text ?? ""
+        
+        presenter.update(name: tempName, email: tempEmail, phoneNumber: tempPhoneNumber, address: tempAddress, city: tempCity, zipCode: tempZipCode)
     }
 }
 
@@ -80,5 +107,16 @@ extension FormViewController: SingleInputFieldWithTitleViewDelegate {
                 list[index] = temp
             }
         }
+    }
+}
+
+extension FormViewController: FormPresenterDelegate {
+    func onSuccessChange() {
+        delegate.onSaveClicked(id: id, list: list)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func onFailed(message: String) {
+        
     }
 }
