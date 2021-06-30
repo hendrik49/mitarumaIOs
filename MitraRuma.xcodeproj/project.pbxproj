@@ -106,6 +106,15 @@
 		10FAF122266A8EE4002640BE /* SliderContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF120266A8EE4002640BE /* SliderContentCollectionViewCell.swift */; };
 		10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAF121266A8EE4002640BE /* SliderContentCollectionViewCell.xib */; };
 		10FAF126266A9099002640BE /* UIGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF125266A9099002640BE /* UIGenerator.swift */; };
+		10FAF1E4268CBA0000263E72 /* ConsultationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF1E2268CBA0000263E72 /* ConsultationViewController.swift */; };
+		10FAF1E5268CBA0000263E72 /* ConsultationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAF1E3268CBA0000263E72 /* ConsultationViewController.xib */; };
+		10FAF1E7268CBFBD00263E72 /* ConsultationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF1E6268CBFBD00263E72 /* ConsultationPresenter.swift */; };
+		10FAF1EF268CC73D00263E72 /* ConsultationVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF1ED268CC73D00263E72 /* ConsultationVideoTableViewCell.swift */; };
+		10FAF1F0268CC73D00263E72 /* ConsultationVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAF1EE268CC73D00263E72 /* ConsultationVideoTableViewCell.xib */; };
+		10FAF1F3268CC74800263E72 /* ConsultationTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF1F1268CC74800263E72 /* ConsultationTitleTableViewCell.swift */; };
+		10FAF1F4268CC74800263E72 /* ConsultationTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAF1F2268CC74800263E72 /* ConsultationTitleTableViewCell.xib */; };
+		10FAF1F7268CC75500263E72 /* ConsultationItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FAF1F5268CC75500263E72 /* ConsultationItemTableViewCell.swift */; };
+		10FAF1F8268CC75500263E72 /* ConsultationItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FAF1F6268CC75500263E72 /* ConsultationItemTableViewCell.xib */; };
 		10FB8E63265FEAC8001D0E64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB8E62265FEAC8001D0E64 /* AppDelegate.swift */; };
 		10FB8E65265FEAC8001D0E64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB8E64265FEAC8001D0E64 /* SceneDelegate.swift */; };
 		10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FB8E66265FEAC8001D0E64 /* ViewController.swift */; };
@@ -216,6 +225,15 @@
 		10FAF120266A8EE4002640BE /* SliderContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		10FAF121266A8EE4002640BE /* SliderContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderContentCollectionViewCell.xib; sourceTree = "<group>"; };
 		10FAF125266A9099002640BE /* UIGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGenerator.swift; sourceTree = "<group>"; };
+		10FAF1E2268CBA0000263E72 /* ConsultationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationViewController.swift; sourceTree = "<group>"; };
+		10FAF1E3268CBA0000263E72 /* ConsultationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsultationViewController.xib; sourceTree = "<group>"; };
+		10FAF1E6268CBFBD00263E72 /* ConsultationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationPresenter.swift; sourceTree = "<group>"; };
+		10FAF1ED268CC73D00263E72 /* ConsultationVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationVideoTableViewCell.swift; sourceTree = "<group>"; };
+		10FAF1EE268CC73D00263E72 /* ConsultationVideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsultationVideoTableViewCell.xib; sourceTree = "<group>"; };
+		10FAF1F1268CC74800263E72 /* ConsultationTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationTitleTableViewCell.swift; sourceTree = "<group>"; };
+		10FAF1F2268CC74800263E72 /* ConsultationTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsultationTitleTableViewCell.xib; sourceTree = "<group>"; };
+		10FAF1F5268CC75500263E72 /* ConsultationItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationItemTableViewCell.swift; sourceTree = "<group>"; };
+		10FAF1F6268CC75500263E72 /* ConsultationItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsultationItemTableViewCell.xib; sourceTree = "<group>"; };
 		10FB8E5F265FEAC8001D0E64 /* MitraRuma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MitraRuma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10FB8E62265FEAC8001D0E64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10FB8E64265FEAC8001D0E64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -490,6 +508,7 @@
 		10FAF112266A8AAB002640BE /* screen */ = {
 			isa = PBXGroup;
 			children = (
+				10FAF1E1268CB9EE00263E72 /* consultation */,
 				10D61EF9268A306A00F336B9 /* selection */,
 				10D61EEF268A2AB700F336B9 /* setting */,
 				10BE32FA267DCAE500639C61 /* account */,
@@ -548,6 +567,30 @@
 				10173FAC26731D550000DAFB /* CustomUserDefaults.swift */,
 			);
 			path = support;
+			sourceTree = "<group>";
+		};
+		10FAF1E1268CB9EE00263E72 /* consultation */ = {
+			isa = PBXGroup;
+			children = (
+				10FAF1E8268CC68E00263E72 /* cell */,
+				10FAF1E2268CBA0000263E72 /* ConsultationViewController.swift */,
+				10FAF1E3268CBA0000263E72 /* ConsultationViewController.xib */,
+				10FAF1E6268CBFBD00263E72 /* ConsultationPresenter.swift */,
+			);
+			path = consultation;
+			sourceTree = "<group>";
+		};
+		10FAF1E8268CC68E00263E72 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				10FAF1ED268CC73D00263E72 /* ConsultationVideoTableViewCell.swift */,
+				10FAF1EE268CC73D00263E72 /* ConsultationVideoTableViewCell.xib */,
+				10FAF1F1268CC74800263E72 /* ConsultationTitleTableViewCell.swift */,
+				10FAF1F2268CC74800263E72 /* ConsultationTitleTableViewCell.xib */,
+				10FAF1F5268CC75500263E72 /* ConsultationItemTableViewCell.swift */,
+				10FAF1F6268CC75500263E72 /* ConsultationItemTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		10FB8E56265FEAC8001D0E64 = {
@@ -668,6 +711,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10FAC8EC2672740100538D6C /* CoverageViewController.xib in Resources */,
+				10FAF1E5268CBA0000263E72 /* ConsultationViewController.xib in Resources */,
 				10FAC8F12672759100538D6C /* SearchTableViewCell.xib in Resources */,
 				10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */,
 				10BE32FE267DCB1100639C61 /* TransactionViewController.xib in Resources */,
@@ -683,6 +727,7 @@
 				10FB8E72265FEAC9001D0E64 /* LaunchScreen.storyboard in Resources */,
 				10D61F04268A326100F336B9 /* FormTableViewCell.xib in Resources */,
 				103AF91D266D1FDF009C561B /* LoginViewController.xib in Resources */,
+				10FAF1F4268CC74800263E72 /* ConsultationTitleTableViewCell.xib in Resources */,
 				10FB8E6F265FEAC9001D0E64 /* Assets.xcassets in Resources */,
 				10FAF117266A8AD0002640BE /* OnBoardingViewController.xib in Resources */,
 				10FE9FD42678BC8200A005FA /* GoogleService-Info.plist in Resources */,
@@ -691,7 +736,9 @@
 				10D61EFD268A308600F336B9 /* FormViewController.xib in Resources */,
 				10BE32EA267DB83600639C61 /* CategoryCollectionViewCell.xib in Resources */,
 				10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */,
+				10FAF1F0268CC73D00263E72 /* ConsultationVideoTableViewCell.xib in Resources */,
 				10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */,
+				10FAF1F8268CC75500263E72 /* ConsultationItemTableViewCell.xib in Resources */,
 				10B9B89D26821B080067075D /* AccountViewController.xib in Resources */,
 				103AF922266D208E009C561B /* InputFieldView.xib in Resources */,
 			);
@@ -774,6 +821,7 @@
 				10BFE15A268B78AB00E92B41 /* ParamsProfileEntity.swift in Sources */,
 				10D131B8268B279D00A286BF /* AddAddressUseCase.swift in Sources */,
 				10B9B89C26821B080067075D /* AccountViewController.swift in Sources */,
+				10FAF1F7268CC75500263E72 /* ConsultationItemTableViewCell.swift in Sources */,
 				103AF92A266D3305009C561B /* OTPViewController.swift in Sources */,
 				10D131B4268B25BC00A286BF /* RemoteAddressEntity.swift in Sources */,
 				101A34552677A3D300C396C0 /* HomeViewController.swift in Sources */,
@@ -789,12 +837,14 @@
 				1062B11F267B99DF004C9858 /* DashboardPresenter.swift in Sources */,
 				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
 				10D61EF2268A2ACA00F336B9 /* SettingViewController.swift in Sources */,
+				10FAF1E4268CBA0000263E72 /* ConsultationViewController.swift in Sources */,
 				10D61F03268A326100F336B9 /* FormTableViewCell.swift in Sources */,
 				1062B123267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift in Sources */,
 				10FAC8EB2672740100538D6C /* CoverageViewController.swift in Sources */,
 				1019E2CB26888C1B00EB5DF9 /* ContentApiClient.swift in Sources */,
 				1062B11A267B9888004C9858 /* BannerCollectionViewCell.swift in Sources */,
 				10D61EF5268A2E7E00F336B9 /* SingleInputFieldWithTitleView.swift in Sources */,
+				10FAF1E7268CBFBD00263E72 /* ConsultationPresenter.swift in Sources */,
 				10FB8E6D265FEAC8001D0E64 /* MitraRuma.xcdatamodeld in Sources */,
 				1027DD632688CFAC00E70798 /* LoginByGoogleUseCase.swift in Sources */,
 				1062B127267BB2CA004C9858 /* ParamsOTPEntity.swift in Sources */,
@@ -807,6 +857,7 @@
 				10D61EEE268A23C600F336B9 /* UIUserEntity.swift in Sources */,
 				1019E2D326888FBB00EB5DF9 /* GetCoverageUseCase.swift in Sources */,
 				10BFE158268B780A00E92B41 /* ParamsUpdateProfileEmailEntity.swift in Sources */,
+				10FAF1F3268CC74800263E72 /* ConsultationTitleTableViewCell.swift in Sources */,
 				10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */,
 				10BE32F3267DC58100639C61 /* NotificationTableViewCell.swift in Sources */,
 				10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */,
@@ -841,6 +892,7 @@
 				10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */,
 				10FAC8DD267264ED00538D6C /* TitleTableViewCell.swift in Sources */,
 				1062B11D267B98E3004C9858 /* RemoteBannerEntity.swift in Sources */,
+				10FAF1EF268CC73D00263E72 /* ConsultationVideoTableViewCell.swift in Sources */,
 				10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

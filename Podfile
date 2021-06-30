@@ -13,6 +13,7 @@ target 'MitraRuma' do
   pod 'DLRadioButton', '~> 1.4'
   pod 'SimpleCheckbox'
   pod 'SwiftJWT'
+  pod "youtube-ios-player-helper"
 
   # Pods for MitraRuma
 

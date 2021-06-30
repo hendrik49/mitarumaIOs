@@ -16,6 +16,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var notificationView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var categoryHeightConstraint: NSLayoutConstraint!
     private let presenter: DashboardPresenter = DashboardPresenter()
@@ -63,9 +64,13 @@ class DashboardViewController: UIViewController {
         
         bannerLabel.attributedText = string
         bannerLabel.textColor = UIColor(named: "white")
+        
+        nameLabel.text = "Hi \(CustomUserDefaults.getName().isEmpty ? "-" : CustomUserDefaults.getName())"
     }
     
     @IBAction func onConsultationClicked(_ sender: Any) {
+        let viewController: ConsultationViewController = ConsultationViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
