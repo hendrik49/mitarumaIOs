@@ -9,5 +9,5 @@ import Foundation
 
 class AddConsultationPresenter {
     
-    var photoList: [String] = []
+    var photoList: [URL] = []
 }

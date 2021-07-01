@@ -33,6 +33,7 @@ class AddConsultationViewController: UIViewController {
         updatePhotoCollectionView.dataSource = self
         
         updatePhotoCollectionView.register(UINib(nibName: String(describing: AddPhotoCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: AddPhotoCollectionViewCell.self))
+        updatePhotoCollectionView.register(UINib(nibName: String(describing: PhotoCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: PhotoCollectionViewCell.self))
     }
     
     @IBAction func onBookClicked(_ sender: Any) {
@@ -47,9 +48,15 @@ extension AddConsultationViewController: UICollectionViewDelegate, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: AddPhotoCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: AddPhotoCollectionViewCell.self), for: indexPath) as! AddPhotoCollectionViewCell
-        cell.delegate = self
-        return cell
+        if (indexPath.row == presenter.photoList.count) {
+            let cell: AddPhotoCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: AddPhotoCollectionViewCell.self), for: indexPath) as! AddPhotoCollectionViewCell
+            cell.delegate = self
+            return cell
+        } else {
+            let cell: PhotoCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PhotoCollectionViewCell.self), for: indexPath) as! PhotoCollectionViewCell
+            cell.setUpData(image: presenter.photoList[indexPath.row])
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -60,6 +67,31 @@ extension AddConsultationViewController: UICollectionViewDelegate, UICollectionV
 
 extension AddConsultationViewController: AddPhotoCollectionViewCellDelegate {
     func onAddPhotoClicked() {
-        
+        let viewController: UIImagePickerController = UIImagePickerController()
+        viewController.delegate = self
+        present(viewController, animated: true, completion: nil)
+    }
+}
+
+extension AddConsultationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else { return }
+
+        let imageName = UUID().uuidString
+        let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
+
+        if let jpegData = image.jpegData(compressionQuality: 0.8) {
+            try? jpegData.write(to: imagePath)
+            presenter.photoList.append(imagePath)
+            
+            updatePhotoCollectionView.reloadData()
+        }
+
+        dismiss(animated: true)
+    }
+
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
     }
 }
