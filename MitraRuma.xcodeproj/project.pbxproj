@@ -68,6 +68,13 @@
 		10BFE156268B77FF00E92B41 /* ParamsUpdateProfileNameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BFE155268B77FF00E92B41 /* ParamsUpdateProfileNameEntity.swift */; };
 		10BFE158268B780A00E92B41 /* ParamsUpdateProfileEmailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BFE157268B780A00E92B41 /* ParamsUpdateProfileEmailEntity.swift */; };
 		10BFE15A268B78AB00E92B41 /* ParamsProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BFE159268B78AB00E92B41 /* ParamsProfileEntity.swift */; };
+		10C07DCA268DF4E1004CCEF4 /* AddConsultationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C07DC8268DF4E1004CCEF4 /* AddConsultationViewController.swift */; };
+		10C07DCB268DF4E1004CCEF4 /* AddConsultationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C07DC9268DF4E1004CCEF4 /* AddConsultationViewController.xib */; };
+		10C07DCD268DFD30004CCEF4 /* AddConsultationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C07DCC268DFD30004CCEF4 /* AddConsultationPresenter.swift */; };
+		10C07DD1268DFD74004CCEF4 /* AddPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C07DCF268DFD74004CCEF4 /* AddPhotoCollectionViewCell.swift */; };
+		10C07DD2268DFD74004CCEF4 /* AddPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C07DD0268DFD74004CCEF4 /* AddPhotoCollectionViewCell.xib */; };
+		10C07DD5268E0883004CCEF4 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C07DD3268E0883004CCEF4 /* PhotoCollectionViewCell.swift */; };
+		10C07DD6268E0883004CCEF4 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10C07DD4268E0883004CCEF4 /* PhotoCollectionViewCell.xib */; };
 		10D131AC268B1E5000A286BF /* FormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D131AB268B1E5000A286BF /* FormPresenter.swift */; };
 		10D131AE268B1F1C00A286BF /* ParamsUpdateProfilePhoneNumberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D131AD268B1F1C00A286BF /* ParamsUpdateProfilePhoneNumberEntity.swift */; };
 		10D131B0268B20E800A286BF /* UpdateProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D131AF268B20E800A286BF /* UpdateProfileUseCase.swift */; };
@@ -187,6 +194,13 @@
 		10BFE155268B77FF00E92B41 /* ParamsUpdateProfileNameEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsUpdateProfileNameEntity.swift; sourceTree = "<group>"; };
 		10BFE157268B780A00E92B41 /* ParamsUpdateProfileEmailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsUpdateProfileEmailEntity.swift; sourceTree = "<group>"; };
 		10BFE159268B78AB00E92B41 /* ParamsProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsProfileEntity.swift; sourceTree = "<group>"; };
+		10C07DC8268DF4E1004CCEF4 /* AddConsultationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConsultationViewController.swift; sourceTree = "<group>"; };
+		10C07DC9268DF4E1004CCEF4 /* AddConsultationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddConsultationViewController.xib; sourceTree = "<group>"; };
+		10C07DCC268DFD30004CCEF4 /* AddConsultationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConsultationPresenter.swift; sourceTree = "<group>"; };
+		10C07DCF268DFD74004CCEF4 /* AddPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		10C07DD0268DFD74004CCEF4 /* AddPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		10C07DD3268E0883004CCEF4 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		10C07DD4268E0883004CCEF4 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		10D131AB268B1E5000A286BF /* FormPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPresenter.swift; sourceTree = "<group>"; };
 		10D131AD268B1F1C00A286BF /* ParamsUpdateProfilePhoneNumberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsUpdateProfilePhoneNumberEntity.swift; sourceTree = "<group>"; };
 		10D131AF268B20E800A286BF /* UpdateProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileUseCase.swift; sourceTree = "<group>"; };
@@ -434,6 +448,39 @@
 			path = account;
 			sourceTree = "<group>";
 		};
+		10C07DC6268DF494004CCEF4 /* dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				10FAF1E8268CC68E00263E72 /* cell */,
+				10FAF1E2268CBA0000263E72 /* ConsultationViewController.swift */,
+				10FAF1E3268CBA0000263E72 /* ConsultationViewController.xib */,
+				10FAF1E6268CBFBD00263E72 /* ConsultationPresenter.swift */,
+			);
+			path = dashboard;
+			sourceTree = "<group>";
+		};
+		10C07DC7268DF4A4004CCEF4 /* add */ = {
+			isa = PBXGroup;
+			children = (
+				10C07DCE268DFD5A004CCEF4 /* cell */,
+				10C07DC8268DF4E1004CCEF4 /* AddConsultationViewController.swift */,
+				10C07DC9268DF4E1004CCEF4 /* AddConsultationViewController.xib */,
+				10C07DCC268DFD30004CCEF4 /* AddConsultationPresenter.swift */,
+			);
+			path = add;
+			sourceTree = "<group>";
+		};
+		10C07DCE268DFD5A004CCEF4 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				10C07DCF268DFD74004CCEF4 /* AddPhotoCollectionViewCell.swift */,
+				10C07DD0268DFD74004CCEF4 /* AddPhotoCollectionViewCell.xib */,
+				10C07DD3268E0883004CCEF4 /* PhotoCollectionViewCell.swift */,
+				10C07DD4268E0883004CCEF4 /* PhotoCollectionViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		10D61EEF268A2AB700F336B9 /* setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,10 +619,8 @@
 		10FAF1E1268CB9EE00263E72 /* consultation */ = {
 			isa = PBXGroup;
 			children = (
-				10FAF1E8268CC68E00263E72 /* cell */,
-				10FAF1E2268CBA0000263E72 /* ConsultationViewController.swift */,
-				10FAF1E3268CBA0000263E72 /* ConsultationViewController.xib */,
-				10FAF1E6268CBFBD00263E72 /* ConsultationPresenter.swift */,
+				10C07DC7268DF4A4004CCEF4 /* add */,
+				10C07DC6268DF494004CCEF4 /* dashboard */,
 			);
 			path = consultation;
 			sourceTree = "<group>";
@@ -725,6 +770,7 @@
 				103AF918266D1AD9009C561B /* Colors.xcassets in Resources */,
 				10FAC8DA267264E000538D6C /* SelectionTableViewCell.xib in Resources */,
 				10FB8E72265FEAC9001D0E64 /* LaunchScreen.storyboard in Resources */,
+				10C07DD2268DFD74004CCEF4 /* AddPhotoCollectionViewCell.xib in Resources */,
 				10D61F04268A326100F336B9 /* FormTableViewCell.xib in Resources */,
 				103AF91D266D1FDF009C561B /* LoginViewController.xib in Resources */,
 				10FAF1F4268CC74800263E72 /* ConsultationTitleTableViewCell.xib in Resources */,
@@ -733,12 +779,14 @@
 				10FE9FD42678BC8200A005FA /* GoogleService-Info.plist in Resources */,
 				10FAC8DE267264ED00538D6C /* TitleTableViewCell.xib in Resources */,
 				101A34562677A3D300C396C0 /* HomeViewController.xib in Resources */,
+				10C07DCB268DF4E1004CCEF4 /* AddConsultationViewController.xib in Resources */,
 				10D61EFD268A308600F336B9 /* FormViewController.xib in Resources */,
 				10BE32EA267DB83600639C61 /* CategoryCollectionViewCell.xib in Resources */,
 				10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */,
 				10FAF1F0268CC73D00263E72 /* ConsultationVideoTableViewCell.xib in Resources */,
 				10FAF123266A8EE4002640BE /* SliderContentCollectionViewCell.xib in Resources */,
 				10FAF1F8268CC75500263E72 /* ConsultationItemTableViewCell.xib in Resources */,
+				10C07DD6268E0883004CCEF4 /* PhotoCollectionViewCell.xib in Resources */,
 				10B9B89D26821B080067075D /* AccountViewController.xib in Resources */,
 				103AF922266D208E009C561B /* InputFieldView.xib in Resources */,
 			);
@@ -819,6 +867,7 @@
 				1062B129267BB330004C9858 /* SendOTPUseCase.swift in Sources */,
 				10FAF11F266A8C38002640BE /* UISliderEntity.swift in Sources */,
 				10BFE15A268B78AB00E92B41 /* ParamsProfileEntity.swift in Sources */,
+				10C07DD5268E0883004CCEF4 /* PhotoCollectionViewCell.swift in Sources */,
 				10D131B8268B279D00A286BF /* AddAddressUseCase.swift in Sources */,
 				10B9B89C26821B080067075D /* AccountViewController.swift in Sources */,
 				10FAF1F7268CC75500263E72 /* ConsultationItemTableViewCell.swift in Sources */,
@@ -830,6 +879,7 @@
 				10D61EFC268A308600F336B9 /* FormViewController.swift in Sources */,
 				10173FAF26731E920000DAFB /* RequestModel.swift in Sources */,
 				10173FA4267311FA0000DAFB /* UIGroupEntity.swift in Sources */,
+				10C07DD1268DFD74004CCEF4 /* AddPhotoCollectionViewCell.swift in Sources */,
 				10FAF126266A9099002640BE /* UIGenerator.swift in Sources */,
 				10BE32F8267DC81700639C61 /* NotificationPresenter.swift in Sources */,
 				10D131AC268B1E5000A286BF /* FormPresenter.swift in Sources */,
@@ -852,8 +902,10 @@
 				10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */,
 				10FAC8F02672759100538D6C /* SearchTableViewCell.swift in Sources */,
 				103AF92D266D33D6009C561B /* SingleInputFieldView.swift in Sources */,
+				10C07DCA268DF4E1004CCEF4 /* AddConsultationViewController.swift in Sources */,
 				10D61EFF268A320900F336B9 /* UIFormBuilderEntity.swift in Sources */,
 				10BE32EE267DC46A00639C61 /* NotificationViewController.swift in Sources */,
+				10C07DCD268DFD30004CCEF4 /* AddConsultationPresenter.swift in Sources */,
 				10D61EEE268A23C600F336B9 /* UIUserEntity.swift in Sources */,
 				1019E2D326888FBB00EB5DF9 /* GetCoverageUseCase.swift in Sources */,
 				10BFE158268B780A00E92B41 /* ParamsUpdateProfileEmailEntity.swift in Sources */,

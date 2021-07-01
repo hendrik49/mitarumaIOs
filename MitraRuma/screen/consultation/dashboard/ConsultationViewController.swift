@@ -34,6 +34,11 @@ class ConsultationViewController: UIViewController {
         tableView.reloadData()
     }
     
+    @IBAction func onBookClicked(_ sender: Any) {
+        let viewController: AddConsultationViewController = AddConsultationViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     @IBAction func onBackPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }

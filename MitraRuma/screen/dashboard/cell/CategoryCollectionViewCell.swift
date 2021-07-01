@@ -16,9 +16,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
     
     func setUpData(imageUrl: String, title: String, size: CGFloat) {
-        let url = URL(string: imageUrl)
-        let data = try? Data(contentsOf: url!)
-        imageView.image = UIImage(data: data!)
+        if let url = URL(string: imageUrl) {
+            UIGenerator.downloadImage(from: url, imageView: imageView)
+        }
         heightSizeConstraint.constant = size
         widthSizeConstraint.constant = size
         containerView.cornerRadius = size / 2

@@ -83,6 +83,9 @@
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="roundBL" value="YES"/>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="roundBR" value="YES"/>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onBookClicked:" destination="-1" eventType="touchUpInside" id="4Sl-uN-IJ7"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDU-Ll-CHx">
                             <rect key="frame" x="24" y="8" width="366" height="40"/>

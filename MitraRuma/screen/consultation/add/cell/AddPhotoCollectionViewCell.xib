@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AddPhotoCollectionViewCell" customModule="MitraRuma" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2XD-lK-x2W">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0W-fD-p4m">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="SLx-js-y0I"/>
+                                    <constraint firstAttribute="width" constant="80" id="sHI-Fg-dZZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundTL" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundTR" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundBL" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundBR" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8hK-qi-iwC">
+                                <rect key="frame" x="25" y="27" width="30" height="26"/>
+                                <color key="tintColor" name="gray_button"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="h4L-6x-4U5"/>
+                                    <constraint firstAttribute="width" constant="30" id="vgx-Ql-S0b"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8hK-qi-iwC" secondAttribute="bottom" constant="25" id="5NP-uq-zoM"/>
+                            <constraint firstItem="8hK-qi-iwC" firstAttribute="top" secondItem="2XD-lK-x2W" secondAttribute="top" constant="25" id="SwC-BI-r4p"/>
+                            <constraint firstAttribute="trailing" secondItem="k0W-fD-p4m" secondAttribute="trailing" id="VSi-zz-2vN"/>
+                            <constraint firstAttribute="trailing" secondItem="8hK-qi-iwC" secondAttribute="trailing" constant="25" id="bqG-SM-k99"/>
+                            <constraint firstItem="k0W-fD-p4m" firstAttribute="leading" secondItem="2XD-lK-x2W" secondAttribute="leading" id="fix-ti-sgr"/>
+                            <constraint firstAttribute="bottom" secondItem="k0W-fD-p4m" secondAttribute="bottom" id="saw-I8-rSc"/>
+                            <constraint firstItem="k0W-fD-p4m" firstAttribute="top" secondItem="2XD-lK-x2W" secondAttribute="top" id="uzv-rA-aeY"/>
+                            <constraint firstItem="8hK-qi-iwC" firstAttribute="leading" secondItem="2XD-lK-x2W" secondAttribute="leading" constant="25" id="wth-y4-9bl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="2XD-lK-x2W" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CbX-l4-72S"/>
+                <constraint firstItem="2XD-lK-x2W" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailing" id="HhG-IV-aDM"/>
+                <constraint firstAttribute="bottom" secondItem="2XD-lK-x2W" secondAttribute="bottom" id="W30-4f-Kmz"/>
+                <constraint firstAttribute="top" secondItem="2XD-lK-x2W" secondAttribute="top" id="c1N-8p-5Yp"/>
+            </constraints>
+            <size key="customSize" width="80" height="81"/>
+            <connections>
+                <outlet property="baseView" destination="k0W-fD-p4m" id="krW-hX-0cC"/>
+            </connections>
+            <point key="canvasLocation" x="8.6956521739130448" y="143.63839285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="gray_button">
+            <color red="0.50999999046325684" green="0.50999999046325684" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
