@@ -32,6 +32,11 @@
 		101A34612677AFFE00C396C0 /* PhoneLoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A34602677AFFE00C396C0 /* PhoneLoginUseCase.swift */; };
 		1027DD632688CFAC00E70798 /* LoginByGoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027DD622688CFAC00E70798 /* LoginByGoogleUseCase.swift */; };
 		1027DD652688D2B700E70798 /* RemoteGoogleLoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1027DD642688D2B700E70798 /* RemoteGoogleLoginEntity.swift */; };
+		10309CE4268F406F008F4656 /* ConsultationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10309CE3268F406F008F4656 /* ConsultationClient.swift */; };
+		10309CE6268F433A008F4656 /* ParamsSubmitConsultationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10309CE5268F433A008F4656 /* ParamsSubmitConsultationEntity.swift */; };
+		10309CE8268F4379008F4656 /* ParamsFileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10309CE7268F4379008F4656 /* ParamsFileEntity.swift */; };
+		10309CEA268F4495008F4656 /* SubmitConsultationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10309CE9268F4495008F4656 /* SubmitConsultationUseCase.swift */; };
+		10309CEC268F44DC008F4656 /* RemoteMessageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10309CEB268F44DC008F4656 /* RemoteMessageEntity.swift */; };
 		103AF918266D1AD9009C561B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103AF917266D1AD9009C561B /* Colors.xcassets */; };
 		103AF91C266D1FDF009C561B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103AF91A266D1FDF009C561B /* LoginViewController.swift */; };
 		103AF91D266D1FDF009C561B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103AF91B266D1FDF009C561B /* LoginViewController.xib */; };
@@ -159,6 +164,11 @@
 		101A34602677AFFE00C396C0 /* PhoneLoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginUseCase.swift; sourceTree = "<group>"; };
 		1027DD622688CFAC00E70798 /* LoginByGoogleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginByGoogleUseCase.swift; sourceTree = "<group>"; };
 		1027DD642688D2B700E70798 /* RemoteGoogleLoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGoogleLoginEntity.swift; sourceTree = "<group>"; };
+		10309CE3268F406F008F4656 /* ConsultationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationClient.swift; sourceTree = "<group>"; };
+		10309CE5268F433A008F4656 /* ParamsSubmitConsultationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsSubmitConsultationEntity.swift; sourceTree = "<group>"; };
+		10309CE7268F4379008F4656 /* ParamsFileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsFileEntity.swift; sourceTree = "<group>"; };
+		10309CE9268F4495008F4656 /* SubmitConsultationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitConsultationUseCase.swift; sourceTree = "<group>"; };
+		10309CEB268F44DC008F4656 /* RemoteMessageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMessageEntity.swift; sourceTree = "<group>"; };
 		103AF917266D1AD9009C561B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		103AF91A266D1FDF009C561B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		103AF91B266D1FDF009C561B /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -285,6 +295,7 @@
 				10173FAE26731E920000DAFB /* RequestModel.swift */,
 				10173FB026731ECB0000DAFB /* UserApiClient.swift */,
 				1019E2CA26888C1B00EB5DF9 /* ContentApiClient.swift */,
+				10309CE3268F406F008F4656 /* ConsultationClient.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -302,6 +313,7 @@
 				1027DD642688D2B700E70798 /* RemoteGoogleLoginEntity.swift */,
 				10D61EEB268A205200F336B9 /* RemoteOTPEntity.swift */,
 				10D131B3268B25BC00A286BF /* RemoteAddressEntity.swift */,
+				10309CEB268F44DC008F4656 /* RemoteMessageEntity.swift */,
 			);
 			path = remote;
 			sourceTree = "<group>";
@@ -326,6 +338,8 @@
 				10BFE155268B77FF00E92B41 /* ParamsUpdateProfileNameEntity.swift */,
 				10BFE157268B780A00E92B41 /* ParamsUpdateProfileEmailEntity.swift */,
 				10BFE159268B78AB00E92B41 /* ParamsProfileEntity.swift */,
+				10309CE5268F433A008F4656 /* ParamsSubmitConsultationEntity.swift */,
+				10309CE7268F4379008F4656 /* ParamsFileEntity.swift */,
 			);
 			path = params;
 			sourceTree = "<group>";
@@ -345,6 +359,7 @@
 				10D131B5268B277000A286BF /* GetAddressUseCase.swift */,
 				10D131B7268B279D00A286BF /* AddAddressUseCase.swift */,
 				10D131B9268B27D600A286BF /* UpdateAddressUseCase.swift */,
+				10309CE9268F4495008F4656 /* SubmitConsultationUseCase.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -887,6 +902,7 @@
 				10BE32F8267DC81700639C61 /* NotificationPresenter.swift in Sources */,
 				10D131AC268B1E5000A286BF /* FormPresenter.swift in Sources */,
 				10BE32E9267DB83600639C61 /* CategoryCollectionViewCell.swift in Sources */,
+				10309CEA268F4495008F4656 /* SubmitConsultationUseCase.swift in Sources */,
 				1062B11F267B99DF004C9858 /* DashboardPresenter.swift in Sources */,
 				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
 				10D61EF2268A2ACA00F336B9 /* SettingViewController.swift in Sources */,
@@ -904,6 +920,7 @@
 				1062B127267BB2CA004C9858 /* ParamsOTPEntity.swift in Sources */,
 				10173FAB26731CD10000DAFB /* RawResponse.swift in Sources */,
 				10FB8E67265FEAC8001D0E64 /* ViewController.swift in Sources */,
+				10309CE4268F406F008F4656 /* ConsultationClient.swift in Sources */,
 				10FAC8F02672759100538D6C /* SearchTableViewCell.swift in Sources */,
 				103AF92D266D33D6009C561B /* SingleInputFieldView.swift in Sources */,
 				10C07DCA268DF4E1004CCEF4 /* AddConsultationViewController.swift in Sources */,
@@ -929,6 +946,7 @@
 				101A34612677AFFE00C396C0 /* PhoneLoginUseCase.swift in Sources */,
 				10FAF122266A8EE4002640BE /* SliderContentCollectionViewCell.swift in Sources */,
 				10173FB826731FD80000DAFB /* RemoteUserEntity.swift in Sources */,
+				10309CE6268F433A008F4656 /* ParamsSubmitConsultationEntity.swift in Sources */,
 				10173FB426731F780000DAFB /* CustomRemoteEntity.swift in Sources */,
 				10FAC8E0267265D300538D6C /* UIPickerEntity.swift in Sources */,
 				1019E2D126888DE600EB5DF9 /* GetSkillSetUseCase.swift in Sources */,
@@ -948,7 +966,9 @@
 				10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */,
 				10FAC8DD267264ED00538D6C /* TitleTableViewCell.swift in Sources */,
 				1062B11D267B98E3004C9858 /* RemoteBannerEntity.swift in Sources */,
+				10309CEC268F44DC008F4656 /* RemoteMessageEntity.swift in Sources */,
 				10FAF1EF268CC73D00263E72 /* ConsultationVideoTableViewCell.swift in Sources */,
+				10309CE8268F4379008F4656 /* ParamsFileEntity.swift in Sources */,
 				10FAF116266A8AD0002640BE /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

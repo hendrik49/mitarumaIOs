@@ -29,6 +29,12 @@ class UIGenerator {
         return phoneNumber.replace("+62", at: 0)
     }
     
+    static func showDialog(title: String, message: String) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        return alert
+    }
+    
     static func downloadImage(from url: URL, imageView: UIImageView) {
         UIGenerator.getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }

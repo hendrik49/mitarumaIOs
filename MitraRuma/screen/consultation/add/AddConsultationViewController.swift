@@ -24,8 +24,8 @@ class AddConsultationViewController: UIViewController {
         presenter.delegate = self
         
         estimatedBudgetFieldView.setUp(entity: UIFormBuilderEntity(id: "budget", title: "Estimated budget", hint: "Enter estimated budget"))
-        nameFieldView.setUp(entity: UIFormBuilderEntity(id: "name", title: "Name", hint: "Enter name"))
-        contactFieldView.setUp(entity: UIFormBuilderEntity(id: "contact", title: "Contact", hint: "Enter contact"))
+        nameFieldView.setUp(entity: UIFormBuilderEntity(id: "name", title: "Name", hint: "Enter name", text: CustomUserDefaults.getName()))
+        contactFieldView.setUp(entity: UIFormBuilderEntity(id: "contact", title: "Contact", hint: "Enter contact", text: CustomUserDefaults.getPhoneNumber()))
         
         setUpCollectionView()
     }
@@ -73,6 +73,14 @@ extension AddConsultationViewController: UICollectionViewDelegate, UICollectionV
 }
 
 extension AddConsultationViewController: AddConsultationPresenterDelegate {
+    func successSubmit() {
+        present(UIGenerator.showDialog(title: "Success", message: "Success submit consultation!"), animated: true, completion: nil)
+    }
+    
+    func onError(message: String) {
+        present(UIGenerator.showDialog(title: "Error", message: message), animated: true, completion: nil)
+    }
+    
     func onSuccessUploadImage() {
         updatePhotoCollectionView.reloadData()
     }

@@ -87,7 +87,7 @@ extension CoverageViewController: CoveragePresenterDelegate {
     
     func failed(message: String) {
         setLoadingState(isLoading: false)
-        print(message)
+        present(UIGenerator.showDialog(title: "Error", message: message), animated: true, completion: nil)
     }
 }
 

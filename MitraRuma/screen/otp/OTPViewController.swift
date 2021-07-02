@@ -124,6 +124,6 @@ extension OTPViewController: OTPPresenterDelegate {
     }
     
     func failed(message: String) {
-        print(message)
+        present(UIGenerator.showDialog(title: "Error", message: message), animated: true, completion: nil)
     }
 }

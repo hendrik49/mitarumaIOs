@@ -10,6 +10,8 @@ import FirebaseStorage
 
 protocol AddConsultationPresenterDelegate {
     func onSuccessUploadImage()
+    func successSubmit()
+    func onError(message: String)
 }
 
 class AddConsultationPresenter {
@@ -38,10 +40,12 @@ class AddConsultationPresenter {
     }
     
     func book(detail: String, estimatedBudget: Int, name: String, contact: String, address: String) {
-        print(detail)
-        print("\(estimatedBudget)")
-        print(name)
-        print(contact)
-        print(address)
+        let params: ParamsSubmitConsultationEntity = ParamsSubmitConsultationEntity(estimatedBudget: estimatedBudget, description: detail, city: "", street: address, zipcode: "", photos: photoList.map({ return ParamsFileUrl(pathUrl: $0.remoteUrl) }), contact: contact)
+        
+        SubmitConsultationUseCase.shared.setParams(entity: params).execute { response in
+            self.delegate.successSubmit()
+        } failed: { error in
+            self.delegate.onError(message: error)
+        }
     }
 }

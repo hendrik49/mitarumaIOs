@@ -85,7 +85,7 @@ extension SelectSkillViewController: SelectSkillPresenterDelegate {
     }
     
     func onFailed(message: String) {
-        print(message)
+        UIGenerator.showDialog(title: "Error", message: message)
     }
     
     func shouldUpdateCounter() {

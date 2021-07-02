@@ -169,7 +169,6 @@ extension LoginViewController: GIDSignInDelegate {
         
         let token = signIn.currentUser.authentication.idToken ?? ""
         presenter.requestLoginGoogle(token: token)
-        print(token)
     }
 }
 
