@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1011024C268EED3400504E1B /* UIUriEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1011024B268EED3400504E1B /* UIUriEntity.swift */; };
 		10173FA2267310920000DAFB /* CoveragePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA1267310920000DAFB /* CoveragePresenter.swift */; };
 		10173FA4267311FA0000DAFB /* UIGroupEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA3267311FA0000DAFB /* UIGroupEntity.swift */; };
 		10173FA726731C7C0000DAFB /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FA626731C7C0000DAFB /* ApiClient.swift */; };
@@ -133,6 +134,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1011024B268EED3400504E1B /* UIUriEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUriEntity.swift; sourceTree = "<group>"; };
 		10173FA1267310920000DAFB /* CoveragePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoveragePresenter.swift; sourceTree = "<group>"; };
 		10173FA3267311FA0000DAFB /* UIGroupEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGroupEntity.swift; sourceTree = "<group>"; };
 		10173FA626731C7C0000DAFB /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -601,6 +603,7 @@
 				10FAC8DF267265D300538D6C /* UIPickerEntity.swift */,
 				10D61EED268A23C600F336B9 /* UIUserEntity.swift */,
 				10D61EFE268A320900F336B9 /* UIFormBuilderEntity.swift */,
+				1011024B268EED3400504E1B /* UIUriEntity.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
 				10D61EF2268A2ACA00F336B9 /* SettingViewController.swift in Sources */,
 				10FAF1E4268CBA0000263E72 /* ConsultationViewController.swift in Sources */,
+				1011024C268EED3400504E1B /* UIUriEntity.swift in Sources */,
 				10D61F03268A326100F336B9 /* FormTableViewCell.swift in Sources */,
 				1062B123267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift in Sources */,
 				10FAC8EB2672740100538D6C /* CoverageViewController.swift in Sources */,

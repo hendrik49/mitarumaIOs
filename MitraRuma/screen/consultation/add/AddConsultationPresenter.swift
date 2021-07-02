@@ -6,8 +6,34 @@
 //
 
 import Foundation
+import FirebaseStorage
+
+protocol AddConsultationPresenterDelegate {
+    func onSuccessUploadImage()
+}
 
 class AddConsultationPresenter {
     
-    var photoList: [URL] = []
+    var photoList: [UIUriEntity] = []
+    
+    var delegate: AddConsultationPresenterDelegate!
+    
+    func uploadImage() {
+        if let entity = photoList.first(where: { !$0.isUploaded }) {
+            let reference = Storage.storage().reference()
+            let child = reference.child("consultation/\(UUID.init().uuidString)-\(entity.url.lastPathComponent)")
+            child.putFile(from: entity.url, metadata: nil) {
+                (metadata, error) in
+                
+                child.downloadURL(completion: { url, error in
+                    if let index: Int = self.photoList.firstIndex(where: { tempEntity in
+                        return tempEntity.url == entity.url
+                    }) {
+                        self.photoList[index].remoteUrl = url?.absoluteString ?? ""
+                        self.delegate.onSuccessUploadImage()
+                    }
+                })
+            }
+        }
+    }
 }

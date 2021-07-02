@@ -21,6 +21,8 @@ class AddConsultationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter.delegate = self
+        
         estimatedBudgetFieldView.setUp(entity: UIFormBuilderEntity(id: "budget", title: "Estimated budget", hint: "Enter estimated budget"))
         nameFieldView.setUp(entity: UIFormBuilderEntity(id: "budget", title: "Estimated budget", hint: "Enter estimated budget"))
         contactFieldView.setUp(entity: UIFormBuilderEntity(id: "budget", title: "Estimated budget", hint: "Enter estimated budget"))
@@ -54,14 +56,19 @@ extension AddConsultationViewController: UICollectionViewDelegate, UICollectionV
             return cell
         } else {
             let cell: PhotoCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PhotoCollectionViewCell.self), for: indexPath) as! PhotoCollectionViewCell
-            cell.setUpData(image: presenter.photoList[indexPath.row])
+            cell.setUpData(entity: presenter.photoList[indexPath.row])
             return cell
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = (UIScreen.main.bounds.width - 32) / 5
         return CGSize(width: 80, height: 80)
+    }
+}
+
+extension AddConsultationViewController: AddConsultationPresenterDelegate {
+    func onSuccessUploadImage() {
+        updatePhotoCollectionView.reloadData()
     }
 }
 
@@ -82,9 +89,9 @@ extension AddConsultationViewController: UIImagePickerControllerDelegate, UINavi
 
         if let jpegData = image.jpegData(compressionQuality: 0.8) {
             try? jpegData.write(to: imagePath)
-            presenter.photoList.append(imagePath)
-            
+            presenter.photoList.append(UIUriEntity(url: imagePath))
             updatePhotoCollectionView.reloadData()
+            presenter.uploadImage()
         }
 
         dismiss(animated: true)

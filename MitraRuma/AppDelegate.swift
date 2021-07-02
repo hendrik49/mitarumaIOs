@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import GoogleSignIn
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
         
+        FirebaseApp.configure()
         
         if #available(iOS 13.0, *) {
             window?.overrideUserInterfaceStyle = .light

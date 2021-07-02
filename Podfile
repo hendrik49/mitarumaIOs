@@ -14,6 +14,7 @@ target 'MitraRuma' do
   pod 'SimpleCheckbox'
   pod 'SwiftJWT'
   pod "youtube-ios-player-helper"
+  pod 'Firebase/Storage'
 
   # Pods for MitraRuma
 
