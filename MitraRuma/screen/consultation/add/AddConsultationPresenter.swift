@@ -36,4 +36,12 @@ class AddConsultationPresenter {
             }
         }
     }
+    
+    func book(detail: String, estimatedBudget: Int, name: String, contact: String, address: String) {
+        print(detail)
+        print("\(estimatedBudget)")
+        print(name)
+        print(contact)
+        print(address)
+    }
 }

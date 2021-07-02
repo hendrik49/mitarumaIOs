@@ -24,8 +24,8 @@ class AddConsultationViewController: UIViewController {
         presenter.delegate = self
         
         estimatedBudgetFieldView.setUp(entity: UIFormBuilderEntity(id: "budget", title: "Estimated budget", hint: "Enter estimated budget"))
-        nameFieldView.setUp(entity: UIFormBuilderEntity(id: "budget", title: "Estimated budget", hint: "Enter estimated budget"))
-        contactFieldView.setUp(entity: UIFormBuilderEntity(id: "budget", title: "Estimated budget", hint: "Enter estimated budget"))
+        nameFieldView.setUp(entity: UIFormBuilderEntity(id: "name", title: "Name", hint: "Enter name"))
+        contactFieldView.setUp(entity: UIFormBuilderEntity(id: "contact", title: "Contact", hint: "Enter contact"))
         
         setUpCollectionView()
     }
@@ -39,7 +39,13 @@ class AddConsultationViewController: UIViewController {
     }
     
     @IBAction func onBookClicked(_ sender: Any) {
+        let detail: String = detailTextView.text
+        let estimatedBudget: Int = try! Int(value: estimatedBudgetFieldView.getText().isEmpty ? "0" : estimatedBudgetFieldView.getText())
+        let name: String = nameFieldView.getText()
+        let contact: String = contactFieldView.getText()
+        let address: String = addressFieldView.text
         
+        presenter.book(detail: detail, estimatedBudget: estimatedBudget, name: name, contact: contact, address: address)
     }
 }
 
