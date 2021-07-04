@@ -40,8 +40,7 @@ class AddConsultationPresenter {
     }
     
     func book(detail: String, estimatedBudget: Int, name: String, contact: String, address: String) {
-        let params: ParamsSubmitConsultationEntity = ParamsSubmitConsultationEntity(estimatedBudget: estimatedBudget, description: detail, city: "", street: address, zipcode: "", photos: photoList.map({ return ParamsFileUrl(pathUrl: $0.remoteUrl) }), contact: contact)
-        
+        let params: ParamsSubmitConsultationEntity = ParamsSubmitConsultationEntity(estimatedBudget: estimatedBudget, description: detail, city: "DKI Jakarta", street: address, zipcode: "14154", photos: photoList.map({ return ParamsFileUrl(pathUrl: $0.remoteUrl) }), contact: contact)
         SubmitConsultationUseCase.shared.setParams(entity: params).execute { response in
             self.delegate.successSubmit()
         } failed: { error in

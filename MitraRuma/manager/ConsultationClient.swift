@@ -15,7 +15,7 @@ class ConsultationClient {
     private let apiClient: ApiClient = ApiClient.init()
     
     func submitConsultation(entity: ParamsSubmitConsultationEntity) -> Observable<Result<RemoteMessageEntity, RemoteErrorEntity>> {
-        let request = RequestModel(httpMethod: .post, path: "consultation", payload: entity.toDictionary()).asURLRequest()
+        let request = RequestModel(httpMethod: .post, path: "user/consultation", payload: entity.toDictionary()).asURLRequest()
         return apiClient.caller.call(request)
     }
 }
