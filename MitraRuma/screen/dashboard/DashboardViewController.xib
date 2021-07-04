@@ -298,6 +298,9 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBound" value="NO"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onChatClicked:" destination="-1" eventType="touchUpInside" id="zrg-KN-9BG"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

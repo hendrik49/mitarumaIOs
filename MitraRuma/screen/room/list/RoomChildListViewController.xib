@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoomChildListViewController" customModule="MitraRuma" customModuleProvider="target">
+            <connections>
+                <outlet property="searchTextField" destination="1je-Kt-re1" id="Dxx-DB-Lc9"/>
+                <outlet property="tableView" destination="qkN-s5-EMn" id="pkc-xc-ynl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WII-0i-Ndt">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYs-zJ-Awc">
+                            <rect key="frame" x="16" y="16" width="382" height="50"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_search" translatesAutoresizingMaskIntoConstraints="NO" id="Ou6-sg-pI1">
+                                    <rect key="frame" x="346" y="15" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="RW9-CA-Mbo"/>
+                                        <constraint firstAttribute="width" constant="20" id="WwU-Pm-5H3"/>
+                                    </constraints>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1je-Kt-re1">
+                                    <rect key="frame" x="16" y="16" width="314" height="18.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="onSearchChanged:" destination="-1" eventType="editingChanged" id="ouj-co-JxE"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="1je-Kt-re1" firstAttribute="leading" secondItem="vYs-zJ-Awc" secondAttribute="leading" constant="16" id="G3q-Bz-lR6"/>
+                                <constraint firstItem="Ou6-sg-pI1" firstAttribute="leading" secondItem="1je-Kt-re1" secondAttribute="trailing" constant="16" id="XG5-yl-1y4"/>
+                                <constraint firstItem="Ou6-sg-pI1" firstAttribute="centerY" secondItem="vYs-zJ-Awc" secondAttribute="centerY" id="ZBe-kb-JLD"/>
+                                <constraint firstAttribute="trailing" secondItem="Ou6-sg-pI1" secondAttribute="trailing" constant="16" id="f4T-Qf-Kao"/>
+                                <constraint firstItem="1je-Kt-re1" firstAttribute="centerY" secondItem="Ou6-sg-pI1" secondAttribute="centerY" id="q9l-GJ-kRM"/>
+                                <constraint firstAttribute="height" constant="50" id="uPJ-Wm-9zw"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundTL" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundTR" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundBL" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="roundBR" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="gray_button"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qkN-s5-EMn">
+                            <rect key="frame" x="0.0" y="66" width="414" height="752"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="vYs-zJ-Awc" secondAttribute="trailing" constant="16" id="4Cm-kG-9Ac"/>
+                        <constraint firstAttribute="trailing" secondItem="qkN-s5-EMn" secondAttribute="trailing" id="H0g-KJ-85X"/>
+                        <constraint firstAttribute="bottom" secondItem="qkN-s5-EMn" secondAttribute="bottom" id="KZU-Ah-EBs"/>
+                        <constraint firstItem="vYs-zJ-Awc" firstAttribute="top" secondItem="WII-0i-Ndt" secondAttribute="top" constant="16" id="dVS-QV-Xgk"/>
+                        <constraint firstItem="vYs-zJ-Awc" firstAttribute="leading" secondItem="WII-0i-Ndt" secondAttribute="leading" constant="16" id="fOX-kk-wJs"/>
+                        <constraint firstItem="qkN-s5-EMn" firstAttribute="leading" secondItem="WII-0i-Ndt" secondAttribute="leading" id="izV-aN-Vc5"/>
+                        <constraint firstItem="qkN-s5-EMn" firstAttribute="top" secondItem="vYs-zJ-Awc" secondAttribute="bottom" id="vuo-C1-7hm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WII-0i-Ndt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0dR-n9-4wI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WII-0i-Ndt" secondAttribute="trailing" id="ASk-rf-HrH"/>
+                <constraint firstItem="WII-0i-Ndt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="PJt-DI-EoH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WII-0i-Ndt" secondAttribute="bottom" id="jL9-W6-TtB"/>
+            </constraints>
+            <point key="canvasLocation" x="-12" y="67"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_search" width="155" height="155"/>
+        <namedColor name="gray_button">
+            <color red="0.50999999046325684" green="0.50999999046325684" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

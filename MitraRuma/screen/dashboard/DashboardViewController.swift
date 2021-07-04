@@ -68,6 +68,11 @@ class DashboardViewController: UIViewController {
         nameLabel.text = "Hi \(CustomUserDefaults.getName().isEmpty ? "-" : CustomUserDefaults.getName())"
     }
     
+    @IBAction func onChatClicked(_ sender: Any) {
+        let viewController: RoomListViewController = RoomListViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     @IBAction func onConsultationClicked(_ sender: Any) {
         let viewController: ConsultationViewController = ConsultationViewController()
         navigationController?.pushViewController(viewController, animated: true)
