@@ -15,7 +15,11 @@ class ConsultationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.delegate = self
         setUpTableView()
+        
+        presenter.requestVideo()
+        presenter.requestBenefits()
     }
     
     private func setUpTableView() {
@@ -25,13 +29,6 @@ class ConsultationViewController: UIViewController {
         tableView.register(UINib(nibName: String(describing: ConsultationVideoTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ConsultationVideoTableViewCell.self))
         tableView.register(UINib(nibName: String(describing: ConsultationTitleTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ConsultationTitleTableViewCell.self))
         tableView.register(UINib(nibName: String(describing: ConsultationItemTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ConsultationItemTableViewCell.self))
-        
-        presenter.list.append("Times new roman")
-        presenter.list.append("Times new roman")
-        presenter.list.append("Times new roman")
-        presenter.list.append("Times new roman")
-        presenter.list.append("Times new roman")
-        tableView.reloadData()
     }
     
     @IBAction func onBookClicked(_ sender: Any) {
@@ -41,6 +38,20 @@ class ConsultationViewController: UIViewController {
     
     @IBAction func onBackPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+}
+
+extension ConsultationViewController: ConsultationPresenterDelegate {
+    func successLoadBenefitsList() {
+        tableView.reloadData()
+    }
+    
+    func successLoadVideo() {
+        tableView.reloadData()
+    }
+    
+    func onFailed(message: String) {
+        present(UIGenerator.showDialog(title: "error", message: message), animated: true, completion: nil)
     }
 }
 

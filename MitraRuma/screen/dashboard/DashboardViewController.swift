@@ -23,7 +23,7 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.setUpData()
+        presenter.delegate = self
         setUpText()
         setUpBannerCollectionView()
         setUpMenuCollectionView()
@@ -31,6 +31,9 @@ class DashboardViewController: UIViewController {
         notificationView.onClick {
             self.navigationController?.pushViewController(NotificationViewController(), animated: true)
         }
+        
+        presenter.getCategoryList()
+        presenter.getBannerList()
     }
     
     private func setUpBannerCollectionView() {
@@ -79,10 +82,24 @@ class DashboardViewController: UIViewController {
     }
 }
 
+extension DashboardViewController: DashboardPresenterDelegate {
+    func successLoadBanner() {
+        bannerCollectionView.reloadData()
+    }
+    
+    func successLoadCategory() {
+        categoryCollectionView.reloadData()
+    }
+    
+    func onFailed(message: String) {
+        present(UIGenerator.showDialog(title: "Error", message: message), animated: true, completion: nil)
+    }
+}
+
 extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == categoryCollectionView) {
-            return 8
+            return presenter.categoryList.count
         } else {
             return presenter.list.count
         }
@@ -92,7 +109,7 @@ extension DashboardViewController: UICollectionViewDelegate, UICollectionViewDat
         if (collectionView == categoryCollectionView) {
             let size = (UIScreen.main.bounds.width - 48) / 5
             let cell: CategoryCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CategoryCollectionViewCell.self), for: indexPath) as! CategoryCollectionViewCell
-            cell.setUpData(imageUrl: "https://apexwebmarketing.com/wp-content/uploads/2020/09/Banner-Designing-Services1.jpg", title: "Test Category", size: size)
+            cell.setUpData(imageUrl: presenter.categoryList[indexPath.row].icon, title: presenter.categoryList[indexPath.row].name, size: size)
             return cell
         } else {
             let cell: BannerCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: BannerCollectionViewCell.self), for: indexPath) as! BannerCollectionViewCell

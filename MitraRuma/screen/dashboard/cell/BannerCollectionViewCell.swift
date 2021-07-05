@@ -15,8 +15,8 @@ class BannerCollectionViewCell: UICollectionViewCell {
 
     func setUpData(entity: RemoteBannerEntity) {
         self.entity = entity
-        let url = URL(string: entity.imageUrl)
-        let data = try? Data(contentsOf: url!)
-        imageView.image = UIImage(data: data!)
+        if let url = URL(string: entity.image) {
+            UIGenerator.downloadImage(from: url, imageView: imageView)
+        }
     }
 }

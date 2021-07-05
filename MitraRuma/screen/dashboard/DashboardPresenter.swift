@@ -7,13 +7,35 @@
 
 import Foundation
 
+protocol DashboardPresenterDelegate {
+    func successLoadBanner()
+    func successLoadCategory()
+    func onFailed(message: String)
+}
+
 class DashboardPresenter {
     
     var list: [RemoteBannerEntity] = []
+    var categoryList: [RemoteCategoryEntity] = []
+    var delegate: DashboardPresenterDelegate!
     
-    func setUpData() {
-        list.append(RemoteBannerEntity(imageUrl: "https://apexwebmarketing.com/wp-content/uploads/2020/09/Banner-Designing-Services1.jpg", clickUrl: "https://www.google.com"))
-        list.append(RemoteBannerEntity(imageUrl: "https://apexwebmarketing.com/wp-content/uploads/2020/09/Banner-Designing-Services1.jpg", clickUrl: "https://www.google.com"))
-        list.append(RemoteBannerEntity(imageUrl: "https://apexwebmarketing.com/wp-content/uploads/2020/09/Banner-Designing-Services1.jpg", clickUrl: "https://www.google.com"))
+    func getBannerList() {
+        GetBannerListUseCase.shared.execute { response in
+            self.list.removeAll()
+            self.list.append(contentsOf: response.values ?? [])
+            self.delegate.successLoadBanner()
+        } failed: { error in
+            self.delegate.onFailed(message: error)
+        }
+    }
+    
+    func getCategoryList() {
+        GetCategoryListUseCase.shared.execute { respose in
+            self.categoryList.removeAll()
+            self.categoryList.append(contentsOf: respose.values ?? [])
+            self.delegate.successLoadCategory()
+        } failed: { error in
+            self.delegate.onFailed(message: error)
+        }
     }
 }

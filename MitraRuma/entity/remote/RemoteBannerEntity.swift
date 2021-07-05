@@ -8,6 +8,11 @@
 import Foundation
 
 struct RemoteBannerEntity: Codable {
-    var imageUrl: String = ""
-    var clickUrl: String = ""
+    var id: Int = 0
+    var image: String = ""
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case image = "image"
+    }
 }

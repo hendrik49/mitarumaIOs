@@ -69,6 +69,13 @@
 		109E381B2691DEC1001EE055 /* RoomListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109E38192691DEC1001EE055 /* RoomListViewController.xib */; };
 		10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A56AD4266E35F40019516A /* DashboardViewController.swift */; };
 		10A56AD7266E35F40019516A /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A56AD5266E35F40019516A /* DashboardViewController.xib */; };
+		10AB88C326935C5900F70023 /* GetBenefitsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB88C226935C5900F70023 /* GetBenefitsUseCase.swift */; };
+		10AB88C526935C8600F70023 /* RemoteBenefitsListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB88C426935C8600F70023 /* RemoteBenefitsListEntity.swift */; };
+		10AB88C726935D5500F70023 /* GetVideoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB88C626935D5500F70023 /* GetVideoUseCase.swift */; };
+		10AB88C926935D6900F70023 /* RemoteVideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB88C826935D6900F70023 /* RemoteVideoEntity.swift */; };
+		10AB88CB26935F8000F70023 /* RemoteCategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB88CA26935F8000F70023 /* RemoteCategoryEntity.swift */; };
+		10AB88CD26935FCA00F70023 /* GetCategoryListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB88CC26935FCA00F70023 /* GetCategoryListUseCase.swift */; };
+		10AB88CF26935FF400F70023 /* GetBannerListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AB88CE26935FF400F70023 /* GetBannerListUseCase.swift */; };
 		10B9B89C26821B080067075D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9B89A26821B080067075D /* AccountViewController.swift */; };
 		10B9B89D26821B080067075D /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B9B89B26821B080067075D /* AccountViewController.xib */; };
 		10BE32E9267DB83600639C61 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE32E7267DB83600639C61 /* CategoryCollectionViewCell.swift */; };
@@ -211,6 +218,13 @@
 		109E38192691DEC1001EE055 /* RoomListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomListViewController.xib; sourceTree = "<group>"; };
 		10A56AD4266E35F40019516A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		10A56AD5266E35F40019516A /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		10AB88C226935C5900F70023 /* GetBenefitsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBenefitsUseCase.swift; sourceTree = "<group>"; };
+		10AB88C426935C8600F70023 /* RemoteBenefitsListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBenefitsListEntity.swift; sourceTree = "<group>"; };
+		10AB88C626935D5500F70023 /* GetVideoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVideoUseCase.swift; sourceTree = "<group>"; };
+		10AB88C826935D6900F70023 /* RemoteVideoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteVideoEntity.swift; sourceTree = "<group>"; };
+		10AB88CA26935F8000F70023 /* RemoteCategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCategoryEntity.swift; sourceTree = "<group>"; };
+		10AB88CC26935FCA00F70023 /* GetCategoryListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCategoryListUseCase.swift; sourceTree = "<group>"; };
+		10AB88CE26935FF400F70023 /* GetBannerListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBannerListUseCase.swift; sourceTree = "<group>"; };
 		10B9B89A26821B080067075D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		10B9B89B26821B080067075D /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
 		10BE32E7267DB83600639C61 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -336,6 +350,9 @@
 				10D131B3268B25BC00A286BF /* RemoteAddressEntity.swift */,
 				10309CEB268F44DC008F4656 /* RemoteMessageEntity.swift */,
 				1040D6C026920FA000292703 /* RemoteRoomEntity.swift */,
+				10AB88C426935C8600F70023 /* RemoteBenefitsListEntity.swift */,
+				10AB88C826935D6900F70023 /* RemoteVideoEntity.swift */,
+				10AB88CA26935F8000F70023 /* RemoteCategoryEntity.swift */,
 			);
 			path = remote;
 			sourceTree = "<group>";
@@ -383,6 +400,10 @@
 				10D131B9268B27D600A286BF /* UpdateAddressUseCase.swift */,
 				10309CE9268F4495008F4656 /* SubmitConsultationUseCase.swift */,
 				1040D6C62692128700292703 /* GetRoomListUseCase.swift */,
+				10AB88C226935C5900F70023 /* GetBenefitsUseCase.swift */,
+				10AB88C626935D5500F70023 /* GetVideoUseCase.swift */,
+				10AB88CC26935FCA00F70023 /* GetCategoryListUseCase.swift */,
+				10AB88CE26935FF400F70023 /* GetBannerListUseCase.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -957,6 +978,7 @@
 				10FAF1F7268CC75500263E72 /* ConsultationItemTableViewCell.swift in Sources */,
 				103AF92A266D3305009C561B /* OTPViewController.swift in Sources */,
 				10D131B4268B25BC00A286BF /* RemoteAddressEntity.swift in Sources */,
+				10AB88C726935D5500F70023 /* GetVideoUseCase.swift in Sources */,
 				101A34552677A3D300C396C0 /* HomeViewController.swift in Sources */,
 				1027DD652688D2B700E70798 /* RemoteGoogleLoginEntity.swift in Sources */,
 				10D131B2268B24D300A286BF /* ParamsUpdateAddressEntity.swift in Sources */,
@@ -970,6 +992,7 @@
 				10BE32E9267DB83600639C61 /* CategoryCollectionViewCell.swift in Sources */,
 				1040D6C52692125100292703 /* ChatApiClient.swift in Sources */,
 				10309CEA268F4495008F4656 /* SubmitConsultationUseCase.swift in Sources */,
+				10AB88CB26935F8000F70023 /* RemoteCategoryEntity.swift in Sources */,
 				1062B11F267B99DF004C9858 /* DashboardPresenter.swift in Sources */,
 				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
 				10D61EF2268A2ACA00F336B9 /* SettingViewController.swift in Sources */,
@@ -979,6 +1002,7 @@
 				1062B123267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift in Sources */,
 				10FAC8EB2672740100538D6C /* CoverageViewController.swift in Sources */,
 				1019E2CB26888C1B00EB5DF9 /* ContentApiClient.swift in Sources */,
+				10AB88C926935D6900F70023 /* RemoteVideoEntity.swift in Sources */,
 				1062B11A267B9888004C9858 /* BannerCollectionViewCell.swift in Sources */,
 				10D61EF5268A2E7E00F336B9 /* SingleInputFieldWithTitleView.swift in Sources */,
 				10FAF1E7268CBFBD00263E72 /* ConsultationPresenter.swift in Sources */,
@@ -1002,6 +1026,7 @@
 				10FAF1F3268CC74800263E72 /* ConsultationTitleTableViewCell.swift in Sources */,
 				10A56AD6266E35F40019516A /* DashboardViewController.swift in Sources */,
 				10BE32F3267DC58100639C61 /* NotificationTableViewCell.swift in Sources */,
+				10AB88C526935C8600F70023 /* RemoteBenefitsListEntity.swift in Sources */,
 				10FAC8D4267261FE00538D6C /* SelectSkillViewController.swift in Sources */,
 				101A345F2677AF9F00C396C0 /* BaseUseCase.swift in Sources */,
 				10173FB626731F890000DAFB /* RemoteErrorEntity.swift in Sources */,
@@ -1028,6 +1053,8 @@
 				103AF920266D2071009C561B /* InputFieldView.swift in Sources */,
 				10173FA726731C7C0000DAFB /* ApiClient.swift in Sources */,
 				10BFE156268B77FF00E92B41 /* ParamsUpdateProfileNameEntity.swift in Sources */,
+				10AB88CD26935FCA00F70023 /* GetCategoryListUseCase.swift in Sources */,
+				10AB88CF26935FF400F70023 /* GetBannerListUseCase.swift in Sources */,
 				10173FB126731ECB0000DAFB /* UserApiClient.swift in Sources */,
 				10D61EEC268A205200F336B9 /* RemoteOTPEntity.swift in Sources */,
 				103AF924266D20FE009C561B /* UIExtension.swift in Sources */,
@@ -1037,6 +1064,7 @@
 				101A345B2677AF3200C396C0 /* LoginPresenter.swift in Sources */,
 				10F3B7FB2677B33300FA7601 /* PhoneRegisterUseCase.swift in Sources */,
 				10FAC8DD267264ED00538D6C /* TitleTableViewCell.swift in Sources */,
+				10AB88C326935C5900F70023 /* GetBenefitsUseCase.swift in Sources */,
 				1062B11D267B98E3004C9858 /* RemoteBannerEntity.swift in Sources */,
 				10309CEC268F44DC008F4656 /* RemoteMessageEntity.swift in Sources */,
 				10FAF1EF268CC73D00263E72 /* ConsultationVideoTableViewCell.swift in Sources */,

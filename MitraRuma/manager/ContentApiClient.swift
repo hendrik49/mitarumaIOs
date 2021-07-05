@@ -23,4 +23,14 @@ class ContentApiClient {
         let request = RequestModel(httpMethod: .get, path: "cms/1", payload: nil).asURLRequest()
         return apiClient.caller.call(request)
     }
+    
+    func getBannerList() -> Observable<Result<CustomRemoteEntity<[RemoteBannerEntity]>, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .get, path: "cms/name/banner", payload: nil).asURLRequest()
+        return apiClient.caller.call(request)
+    }
+    
+    func getCategoryList() -> Observable<Result<CustomRemoteEntity<[RemoteCategoryEntity]>, RemoteErrorEntity>> {
+        let request = RequestModel(httpMethod: .get, path: "cms/name/category-list", payload: nil).asURLRequest()
+        return apiClient.caller.call(request)
+    }
 }
