@@ -168,6 +168,7 @@ extension LoginViewController: GIDSignInDelegate {
         }
         
         let token = signIn.currentUser.authentication.idToken ?? ""
+        let firebaseToken = Messaging.messaging().fcmToken ?? ""
         presenter.requestLoginGoogle(token: token)
     }
 }
