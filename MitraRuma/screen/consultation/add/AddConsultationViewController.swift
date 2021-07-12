@@ -40,7 +40,7 @@ class AddConsultationViewController: UIViewController {
     
     @IBAction func onBookClicked(_ sender: Any) {
         let detail: String = detailTextView.text
-        let estimatedBudget: Int = try! Int(value: estimatedBudgetFieldView.getText().isEmpty ? "0" : estimatedBudgetFieldView.getText())
+        let estimatedBudget: Int = try! Int(estimatedBudgetFieldView.getText().isEmpty ? "0" : estimatedBudgetFieldView.getText()) ?? 0
         let name: String = nameFieldView.getText()
         let contact: String = contactFieldView.getText()
         let address: String = addressFieldView.text

@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import SwiftJWT
 
-struct UIUserEntity: Claims {
+struct UIUserEntity {
     var user_email: String = ""
     var user_nicename: String = ""
     var user_type: String = ""

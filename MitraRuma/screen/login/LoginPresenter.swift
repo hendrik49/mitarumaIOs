@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import SwiftJWT
+import JWTDecode
 
 protocol LoginPresenterDelegate {
     func successLogin(shouldByPassToDashboard: Bool)
@@ -28,7 +28,19 @@ class LoginPresenter {
     
     func requestLoginGoogle(token: String) {
         LoginByGoogleUseCase.shared.setParams(entity: ParamsLoginEntity(googleToken: token)).execute { entity in
-            self.delegate.successLogin(shouldByPassToDashboard: true)
+            do {
+                let jwt = try decode(jwt: entity.token)
+                CustomUserDefaults.setEmail(email: jwt.claim(name: "user_email").string ?? "")
+                CustomUserDefaults.setName(name: jwt.claim(name: "user_nicename").string ?? "")
+                CustomUserDefaults.setPhoto(photo: jwt.claim(name: "user_picture_url").string ?? "")
+                CustomUserDefaults.setAuthToken(token: entity.token)
+                CustomUserDefaults.setPhoneNumber(phoneNumber: jwt.claim(name: "user_phone_number").string ?? "")
+                CustomUserDefaults.setType(type: jwt.claim(name: "user_email").string ?? "")
+                self.delegate.successLogin(shouldByPassToDashboard: true)
+            } catch let error {
+                print(error.localizedDescription)
+                self.delegate.failed(message: "Please relogin")
+            }
         } failed: { error in
             self.delegate.failed(message: error)
         }

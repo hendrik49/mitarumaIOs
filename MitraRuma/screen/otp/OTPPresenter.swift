@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import SwiftJWT
+import JWTDecode
 
 protocol OTPPresenterDelegate {
     func successOTP()
@@ -21,13 +21,13 @@ class OTPPresenter {
     func sendOTP(otp: String) {
         SendOTPUseCase.shared.setParams(entity: ParamsOTPEntity(phone: phoneNumber, otp: otp)).execute { entity in
             do {
-                let jwt = try JWT<UIUserEntity>(jwtString: entity.token)
-                CustomUserDefaults.setEmail(email: jwt.claims.user_email)
-                CustomUserDefaults.setName(name: jwt.claims.user_nicename)
-                CustomUserDefaults.setPhoto(photo: jwt.claims.user_picture_url ?? "")
+                let jwt = try decode(jwt: entity.token)
+                CustomUserDefaults.setEmail(email: jwt.claim(name: "user_email").string ?? "")
+                CustomUserDefaults.setName(name: jwt.claim(name: "user_nicename").string ?? "")
+                CustomUserDefaults.setPhoto(photo: jwt.claim(name: "user_picture_url").string ?? "")
                 CustomUserDefaults.setAuthToken(token: entity.token)
-                CustomUserDefaults.setPhoneNumber(phoneNumber: jwt.claims.user_phone_number)
-                CustomUserDefaults.setType(type: jwt.claims.user_type)
+                CustomUserDefaults.setPhoneNumber(phoneNumber: jwt.claim(name: "user_phone_number").string ?? "")
+                CustomUserDefaults.setType(type: jwt.claim(name: "user_email").string ?? "")
                 self.delegate.successOTP()
             } catch {
                 self.delegate.failed(message: "Failed to decode")

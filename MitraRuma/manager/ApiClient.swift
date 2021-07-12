@@ -16,5 +16,9 @@ class ApiClient {
         RequestModel.defaults.baseUrl = "http://149.28.148.227:8081/api"
         RequestModel.defaults.headers = UIGenerator.generateHeaders()
     }
+    
+    func updateHeader() {
+        RequestModel.defaults.headers = UIGenerator.generateHeaders()
+    }
 }
 

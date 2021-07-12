@@ -68,4 +68,8 @@ class UserApiClient {
         let request = RequestModel(httpMethod: .get, path: "user/profile/address").asURLRequest()
         return apiClient.caller.call(request)
     }
+    
+    func update() {
+        apiClient.updateHeader()
+    }
 }

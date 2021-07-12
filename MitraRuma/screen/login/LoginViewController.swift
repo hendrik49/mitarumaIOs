@@ -187,6 +187,7 @@ extension LoginViewController: LoginPresenterDelegate {
     }
     
     func failed(message: String) {
+        print(message)
         loadingState(isLoading: false)
     }
 }

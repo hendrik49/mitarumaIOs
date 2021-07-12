@@ -12,7 +12,7 @@ target 'MitraRuma' do
   pod 'RxRetroSwift'
   pod 'DLRadioButton', '~> 1.4'
   pod 'SimpleCheckbox'
-  pod 'SwiftJWT'
+  pod 'JWTDecode', '~> 2.6'
   pod "youtube-ios-player-helper"
   pod 'Firebase/Storage'
 
