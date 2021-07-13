@@ -19,6 +19,8 @@
 		10173FB426731F780000DAFB /* CustomRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB326731F780000DAFB /* CustomRemoteEntity.swift */; };
 		10173FB626731F890000DAFB /* RemoteErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB526731F890000DAFB /* RemoteErrorEntity.swift */; };
 		10173FB826731FD80000DAFB /* RemoteUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10173FB726731FD80000DAFB /* RemoteUserEntity.swift */; };
+		10186E45269C8D310056EA63 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10186E43269C8D310056EA63 /* ChatRoomViewController.swift */; };
+		10186E46269C8D310056EA63 /* ChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10186E44269C8D310056EA63 /* ChatRoomViewController.xib */; };
 		1019E2CB26888C1B00EB5DF9 /* ContentApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019E2CA26888C1B00EB5DF9 /* ContentApiClient.swift */; };
 		1019E2CD26888D2300EB5DF9 /* RemoteSelectionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019E2CC26888D2300EB5DF9 /* RemoteSelectionEntity.swift */; };
 		1019E2CF26888D7E00EB5DF9 /* RemoteGroupEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019E2CE26888D7E00EB5DF9 /* RemoteGroupEntity.swift */; };
@@ -168,6 +170,8 @@
 		10173FB326731F780000DAFB /* CustomRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRemoteEntity.swift; sourceTree = "<group>"; };
 		10173FB526731F890000DAFB /* RemoteErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteErrorEntity.swift; sourceTree = "<group>"; };
 		10173FB726731FD80000DAFB /* RemoteUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserEntity.swift; sourceTree = "<group>"; };
+		10186E43269C8D310056EA63 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		10186E44269C8D310056EA63 /* ChatRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomViewController.xib; sourceTree = "<group>"; };
 		1019E2CA26888C1B00EB5DF9 /* ContentApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentApiClient.swift; sourceTree = "<group>"; };
 		1019E2CC26888D2300EB5DF9 /* RemoteSelectionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteSelectionEntity.swift; sourceTree = "<group>"; };
 		1019E2CE26888D7E00EB5DF9 /* RemoteGroupEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGroupEntity.swift; sourceTree = "<group>"; };
@@ -355,6 +359,15 @@
 				10AB88CA26935F8000F70023 /* RemoteCategoryEntity.swift */,
 			);
 			path = remote;
+			sourceTree = "<group>";
+		};
+		10186E42269C8D1E0056EA63 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				10186E43269C8D310056EA63 /* ChatRoomViewController.swift */,
+				10186E44269C8D310056EA63 /* ChatRoomViewController.xib */,
+			);
+			path = chat;
 			sourceTree = "<group>";
 		};
 		101A34522677A3C100C396C0 /* home */ = {
@@ -654,6 +667,7 @@
 		10FAF112266A8AAB002640BE /* screen */ = {
 			isa = PBXGroup;
 			children = (
+				10186E42269C8D1E0056EA63 /* chat */,
 				109E38172691DEA7001EE055 /* room */,
 				10FAF1E1268CB9EE00263E72 /* consultation */,
 				10D61EF9268A306A00F336B9 /* selection */,
@@ -861,6 +875,7 @@
 				10FAC8F12672759100538D6C /* SearchTableViewCell.xib in Resources */,
 				10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */,
 				10BE32FE267DCB1100639C61 /* TransactionViewController.xib in Resources */,
+				10186E46269C8D310056EA63 /* ChatRoomViewController.xib in Resources */,
 				103AF92F266D33E7009C561B /* SingleInputFieldView.xib in Resources */,
 				1062B11B267B9888004C9858 /* BannerCollectionViewCell.xib in Resources */,
 				10BE32F4267DC58100639C61 /* NotificationTableViewCell.xib in Resources */,
@@ -1042,6 +1057,7 @@
 				101A34612677AFFE00C396C0 /* PhoneLoginUseCase.swift in Sources */,
 				10FAF122266A8EE4002640BE /* SliderContentCollectionViewCell.swift in Sources */,
 				10173FB826731FD80000DAFB /* RemoteUserEntity.swift in Sources */,
+				10186E45269C8D310056EA63 /* ChatRoomViewController.swift in Sources */,
 				10309CE6268F433A008F4656 /* ParamsSubmitConsultationEntity.swift in Sources */,
 				10173FB426731F780000DAFB /* CustomRemoteEntity.swift in Sources */,
 				10FAC8E0267265D300538D6C /* UIPickerEntity.swift in Sources */,

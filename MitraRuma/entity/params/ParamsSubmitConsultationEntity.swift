@@ -14,6 +14,7 @@ struct ParamsSubmitConsultationEntity: Codable {
     var city: String = ""
     var street: String = ""
     var zipcode: String = ""
+    var name: String = ""
     var photos: [ParamsFileUrl] = []
     var contact: String
     
@@ -24,6 +25,7 @@ struct ParamsSubmitConsultationEntity: Codable {
         case street = "street"
         case zipcode = "zipcode"
         case photos = "photos"
+        case name = "name"
         case contact = "contact"
     }
 }
