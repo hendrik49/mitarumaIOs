@@ -58,6 +58,12 @@
 		1040D6C32692119700292703 /* RoomChildListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040D6C22692119700292703 /* RoomChildListPresenter.swift */; };
 		1040D6C52692125100292703 /* ChatApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040D6C42692125100292703 /* ChatApiClient.swift */; };
 		1040D6C72692128700292703 /* GetRoomListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1040D6C62692128700292703 /* GetRoomListUseCase.swift */; };
+		1042E0A5269EADE200CBA876 /* ChatDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042E0A3269EADE200CBA876 /* ChatDetailTableViewCell.swift */; };
+		1042E0A6269EADE200CBA876 /* ChatDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1042E0A4269EADE200CBA876 /* ChatDetailTableViewCell.xib */; };
+		1042E0A9269EB18C00CBA876 /* ChatLeftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042E0A7269EB18C00CBA876 /* ChatLeftTableViewCell.swift */; };
+		1042E0AA269EB18C00CBA876 /* ChatLeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1042E0A8269EB18C00CBA876 /* ChatLeftTableViewCell.xib */; };
+		1042E0AD269EBF6E00CBA876 /* ChatRightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1042E0AB269EBF6E00CBA876 /* ChatRightTableViewCell.swift */; };
+		1042E0AE269EBF6E00CBA876 /* ChatRightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1042E0AC269EBF6E00CBA876 /* ChatRightTableViewCell.xib */; };
 		1062B11A267B9888004C9858 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B118267B9888004C9858 /* BannerCollectionViewCell.swift */; };
 		1062B11B267B9888004C9858 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1062B119267B9888004C9858 /* BannerCollectionViewCell.xib */; };
 		1062B11D267B98E3004C9858 /* RemoteBannerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1062B11C267B98E3004C9858 /* RemoteBannerEntity.swift */; };
@@ -209,6 +215,12 @@
 		1040D6C22692119700292703 /* RoomChildListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomChildListPresenter.swift; sourceTree = "<group>"; };
 		1040D6C42692125100292703 /* ChatApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApiClient.swift; sourceTree = "<group>"; };
 		1040D6C62692128700292703 /* GetRoomListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomListUseCase.swift; sourceTree = "<group>"; };
+		1042E0A3269EADE200CBA876 /* ChatDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailTableViewCell.swift; sourceTree = "<group>"; };
+		1042E0A4269EADE200CBA876 /* ChatDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailTableViewCell.xib; sourceTree = "<group>"; };
+		1042E0A7269EB18C00CBA876 /* ChatLeftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLeftTableViewCell.swift; sourceTree = "<group>"; };
+		1042E0A8269EB18C00CBA876 /* ChatLeftTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatLeftTableViewCell.xib; sourceTree = "<group>"; };
+		1042E0AB269EBF6E00CBA876 /* ChatRightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRightTableViewCell.swift; sourceTree = "<group>"; };
+		1042E0AC269EBF6E00CBA876 /* ChatRightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRightTableViewCell.xib; sourceTree = "<group>"; };
 		1062B118267B9888004C9858 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		1062B119267B9888004C9858 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		1062B11C267B98E3004C9858 /* RemoteBannerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBannerEntity.swift; sourceTree = "<group>"; };
@@ -364,6 +376,7 @@
 		10186E42269C8D1E0056EA63 /* chat */ = {
 			isa = PBXGroup;
 			children = (
+				1042E0A2269EADCF00CBA876 /* cell */,
 				10186E43269C8D310056EA63 /* ChatRoomViewController.swift */,
 				10186E44269C8D310056EA63 /* ChatRoomViewController.xib */,
 			);
@@ -487,6 +500,19 @@
 			children = (
 				1040D6BC26920CC200292703 /* RoomListTableViewCell.swift */,
 				1040D6BD26920CC200292703 /* RoomListTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		1042E0A2269EADCF00CBA876 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				1042E0A3269EADE200CBA876 /* ChatDetailTableViewCell.swift */,
+				1042E0A4269EADE200CBA876 /* ChatDetailTableViewCell.xib */,
+				1042E0A7269EB18C00CBA876 /* ChatLeftTableViewCell.swift */,
+				1042E0A8269EB18C00CBA876 /* ChatLeftTableViewCell.xib */,
+				1042E0AB269EBF6E00CBA876 /* ChatRightTableViewCell.swift */,
+				1042E0AC269EBF6E00CBA876 /* ChatRightTableViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -871,6 +897,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10FAC8EC2672740100538D6C /* CoverageViewController.xib in Resources */,
+				1042E0AE269EBF6E00CBA876 /* ChatRightTableViewCell.xib in Resources */,
 				10FAF1E5268CBA0000263E72 /* ConsultationViewController.xib in Resources */,
 				10FAC8F12672759100538D6C /* SearchTableViewCell.xib in Resources */,
 				10FAC8D5267261FE00538D6C /* SelectSkillViewController.xib in Resources */,
@@ -878,6 +905,7 @@
 				10186E46269C8D310056EA63 /* ChatRoomViewController.xib in Resources */,
 				103AF92F266D33E7009C561B /* SingleInputFieldView.xib in Resources */,
 				1062B11B267B9888004C9858 /* BannerCollectionViewCell.xib in Resources */,
+				1042E0A6269EADE200CBA876 /* ChatDetailTableViewCell.xib in Resources */,
 				10BE32F4267DC58100639C61 /* NotificationTableViewCell.xib in Resources */,
 				10D61EF3268A2ACA00F336B9 /* SettingViewController.xib in Resources */,
 				10BE32EF267DC46A00639C61 /* NotificationViewController.xib in Resources */,
@@ -885,6 +913,7 @@
 				103AF92B266D3305009C561B /* OTPViewController.xib in Resources */,
 				103AF918266D1AD9009C561B /* Colors.xcassets in Resources */,
 				10FAC8DA267264E000538D6C /* SelectionTableViewCell.xib in Resources */,
+				1042E0AA269EB18C00CBA876 /* ChatLeftTableViewCell.xib in Resources */,
 				10FB8E72265FEAC9001D0E64 /* LaunchScreen.storyboard in Resources */,
 				1040D6BF26920CC200292703 /* RoomListTableViewCell.xib in Resources */,
 				10C07DD2268DFD74004CCEF4 /* AddPhotoCollectionViewCell.xib in Resources */,
@@ -1012,9 +1041,11 @@
 				10173FAD26731D550000DAFB /* CustomUserDefaults.swift in Sources */,
 				10D61EF2268A2ACA00F336B9 /* SettingViewController.swift in Sources */,
 				10FAF1E4268CBA0000263E72 /* ConsultationViewController.swift in Sources */,
+				1042E0A9269EB18C00CBA876 /* ChatLeftTableViewCell.swift in Sources */,
 				1011024C268EED3400504E1B /* UIUriEntity.swift in Sources */,
 				10D61F03268A326100F336B9 /* FormTableViewCell.swift in Sources */,
 				1062B123267BADF8004C9858 /* PhoneRegisterApplicatorUseCase.swift in Sources */,
+				1042E0A5269EADE200CBA876 /* ChatDetailTableViewCell.swift in Sources */,
 				10FAC8EB2672740100538D6C /* CoverageViewController.swift in Sources */,
 				1019E2CB26888C1B00EB5DF9 /* ContentApiClient.swift in Sources */,
 				10AB88C926935D6900F70023 /* RemoteVideoEntity.swift in Sources */,
@@ -1063,6 +1094,7 @@
 				10FAC8E0267265D300538D6C /* UIPickerEntity.swift in Sources */,
 				1040D6BE26920CC200292703 /* RoomListTableViewCell.swift in Sources */,
 				1019E2D126888DE600EB5DF9 /* GetSkillSetUseCase.swift in Sources */,
+				1042E0AD269EBF6E00CBA876 /* ChatRightTableViewCell.swift in Sources */,
 				10FB8E65265FEAC8001D0E64 /* SceneDelegate.swift in Sources */,
 				10D131B6268B277000A286BF /* GetAddressUseCase.swift in Sources */,
 				10BE32FD267DCB1100639C61 /* TransactionViewController.swift in Sources */,

@@ -9,10 +9,25 @@ import UIKit
 
 class ChatRoomViewController: UIViewController {
 
+    @IBOutlet weak var headerTopLabel: UILabel!
+    @IBOutlet weak var headerBottomLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
+    @IBAction func onBackClicked(_ sender: Any) {
+        
+    }
+    
+    @IBAction func onAttachmentClicked(_ sender: Any) {
+    
+    }
+    
+    @IBAction func onSendClicked(_ sender: Any) {
+    
+    }
 }
